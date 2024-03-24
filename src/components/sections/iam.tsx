@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { FaGithub, FaLinkedin, FaLinkedinIn } from 'react-icons/fa';
+import { FaDownload, FaGithub, FaLinkedin, FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
 
@@ -9,7 +9,7 @@ import Typewriter from 'typewriter-effect';
 const IAM: React.FC = () => {
     return (
         <div className="grid lg:grid-cols-2 md:grid-col-1 gap-4 items-center justify-center">
-            <div className="col-span-1 grid-rows-5">
+            <div className="col-span-1 grid-rows-4">
                 <div className="row-span-2 my-4">
                     <h1 className="text-7xl">
                         Hola, soy
@@ -25,7 +25,7 @@ const IAM: React.FC = () => {
                                 .callFunction(() => {
                                     console.log('String typed out!');
                                 })
-                                .pauseFor(1500)
+                                .pauseFor(200)
                                 .callFunction(() => {
                                     console.log('All strings were deleted');
                                 })
@@ -42,6 +42,9 @@ const IAM: React.FC = () => {
                     </div>
                     <div className="flex justify-center items-center h-14 w-14 rounded-md bg-gray-700">
                         <FaGithub size={24} />
+                    </div>
+                    <div className="flex justify-center items-center h-14 w-14 rounded-md bg-green-700">
+                        <FaDownload size={24}/>
                     </div>
                 </div>
             </div>
