@@ -4,8 +4,8 @@ import yo from "./yo.png";
 
 const About: React.FC = () => {
     return (
-        <div className="grid lg:grid-cols-2 md:grid-col-1 gap-4 items-center justify-center pt-8">
-            <div className="col-span-1"> 
+        <div className="grid lg:grid-cols-2 md:grid-col-1 gap-4 items-center justify-center pt-8 border-t-2">
+            <div className="col-span-1 border-r-2"> 
                 <h1 className="text-7xl text-end">Sobre Mi</h1>
                 <p className="text-end">
                     Soy estudiante de Ingeniería en Sistemas De Información en la Universidad
