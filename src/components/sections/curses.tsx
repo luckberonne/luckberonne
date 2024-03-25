@@ -68,9 +68,9 @@ const Curses: React.FC = () => {
                                         <CardDescription>{experience.company}</CardDescription>
                                         <CardDescription>{experience.date}</CardDescription>
                                     </CardHeader>
-                                    <CardFooter className="flex justify-between">
+                                    {/* <CardFooter className="flex justify-between">
                                         <Button>Titulo</Button>
-                                    </CardFooter>
+                                    </CardFooter> */}
                                 </Card>
                             </div>
                         ))}

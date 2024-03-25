@@ -7,7 +7,7 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { SiCsharp, SiExpress, SiMicrosoftsqlserver, SiNestjs, SiNextdotjs } from 'react-icons/si';
+import { SiCsharp, SiExpress, SiMicrosoftsqlserver, SiMysql, SiNestjs, SiNextdotjs } from 'react-icons/si';
 import { RiJavascriptLine } from 'react-icons/ri';
 import { TbSql } from 'react-icons/tb';
 import { BiLogoPostgresql, BiLogoSpringBoot } from 'react-icons/bi';
@@ -134,7 +134,7 @@ const Skills: React.FC = () => {
                     name: 'MySQL',
                     level: 'Intermedio',
                     color: 'orange',
-                    icon: <FaDownload size={24}/>
+                    icon: <SiMysql size={24}/>
                 },
                 {
                     name: 'PostgreSQL',
