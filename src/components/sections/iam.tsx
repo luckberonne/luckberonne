@@ -50,8 +50,11 @@ const IAM: React.FC = () => {
                         </a>
                     </div>
                     <div className="flex justify-center items-center h-14 w-14 rounded-md bg-green-700">
-                        <FaDownload size={24} />
+                        <a href="https://drive.google.com/file/d/1umllW_QBbVKjXxl1zO5o96THyfFX_ZVu/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                            <FaDownload size={24} />
+                        </a>
                     </div>
+
                 </div>
             </div>
             <div className="col-span-1 hidden lg:block">
