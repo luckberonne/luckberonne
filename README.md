@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<h1 align="center">Hi <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35">, I'm Lucas Beronne</h1>
 
-First, run the development server:
+## About Me :
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🏢 I am currently working as a **SemiSenior Software Engineer** at [PlanexWare S.A.](https://www.planexware.com/)
+- 🏢 Former new **Software Developers** at [PlanexWare S.A.](https://www.planexware.com/)
+- 🎓 Studies for Software Engineering at [U.T.N. - Universidad Tecnologica Nacional](https://www.frba.utn.edu.ar/)
+- 🏡'Lives in **Argentina**
+- ⚡ **Fun Facts** : 🍕 🏉 🏏 🎥 🚞
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Connect with me ☕ :
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<br>
 
-## Learn More
+ [![@lucasberonne](https://img.icons8.com/fluency/48/000000/linkedin.png "@lucasberonne")](https://www.linkedin.com/in/lucas-beronne/) [![@lucasberonne@gmail.com](https://img.icons8.com/fluency/48/000000/apple-mail.png "@lucasberonne@gmail.com")](lucasberonne@gmail.com)
 
-To learn more about Next.js, take a look at the following resources:
+<br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## What I am Good at 🧑‍💻 :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br>
 
-## Deploy on Vercel
+<img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/> <img src="https://img.icons8.com/color/48/000000/css3.png"/> <img src="https://img.icons8.com/color/48/000000/sass.png"/> <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/> <img src="https://img.icons8.com/office/48/000000/react.png"/> <img src="https://img.icons8.com/color/48/000000/nextjs.png"/>
+<img src="https://img.icons8.com/color/48/000000/angularjs"/> 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"/> 
+<img src="https://img.icons8.com/color/48/000000/c-sharp-logo"/> 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img src="https://img.icons8.com/color/48/000000/mysql-logo.png"/> <img src="https://img.icons8.com/color/48/000000/firebase.png"/>
+
+<img src="https://img.icons8.com/color/48/000000/npm.png"/>
+
+<br>
