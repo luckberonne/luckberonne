@@ -2,41 +2,51 @@
 import React from 'react';
 import { Button } from "@/components/ui/button"
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card"
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 
 
 const Experience: React.FC = () => {
     const experiences = [
         {
-            company: 'Company 1',
-            position: 'Frontend Developer',
-            date: '2020 - 2021',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero.'
+            company: 'PlanexWare S.A.',
+            position: 'SSr Fullstack Developer',
+            date: '2022 - ACTUALIDAD',
+            description: "Tareas realizadas:\n• Realizar documentación Técnica.\n• Definición de arquitectura y desarrollo de APIs REST\n• Tickets CRM.\n• Desarrollo de Procesos en .net.\n• Capacitación desarrolladores jr.\n• Investigación e implementación de nuevas Tecnologías."
         },
         {
-            company: 'Company 2',
-            position: 'Backend Developer',
-            date: '2019 - 2020',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero.'
+            company: 'PlanexWare S.A.',
+            position: 'Jr Fullstack Developer',
+            date: '2021 - 2022',
+            description: "Tareas realizadas:\n • Desarrollo de APIs REST y Páginas Webs con Angular.\n • Migración de soluciones LEGACY.\n • Creación y modificación de SPs (SQL SERVER).\n • Alta de datos en Tablas (SQL SERVER).\n • Automatización de tareas."
         },
         {
-            company: 'Company 3',
-            position: 'Fullstack Developer',
-            date: '2018 - 2019',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero.'
+            company: 'PlanexWare S.A.',
+            position: 'QA Tester',
+            date: '2019 - 2021',
+            description: "Tareas realizadas:\n • Diseñar plan de pruebas.\n • Realizar diversas pruebas (unitarias, regresión, estrés y integración).\n • Registrar resultados Azure."
         }
+    
     ]
 
     return (
         <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
             <div className="col-span-1 mr-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {experiences.map((experience, index) => (
                         <div key={index}>
                             <Card>
@@ -44,12 +54,22 @@ const Experience: React.FC = () => {
                                     <CardTitle>{experience.position} - {experience.company}</CardTitle>
                                     <CardDescription>{experience.date}</CardDescription>
                                 </CardHeader>
-                                <CardContent>
-                                    {/* <p>{experience.description}</p> */}
-                                </CardContent>
                                 <CardFooter className="flex justify-between">
-                                    <Button variant="outline">Cancel</Button>
-                                    <Button>Deploy</Button>
+                                    <Dialog>
+                                        <DialogTrigger asChild>
+                                            <Button>Tareas Realizadas</Button>
+                                        </DialogTrigger>
+                                        <DialogContent className="sm:max-w-[425px]">
+                                            <DialogHeader>
+                                                <DialogTitle>{experience.position}</DialogTitle>
+                                                <DialogDescription>
+                                                    {experience.description.split('\n').map((line, index) => (
+                                                        <div key={index}>{line}</div>
+                                                    ))}
+                                                </DialogDescription>
+                                            </DialogHeader>
+                                        </DialogContent>
+                                    </Dialog>
                                 </CardFooter>
                             </Card>
                         </div>
