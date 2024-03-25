@@ -69,7 +69,7 @@ const Curses: React.FC = () => {
                                         <CardDescription>{experience.date}</CardDescription>
                                     </CardHeader>
                                     <CardFooter className="flex justify-between">
-                                        <Button>Deploy</Button>
+                                        <Button>Titulo</Button>
                                     </CardFooter>
                                 </Card>
                             </div>
