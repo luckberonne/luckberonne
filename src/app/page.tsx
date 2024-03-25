@@ -8,7 +8,7 @@ import Skills from "@/components/sections/skills";
 export default function Home() {
   return (
     <main className="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-      <div className="my-8">
+      <div className="mb-24 mt-20">
         <IAM/>
       </div>
       <div className="my-8">

@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
     return (
         <>
             <div>
-                <h1 className="text-6xl">Experiencia</h1>
+                <h1 className="text-6xl">Hobby</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
                 <div className="col-span-1 mr-4">
