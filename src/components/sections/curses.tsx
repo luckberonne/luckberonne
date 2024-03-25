@@ -14,22 +14,28 @@ import {
 const Curses: React.FC = () => {
     const experiences = [
         {
-            company: 'Company 1',
-            position: 'Frontend Developer',
-            date: '2020 - 2021',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero.'
+            company: 'I.T.B.A. - Instituto Tecnológico',
+            position: 'CiberSeguridad y Ethical Hacking',
+            date: 'VIRTUAL(07/2023 – 11/2023)',
+            description: ''
         },
         {
-            company: 'Company 2',
-            position: 'Backend Developer',
-            date: '2019 - 2020',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero.'
+            company: 'U.T.N. - Centro e-learning',
+            position: 'DevOps, integración y agilidad continua',
+            date: 'VIRTUAL(07/2023 – 09/2023)',
+            description: ''
         },
         {
-            company: 'Company 3',
-            position: 'Fullstack Developer',
-            date: '2018 - 2019',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero. Sed sit amet urna consectetur, lacinia libero quis, tincidunt libero.'
+            company: 'AACI – ASOSIACION DE CULTURA INGLESA',
+            position: 'INGLES - PRE INTERMEDIATE',
+            date: '(03/2021 – ACTUALIDAD)',
+            description: ''
+        },
+        {
+            company: 'U.T.N. (F.R.B.A)-GOB (Ministerio de educación)',
+            position: '111mil - Curso de JAVA con SQL',
+            date: '(03/2019 – 10/2020)',
+            description: ''
         }
     ]
 
@@ -58,14 +64,11 @@ const Curses: React.FC = () => {
                             <div key={index}>
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle>{experience.position} - {experience.company}</CardTitle>
+                                        <CardTitle>{experience.position}</CardTitle>
+                                        <CardDescription>{experience.company}</CardDescription>
                                         <CardDescription>{experience.date}</CardDescription>
                                     </CardHeader>
-                                    <CardContent>
-                                        {/* <p>{experience.description}</p> */}
-                                    </CardContent>
                                     <CardFooter className="flex justify-between">
-                                        <Button variant="outline">Cancel</Button>
                                         <Button>Deploy</Button>
                                     </CardFooter>
                                 </Card>
