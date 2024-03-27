@@ -12,12 +12,12 @@ import {
 import Link from 'next/link';
 
 import Image from "next/image";
-import projects from "./../../assets/projects.svg";
+import projectsImage from "./../../assets/projectsImage.svg";
 import { motion } from "framer-motion";
 
 
 const Projects: React.FC = () => {
-    const hobbies = [
+    const projects = [
         {
             titulo: 'TotalNews',
             subtitulo: 'Pagina de noticias Falsas',
@@ -39,11 +39,11 @@ const Projects: React.FC = () => {
     return (
         <div>
             <div>
-                <h1 className="text-6xl mb-4">Hobby</h1>
+                <h1 className="text-6xl mb-4">project</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
                 <div className="col-span-1 lg:mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    {hobbies.map((hobby, index) => (
+                    {projects.map((project, index) => (
                         <motion.div
                          whileHover={{
                             scale: 1.05,
@@ -52,13 +52,13 @@ const Projects: React.FC = () => {
                           whileTap={{ scale: 0.9 }} key={index} className="flex-grow">
                             <Card className="h-full flex flex-col justify-between">
                                 <CardHeader>
-                                    <CardTitle>{hobby.titulo}</CardTitle>
-                                    <CardDescription>{hobby.subtitulo}</CardDescription>
+                                    <CardTitle>{project.titulo}</CardTitle>
+                                    <CardDescription>{project.subtitulo}</CardDescription>
                                 </CardHeader>
                                 <CardContent>
-                                    <p>{hobby.description}</p>
+                                    <p>{project.description}</p>
                                     <div className="flex flex-wrap mt-4">
-                                        {hobby.chips.map((chip, index) => (
+                                        {project.chips.map((chip, index) => (
                                             <span key={index} className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-sm mr-2 mb-2">
                                                 {chip}
                                             </span>
@@ -67,15 +67,15 @@ const Projects: React.FC = () => {
                                 </CardContent>
                                 <CardFooter className="flex justify-between items-center">
                                     <div>
-                                        {hobby.pagina && (
-                                            <Link href={hobby.pagina} target="_blank">
+                                        {project.pagina && (
+                                            <Link href={project.pagina} target="_blank">
                                                 <Button>Abrir</Button>
                                             </Link>
                                         )}
                                     </div>
                                     <div>
-                                        {hobby.github && (
-                                            <Link href={hobby.github} target="_blank">
+                                        {project.github && (
+                                            <Link href={project.github} target="_blank">
                                                 <Button variant="outline">Repositorio</Button>
                                             </Link>
                                         )}
@@ -87,7 +87,7 @@ const Projects: React.FC = () => {
                 </div>
                 <div className="col-span-1 hidden lg:block">
                     <div className="p-8 flex justify-center items-center">
-                        <Image src={projects} alt="Projects" />
+                        <Image src={projectsImage} alt="Projects" />
                     </div>
                 </div>
             </div>
