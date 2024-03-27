@@ -1,4 +1,4 @@
-
+'use client'
 import React from 'react';
 import { Button } from "@/components/ui/button"
 import {
@@ -21,6 +21,7 @@ import {
 import Image from "next/image";
 import experience from "./../../assets/experience.svg";
 import { Link } from 'lucide-react';
+import { motion } from "framer-motion";
 
 
 const Experience: React.FC = () => {
@@ -58,7 +59,12 @@ const Experience: React.FC = () => {
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center">
                 <div className="col-span-1 lg:mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {experiences.map((experience, index) => (
-                        <div key={index} className="flex-grow">
+                        <motion.div
+                            whileHover={{
+                                scale: 1.05,
+                                transition: { duration: 0.3 },
+                            }}
+                            whileTap={{ scale: 0.9 }} key={index} className="flex-grow">
                             <Card className="h-full flex flex-col justify-between">
                                 <CardHeader>
                                     <CardTitle>{experience.position}</CardTitle>
@@ -85,7 +91,7 @@ const Experience: React.FC = () => {
                                     </Dialog>
                                 </CardFooter>
                             </Card>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
                 <div className="col-span-1 hidden lg:block">

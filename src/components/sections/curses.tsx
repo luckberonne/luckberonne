@@ -1,4 +1,4 @@
-
+'use client'
 import React from 'react';
 import { Button } from "@/components/ui/button"
 import {
@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/card"
 import Image from "next/image";
 import curse from "./../../assets/curse.svg";
+import { motion } from "framer-motion";
+
 
 
 const Curses: React.FC = () => {
@@ -55,7 +57,12 @@ const Curses: React.FC = () => {
                 <div className="col-span-1 lg:mr-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {experiences.map((experience, index) => (
-                            <div key={index}>
+                            <motion.div
+                            whileHover={{
+                                scale: 1.05,
+                                transition: { duration: 0.3 },
+                            }}
+                            whileTap={{ scale: 0.9 }} key={index}>
                                 <Card>
                                     <CardHeader>
                                         <CardTitle>{experience.position}</CardTitle>
@@ -66,7 +73,7 @@ const Curses: React.FC = () => {
                                         <Button>Titulo</Button>
                                     </CardFooter> */}
                                 </Card>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
