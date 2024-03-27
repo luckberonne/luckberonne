@@ -63,7 +63,7 @@ const Curses: React.FC = () => {
                                 transition: { duration: 0.3 },
                             }}
                             whileTap={{ scale: 0.9 }} key={index}>
-                                <Card>
+                            <Card className="h-full flex flex-col justify-between">
                                     <CardHeader>
                                         <CardTitle>{experience.position}</CardTitle>
                                         <CardDescription>{experience.company}</CardDescription>

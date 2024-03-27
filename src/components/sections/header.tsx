@@ -23,7 +23,7 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <header className={`sticky top-0 z-10 w-full shadow-md ${scrolled ? 'rounded-b-md' : ''}`}>
+        <header className={`sticky top-0 z-10 w-full ${scrolled ? 'rounded-b-md shadow-md' : ' bg-background'}`}>
             <div className='container mx-auto py-2'>
                 <div className="flex justify-between items-center">
                     <a href="#about" onClick={scrollToBottom}>
