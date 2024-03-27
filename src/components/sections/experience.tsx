@@ -20,24 +20,28 @@ import {
 } from "@/components/ui/dialog"
 import Image from "next/image";
 import experience from "./../../assets/experience.svg";
+import { Link } from 'lucide-react';
 
 
 const Experience: React.FC = () => {
     const experiences = [
         {
             company: 'PlanexWare S.A.',
+            link: 'https://www.planexware.com/',
             position: 'SSr Fullstack Developer',
             date: '2022 - ACTUALIDAD',
             description: "Tareas realizadas:\n• Realizar documentación Técnica.\n• Definición de arquitectura y desarrollo de APIs REST\n• Tickets CRM.\n• Desarrollo de Procesos en .net.\n• Capacitación desarrolladores jr.\n• Investigación e implementación de nuevas Tecnologías."
         },
         {
             company: 'PlanexWare S.A.',
+            link: 'https://www.planexware.com/',
             position: 'Jr Fullstack Developer',
             date: '2021 - 2022',
             description: "Tareas realizadas:\n • Desarrollo de APIs REST y Páginas Webs con Angular.\n • Migración de soluciones LEGACY.\n • Creación y modificación de SPs (SQL SERVER).\n • Alta de datos en Tablas (SQL SERVER).\n • Automatización de tareas."
         },
         {
             company: 'PlanexWare S.A.',
+            link: 'https://www.planexware.com/',
             position: 'QA Tester',
             date: '2019 - 2021',
             description: "Tareas realizadas:\n • Diseñar plan de pruebas.\n • Realizar diversas pruebas (unitarias, regresión, estrés y integración).\n • Registrar resultados Azure."
@@ -57,7 +61,10 @@ const Experience: React.FC = () => {
                             <div key={index}>
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle>{experience.position} - {experience.company}</CardTitle>
+                                        <CardTitle>{experience.position}</CardTitle>
+                                        <CardDescription>
+                                        <a href={experience.link} target="_blank" rel="noopener noreferrer">{experience.company}</a>
+                                        </CardDescription>
                                         <CardDescription>{experience.date}</CardDescription>
                                     </CardHeader>
                                     <CardFooter className="flex justify-between">

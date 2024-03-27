@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button"
 import {
@@ -15,12 +14,22 @@ import Image from "next/image";
 import projects from "./../../assets/projects.svg";
 
 const Projects: React.FC = () => {
-    const experiences = [
+    const hobbies = [
         {
-            company: 'Pagina de noticias Falsas',
-            position: 'TotalNews',
-            date: '2020 - 2021',
-            description: 'Pagina de noticias falsas generadas por IA'
+            titulo: 'TotalNews',
+            subtitulo: 'Pagina de noticias Falsas',
+            description: 'Pagina de noticias falsas generadas por IA.',
+            chips: ['Next.js', 'PostgreSQL', 'Gemini API', 'Vercel'],
+            pagina: 'https://totalnews.vercel.app/',
+            github: 'https://github.com/luckberonne/totalnews'
+        },
+        {
+            titulo: 'GenReadme',
+            subtitulo: 'Genera un readme con IA',
+            description: 'Genera un README.md con IA, extrayendo el packaje.json y los nombres de los achivos.',
+            chips: ['Typescript', 'Gemini API', 'VSCODE Extension', 'Node.js'],
+            pagina: '',
+            github: 'https://github.com/luckberonne/genreadme'
         }
     ]
 
@@ -30,27 +39,43 @@ const Projects: React.FC = () => {
                 <h1 className="text-6xl">Hobby</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
-                <div className="col-span-1 mr-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        {experiences.map((experience, index) => (
-                            <div key={index}>
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle>{experience.position} - {experience.company}</CardTitle>
-                                        <CardDescription>{experience.date}</CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p>{experience.description}</p>
-                                    </CardContent>
-                                    <CardFooter className="flex justify-between">
-                                        <Link href="https://totalnews.vercel.app/" target="_blank">
-                                            <Button>Abrir</Button>
-                                        </Link>
-                                    </CardFooter>
-                                </Card>
-                            </div>
-                        ))}
-                    </div>
+                <div className="col-span-1 mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    {hobbies.map((hobby, index) => (
+                        <div key={index} className="flex-grow">
+                            <Card className="h-full flex flex-col justify-between">
+                                <CardHeader>
+                                    <CardTitle>{hobby.titulo}</CardTitle>
+                                    <CardDescription>{hobby.subtitulo}</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p>{hobby.description}</p>
+                                    <div className="flex flex-wrap mt-4">
+                                        {hobby.chips.map((chip, index) => (
+                                            <span key={index} className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-sm mr-2 mb-2">
+                                                {chip}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                                <CardFooter className="flex justify-between items-center">
+                                    <div>
+                                        {hobby.pagina && (
+                                            <Link href={hobby.pagina} target="_blank">
+                                                <Button>Abrir</Button>
+                                            </Link>
+                                        )}
+                                    </div>
+                                    <div>
+                                        {hobby.github && (
+                                            <Link href={hobby.github} target="_blank">
+                                                <Button variant="outline">Repositorio</Button>
+                                            </Link>
+                                        )}
+                                    </div>
+                                </CardFooter>
+                            </Card>
+                        </div>
+                    ))}
                 </div>
                 <div className="col-span-1 hidden lg:block">
                     <div className="h-[35rem] w-[35rem] flex justify-center items-center">
