@@ -60,7 +60,12 @@ const IAM: React.FC = () => {
                 </div>
                 <div className="row-span-1 flex gap-4">
                     {items.map((item, index) => (
-                        <motion.div initial={{ opacity: 0, y: 20 }}
+                        <motion.div
+                            whileHover={{
+                                scale: 1.05,
+                                transition: { duration: 0.3 },
+                            }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }} key={index} className="flex justify-center items-center h-14 w-14 rounded-md" style={{ backgroundColor: item.color }}>
                             <a href={item.link} target="_blank">

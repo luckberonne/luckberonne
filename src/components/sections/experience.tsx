@@ -3,7 +3,6 @@ import React from 'react';
 import { Button } from "@/components/ui/button"
 import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
@@ -13,14 +12,12 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
 import Image from "next/image";
 import experience from "./../../assets/experience.svg";
-import { Link } from 'lucide-react';
 import { motion } from "framer-motion";
 
 
