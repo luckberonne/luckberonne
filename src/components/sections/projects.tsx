@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Button } from "@/components/ui/button"
 import {
@@ -12,6 +13,8 @@ import Link from 'next/link';
 
 import Image from "next/image";
 import projects from "./../../assets/projects.svg";
+import { motion } from "framer-motion";
+
 
 const Projects: React.FC = () => {
     const hobbies = [
@@ -34,14 +37,19 @@ const Projects: React.FC = () => {
     ]
 
     return (
-        <>
+        <div>
             <div>
-                <h1 className="text-6xl">Hobby</h1>
+                <h1 className="text-6xl mb-4">Hobby</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
-                <div className="col-span-1 mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="col-span-1 lg:mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {hobbies.map((hobby, index) => (
-                        <div key={index} className="flex-grow">
+                        <motion.div
+                         whileHover={{
+                            scale: 1.05,
+                            transition: { duration: 0.3 },
+                          }}
+                          whileTap={{ scale: 0.9 }} key={index} className="flex-grow">
                             <Card className="h-full flex flex-col justify-between">
                                 <CardHeader>
                                     <CardTitle>{hobby.titulo}</CardTitle>
@@ -74,16 +82,16 @@ const Projects: React.FC = () => {
                                     </div>
                                 </CardFooter>
                             </Card>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
                 <div className="col-span-1 hidden lg:block">
-                    <div className="h-[35rem] w-[35rem] flex justify-center items-center">
+                    <div className="p-8 flex justify-center items-center">
                         <Image src={projects} alt="Projects" />
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

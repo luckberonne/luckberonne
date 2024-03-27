@@ -1,4 +1,4 @@
-
+'use client'
 import React from 'react';
 import { Button } from "@/components/ui/button"
 import {
@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/card"
 import Image from "next/image";
 import curse from "./../../assets/curse.svg";
+import { motion } from "framer-motion";
+
 
 
 const Curses: React.FC = () => {
@@ -42,20 +44,25 @@ const Curses: React.FC = () => {
     ]
 
     return (
-        <>
+        <div>
             <div>
-                <h1 className="text-6xl">Cursos</h1>
+                <h1 className="text-6xl mb-4">Cursos</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
                 <div className="col-span-1 hidden lg:block">
-                    <div className="h-[35rem] w-[35rem] flex justify-center items-center">
+                    <div className=" p-10 flex justify-center items-center">
                         <Image src={curse} alt="Curse" />
                     </div>
                 </div>
-                <div className="col-span-1 mr-4">
+                <div className="col-span-1 lg:mr-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {experiences.map((experience, index) => (
-                            <div key={index}>
+                            <motion.div
+                            whileHover={{
+                                scale: 1.05,
+                                transition: { duration: 0.3 },
+                            }}
+                            whileTap={{ scale: 0.9 }} key={index}>
                                 <Card>
                                     <CardHeader>
                                         <CardTitle>{experience.position}</CardTitle>
@@ -66,12 +73,12 @@ const Curses: React.FC = () => {
                                         <Button>Titulo</Button>
                                     </CardFooter> */}
                                 </Card>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

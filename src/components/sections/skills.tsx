@@ -1,4 +1,4 @@
-
+'use client'
 import React from 'react';
 import { FaAngular, FaCss3, FaDownload, FaHtml5, FaJava, FaPython, FaVuejs } from 'react-icons/fa';
 import {
@@ -15,6 +15,8 @@ import { IoLogoFirebase } from 'react-icons/io5';
 
 import Image from "next/image";
 import skill from "./../../assets/skill.svg";
+import { motion } from "framer-motion";
+
 
 
 const Skills: React.FC = () => {
@@ -157,13 +159,13 @@ const Skills: React.FC = () => {
     ];
 
     return (
-        <>
+        <div>
             <div>
-                <h1 className="text-6xl">Skills</h1>
+                <h1 className="text-6xl mb-4">Skills</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
                 <div className="col-span-1 hidden lg:block">
-                    <div className="h-[35rem] w-[35rem] flex justify-center items-center">
+                    <div className="p-8 flex justify-center items-center">
                         <Image src={skill} alt="Skill" />
                     </div>
                 </div>
@@ -175,7 +177,14 @@ const Skills: React.FC = () => {
                             <div>
                                 <ul className="flex flex-wrap gap-3">
                                     {skill.items.map((item, index) => (
-                                        <li key={index}>
+                                        <motion.li key={index}
+                                            whileHover={{
+                                                scale: 1.05,
+                                                transition: { duration: 0.3 },
+                                            }}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.5, delay: index * 0.1 }}>
                                             <TooltipProvider>
                                                 <Tooltip>
                                                     <TooltipTrigger asChild>
@@ -188,7 +197,7 @@ const Skills: React.FC = () => {
                                                     </TooltipContent>
                                                 </Tooltip>
                                             </TooltipProvider>
-                                        </li>
+                                        </motion.li>
                                     ))}
                                 </ul>
                             </div>
@@ -196,7 +205,7 @@ const Skills: React.FC = () => {
                     ))}
                 </div>
             </div >
-        </>
+        </div>
     );
 };
 
