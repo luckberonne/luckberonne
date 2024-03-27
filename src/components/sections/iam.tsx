@@ -40,7 +40,7 @@ const IAM: React.FC = () => {
     ];
 
     return (
-        <div className="grid lg:grid-cols-2 md:grid-col-1 gap-4 items-center justify-center">
+        <div className="grid lg:grid-cols-2 md:grid-col-1 mt-14 gap-4 items-center justify-center">
             <div className="col-span-1 grid-rows-4">
                 <div className="row-span-2 my-4">
                     <h1 className="text-7xl">

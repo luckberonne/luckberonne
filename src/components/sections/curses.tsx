@@ -44,13 +44,13 @@ const Curses: React.FC = () => {
     ]
 
     return (
-        <>
+        <div>
             <div>
-                <h1 className="text-6xl">Cursos</h1>
+                <h1 className="text-6xl mb-4">Cursos</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
                 <div className="col-span-1 hidden lg:block">
-                    <div className="h-[35rem] w-[35rem] flex justify-center items-center">
+                    <div className=" p-10 flex justify-center items-center">
                         <Image src={curse} alt="Curse" />
                     </div>
                 </div>
@@ -78,7 +78,7 @@ const Curses: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

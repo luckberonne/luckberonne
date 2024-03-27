@@ -37,9 +37,9 @@ const Projects: React.FC = () => {
     ]
 
     return (
-        <>
+        <div>
             <div>
-                <h1 className="text-6xl">Hobby</h1>
+                <h1 className="text-6xl mb-4">Hobby</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
                 <div className="col-span-1 lg:mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -86,12 +86,12 @@ const Projects: React.FC = () => {
                     ))}
                 </div>
                 <div className="col-span-1 hidden lg:block">
-                    <div className="h-[35rem] w-[35rem] flex justify-center items-center">
+                    <div className="p-8 flex justify-center items-center">
                         <Image src={projects} alt="Projects" />
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

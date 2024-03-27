@@ -51,9 +51,9 @@ const Experience: React.FC = () => {
     ]
 
     return (
-        <>
+        <div>
             <div>
-                <h1 className="text-6xl">Experiencia</h1>
+                <h1 className="text-6xl mb-4">Experiencia</h1>
             </div>
 
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center">
@@ -95,12 +95,12 @@ const Experience: React.FC = () => {
                     ))}
                 </div>
                 <div className="col-span-1 hidden lg:block">
-                    <div className="h-[35rem] w-[35rem] flex justify-center items-center">
+                    <div className=" p-8 flex justify-center items-center">
                         <Image src={experience} alt="Experience" />
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
