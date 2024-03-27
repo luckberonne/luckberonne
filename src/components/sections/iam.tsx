@@ -5,10 +5,40 @@ import { SiGmail } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
 import Image from "next/image";
 import landing from "./../../assets/landing.svg";
+import { motion } from "framer-motion";
+
 
 
 
 const IAM: React.FC = () => {
+    const items = [
+
+        {
+            name: 'Linkedin',
+            color: 'blue',
+            icon: <FaLinkedin size={24} />,
+            link: 'https://www.linkedin.com/in/lucas-beronne/'
+        },
+        {
+            name: 'Gmail',
+            color: 'red',
+            icon: <SiGmail size={24} />,
+            link: 'mailto: lucasberonne@gmail.com'
+        },
+        {
+            name: 'Github',
+            color: 'gray',
+            icon: <FaGithub size={24} />,
+            link: 'https://github.com/luckberonne'
+        },
+        {
+            name: 'CV',
+            color: 'green',
+            icon: <FaDownload size={24} />,
+            link: 'https://drive.google.com/file/d/1umllW_QBbVKjXxl1zO5o96THyfFX_ZVu/view?usp=drive_link'
+        }
+    ];
+
     return (
         <div className="grid lg:grid-cols-2 md:grid-col-1 gap-4 items-center justify-center">
             <div className="col-span-1 grid-rows-4">
@@ -36,32 +66,22 @@ const IAM: React.FC = () => {
                     />
                 </div>
                 <div className="row-span-1 flex gap-4">
-                    <div className="flex justify-center items-center h-14 w-14 rounded-md bg-blue-700">
-                        <a href="https://www.linkedin.com/in/lucas-beronne/" target="_blank">
-                            <FaLinkedin size={24} />
-                        </a>
-                    </div>
-                    <div className="flex justify-center items-center h-14 w-14 rounded-md bg-red-700">
-                        <a href="mailto:lucasberonne@gmail.com">
-                            <SiGmail size={24} />
-                        </a>
-                    </div>
-                    <div className="flex justify-center items-center h-14 w-14 rounded-md bg-gray-700">
-                        <a href="https://github.com/luckberonne" target="_blank">
-                            <FaGithub size={24} />
-                        </a>
-                    </div>
-                    <div className="flex justify-center items-center h-14 w-14 rounded-md bg-green-700">
-                        <a href="https://drive.google.com/file/d/1umllW_QBbVKjXxl1zO5o96THyfFX_ZVu/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                            <FaDownload size={24} />
-                        </a>
-                    </div>
+                    {items.map((item, index) => (
+                        <motion.div initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }} key={index} className="flex justify-center items-center h-14 w-14 rounded-md" style={{ backgroundColor: item.color }}>
+                            <a href={item.link} target="_blank">
+                                {item.icon}
+                            </a>
+                        </motion.div>
+                    ))}
+
 
                 </div>
             </div>
             <div className="col-span-1 hidden lg:block">
                 <div className="h-[35rem] w-[35rem]">
-                    <Image src={landing} alt="Landing"/>
+                    <Image src={landing} alt="Landing" />
                 </div>
             </div>
         </div>

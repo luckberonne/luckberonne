@@ -5,7 +5,7 @@ const Header: React.FC = () => {
         <header className='sticky'>
             <div className='container mx-auto py-2'>
                 <div className="flex justify-between items-center">
-                    <h1 className="text-3xl font-bold leading-tight">
+                    <h1 className="text-2xl font-bold leading-tight">
                         Lucas Beronne
                     </h1>
                     <div>

@@ -52,7 +52,7 @@ const Curses: React.FC = () => {
                         <Image src={curse} alt="Curse" />
                     </div>
                 </div>
-                <div className="col-span-1 mr-4">
+                <div className="col-span-1 lg:mr-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {experiences.map((experience, index) => (
                             <div key={index}>

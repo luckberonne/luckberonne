@@ -54,40 +54,39 @@ const Experience: React.FC = () => {
             <div>
                 <h1 className="text-6xl">Experiencia</h1>
             </div>
-            <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
-                <div className="col-span-1 mr-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        {experiences.map((experience, index) => (
-                            <div key={index}>
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle>{experience.position}</CardTitle>
-                                        <CardDescription>
+
+            <div className="grid lg:grid-cols-2 md:grid-col-1 items-center">
+                <div className="col-span-1 lg:mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    {experiences.map((experience, index) => (
+                        <div key={index} className="flex-grow">
+                            <Card className="h-full flex flex-col justify-between">
+                                <CardHeader>
+                                    <CardTitle>{experience.position}</CardTitle>
+                                    <CardDescription>
                                         <a href={experience.link} target="_blank" rel="noopener noreferrer">{experience.company}</a>
-                                        </CardDescription>
-                                        <CardDescription>{experience.date}</CardDescription>
-                                    </CardHeader>
-                                    <CardFooter className="flex justify-between">
-                                        <Dialog>
-                                            <DialogTrigger asChild>
-                                                <Button>Tareas Realizadas</Button>
-                                            </DialogTrigger>
-                                            <DialogContent className="sm:max-w-[425px]">
-                                                <DialogHeader>
-                                                    <DialogTitle>{experience.position}</DialogTitle>
-                                                    <DialogDescription>
-                                                        {experience.description.split('\n').map((line, index) => (
-                                                            <div key={index}>{line}</div>
-                                                        ))}
-                                                    </DialogDescription>
-                                                </DialogHeader>
-                                            </DialogContent>
-                                        </Dialog>
-                                    </CardFooter>
-                                </Card>
-                            </div>
-                        ))}
-                    </div>
+                                    </CardDescription>
+                                    <CardDescription>{experience.date}</CardDescription>
+                                </CardHeader>
+                                <CardFooter className="flex justify-between">
+                                    <Dialog>
+                                        <DialogTrigger asChild>
+                                            <Button>Tareas Realizadas</Button>
+                                        </DialogTrigger>
+                                        <DialogContent className="sm:max-w-[425px]">
+                                            <DialogHeader>
+                                                <DialogTitle>{experience.position}</DialogTitle>
+                                                <DialogDescription>
+                                                    {experience.description.split('\n').map((line, index) => (
+                                                        <div key={index}>{line}</div>
+                                                    ))}
+                                                </DialogDescription>
+                                            </DialogHeader>
+                                        </DialogContent>
+                                    </Dialog>
+                                </CardFooter>
+                            </Card>
+                        </div>
+                    ))}
                 </div>
                 <div className="col-span-1 hidden lg:block">
                     <div className="h-[35rem] w-[35rem] flex justify-center items-center">

@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
                 <h1 className="text-6xl">Hobby</h1>
             </div>
             <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
-                <div className="col-span-1 mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="col-span-1 lg:mr-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {hobbies.map((hobby, index) => (
                         <div key={index} className="flex-grow">
                             <Card className="h-full flex flex-col justify-between">
