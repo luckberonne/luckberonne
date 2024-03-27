@@ -54,13 +54,6 @@ const IAM: React.FC = () => {
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter.typeString('Desarrollador Full-Stack!')
-                                .callFunction(() => {
-                                    console.log('String typed out!');
-                                })
-                                .pauseFor(200)
-                                .callFunction(() => {
-                                    console.log('All strings were deleted');
-                                })
                                 .start();
                         }}
                     />
