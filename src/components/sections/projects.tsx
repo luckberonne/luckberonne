@@ -33,6 +33,14 @@ const Projects: React.FC = () => {
             chips: ['Typescript', 'Gemini API', 'VSCODE Extension', 'Node.js'],
             pagina: '',
             github: 'https://github.com/luckberonne/genreadme'
+        },
+        {
+            titulo: 'Generador de modelos SP',
+            subtitulo: 'Genera modelos a partir de los sps de una base de datos',
+            description: 'Genera modelos a partir de los sps de una base de datos, para ser usados en un proyecto .NET.',
+            chips: ['.NET', 'API REST', 'Swagger'],
+            pagina: '',
+            github: 'https://github.com/luckberonne/GeneradorModelosAPI'
         }
     ]
 
