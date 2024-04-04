@@ -29,7 +29,7 @@
 
   .dark {
     --background: 221 22 15%;
-    --header-background-opacity: rgba(33, 6, 3, 0.75); /* Nuevo color con opacidad ajustada */
+    --header-background-opacity: rgba(30, 35, 42, 0.75); /* Nuevo color con opacidad ajustada */
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -61,5 +61,6 @@
   }
   header {
     background-color: var(--header-background-opacity);
+    backdrop-filter: blur(2px);
   }
 }
