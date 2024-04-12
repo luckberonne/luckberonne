@@ -7,7 +7,7 @@
 - 🏢 Former new **Software Developers** at [PlanexWare S.A.](https://www.planexware.com/)
 - 🎓 Studies for Software Engineering at [U.T.N. - Universidad Tecnologica Nacional](https://www.frba.utn.edu.ar/)
 - 🏡'Lives in **Argentina**
-- ⚡ **Fun Facts** : 🍕 🏉 🏏 🎥 🚞
+- ⚡ **Fun Facts** : 😁🎮🚴♟️👨‍💻
 
 <br>
 
