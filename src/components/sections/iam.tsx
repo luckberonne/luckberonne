@@ -6,35 +6,9 @@ import Typewriter from 'typewriter-effect';
 import Image from "next/image";
 import landing from "./../../assets/landing.svg";
 import { motion } from "framer-motion";
+import { Item } from './dataProvider';
 
-const IAM: React.FC = () => {
-    const items = [
-
-        {
-            name: 'Linkedin',
-            color: 'blue',
-            icon: <FaLinkedin size={24} />,
-            link: 'https://www.linkedin.com/in/lucas-beronne/'
-        },
-        {
-            name: 'Gmail',
-            color: 'red',
-            icon: <SiGmail size={24} />,
-            link: 'mailto: lucasberonne@gmail.com'
-        },
-        {
-            name: 'Github',
-            color: 'gray',
-            icon: <FaGithub size={24} />,
-            link: 'https://github.com/luckberonne'
-        },
-        {
-            name: 'CV',
-            color: 'green',
-            icon: <FaDownload size={24} />,
-            link: 'https://drive.google.com/file/d/1umllW_QBbVKjXxl1zO5o96THyfFX_ZVu/view?usp=drive_link'
-        }
-    ];
+const IAM: React.FC<{ title: string, items: Item[] }> = ({ title, items }) => {
 
     return (
         <div className="grid lg:grid-cols-2 md:grid-col-1 mt-16 gap-4 items-center justify-center">
@@ -44,7 +18,7 @@ const IAM: React.FC = () => {
                         Hola, soy
                     </h1>
                     <h1 className="text-7xl">
-                        Lucas Beronne
+                        {title}
                     </h1>
                 </div>
                 <div className="row-span-1 min-h-10 text-xl">

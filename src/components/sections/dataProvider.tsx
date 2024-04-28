@@ -18,7 +18,7 @@ interface Experience {
   description: string;
 }
 
-interface Item {
+export interface Item {
   name: string;
   color: string;
   icon: string;
