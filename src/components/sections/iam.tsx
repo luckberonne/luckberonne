@@ -7,9 +7,6 @@ import Image from "next/image";
 import landing from "./../../assets/landing.svg";
 import { motion } from "framer-motion";
 
-
-
-
 const IAM: React.FC = () => {
     const items = [
 

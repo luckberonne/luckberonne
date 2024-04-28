@@ -1,0 +1,256 @@
+{
+    "curses": [
+      {
+        "company": "AACI – ASOSIACION DE CULTURA INGLESA",
+        "position": "INGLES - PRE INTERMEDIATE",
+        "date": "(03/2021 – ACTUALIDAD)",
+        "description": ""
+      },
+      {
+        "company": "Linkedin Learning",
+        "position": "DevOps esencial",
+        "date": "VIRTUAL(04/2024)",
+        "description": "",
+        "certificate": "https://www.linkedin.com/posts/lucas-beronne_devops-activity-7185498013417562112-PoPa"
+      },
+      {
+        "company": "Linkedin Learning",
+        "position": "Java avanzado 2",
+        "date": "VIRTUAL(04/2024)",
+        "description": "",
+        "certificate": "https://www.linkedin.com/posts/lucas-beronne_certificate-of-completion-activity-7181769181283893248-DSsp"
+      },
+      {
+        "company": "I.T.B.A. - Instituto Tecnológico",
+        "position": "CiberSeguridad y Ethical Hacking",
+        "date": "VIRTUAL(07/2023 – 11/2023)",
+        "description": "",
+        "certificate": "https://certtun.vottun.com/badgedetail?id=1cfdbcfc-a63e-46f1-a1c0-f978dd5fd15c"
+      },
+      {
+        "company": "U.T.N. - Centro e-learning",
+        "position": "DevOps, integración y agilidad continua",
+        "date": "VIRTUAL(07/2023 – 09/2023)",
+        "description": "",
+        "certificate": "https://www.linkedin.com/posts/lucas-beronne_activity-7143240537830076417-AFr2"
+      },
+      {
+        "company": "U.T.N. (F.R.B.A)-GOB (Ministerio de educación)",
+        "position": "111mil - Curso de JAVA con SQL",
+        "date": "(03/2019 – 10/2020)",
+        "description": ""
+      }
+    ],
+    "experiences": [
+      {
+        "company": "PlanexWare S.A.",
+        "link": "https://www.planexware.com/",
+        "position": "SSr Fullstack Developer",
+        "date": "2022 - ACTUALIDAD",
+        "description": "Tareas realizadas:\n• Realizar documentación Técnica.\n• Definición de arquitectura y desarrollo de APIs REST\n• Tickets CRM.\n• Desarrollo de Procesos en .net.\n• Capacitación desarrolladores jr.\n• Investigación e implementación de nuevas Tecnologías."
+      },
+      {
+        "company": "PlanexWare S.A.",
+        "link": "https://www.planexware.com/",
+        "position": "Jr Fullstack Developer",
+        "date": "2021 - 2022",
+        "description": "Tareas realizadas:\n • Desarrollo de APIs REST y Páginas Webs con Angular.\n • Migración de soluciones LEGACY.\n • Creación y modificación de SPs (SQL SERVER).\n • Alta de datos en Tablas (SQL SERVER).\n • Automatización de tareas."
+      },
+      {
+        "company": "PlanexWare S.A.",
+        "link": "https://www.planexware.com/",
+        "position": "QA Tester",
+        "date": "2019 - 2021",
+        "description": "Tareas realizadas:\n • Diseñar plan de pruebas.\n • Realizar diversas pruebas (unitarias, regresión, estrés y integración).\n • Registrar resultados Azure."
+      }
+    ],
+    "items": [
+      {
+        "name": "Linkedin",
+        "color": "blue",
+        "icon": "<FaLinkedin size={24} />",
+        "link": "https://www.linkedin.com/in/lucas-beronne/"
+      },
+      {
+        "name": "Gmail",
+        "color": "red",
+        "icon": "<SiGmail size={24} />",
+        "link": "mailto:lucasberonne@gmail.com"
+      },
+      {
+        "name": "Github",
+        "color": "gray",
+        "icon": "<FaGithub size={24} />",
+        "link": "https://github.com/luckberonne"
+      },
+      {
+        "name": "CV",
+        "color": "green",
+        "icon": "<FaDownload size={24} />",
+        "link": "https://drive.google.com/file/d/1umllW_QBbVKjXxl1zO5o96THyfFX_ZVu/view?usp=drive_link"
+      }
+    ],
+    "projects": [
+      {
+        "titulo": "TotalNews",
+        "subtitulo": "Pagina de noticias Falsas",
+        "description": "Pagina de noticias falsas generadas por IA.",
+        "chips": ["Next.js", "PostgreSQL", "Gemini API", "Vercel"],
+        "pagina": "https://totalnews.vercel.app/",
+        "github": "https://github.com/luckberonne/totalnews"
+      },
+      {
+        "titulo": "GenReadme",
+        "subtitulo": "Genera un readme con IA",
+        "description": "Genera un README.md con IA, extrayendo el packaje.json y los nombres de los achivos.",
+        "chips": ["Typescript", "Gemini API", "VSCODE Extension", "Node.js"],
+        "pagina": "",
+        "github": "https://github.com/luckberonne/genreadme"
+      },
+      {
+        "titulo": "Generador de modelos SP",
+        "subtitulo": "Genera modelos a partir de los sps de una base de datos",
+        "description": "Genera modelos a partir de los sps de una base de datos, para ser usados en un proyecto .NET.",
+        "chips": [".NET", "API REST", "Swagger"],
+        "pagina": "",
+        "github": "https://github.com/luckberonne/GeneradorModelosAPI"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Lenguajes",
+        "items": [
+          {
+            "name": "C#",
+            "level": "Advanzado",
+            "color": "blue",
+            "icon": "<SiCsharp size={24} />"
+          },
+          {
+            "name": "Java",
+            "level": "Intermedio",
+            "color": "red",
+            "icon": "<FaJava size={24} />"
+          },
+          {
+            "name": "JavaScript",
+            "level": "Intermedio",
+            "color": "orange",
+            "icon": "<RiJavascriptLine size={24} />"
+          },
+          {
+            "name": "Python",
+            "level": "Basico",
+            "color": "green",
+            "icon": "<FaPython size={24} />"
+          },
+          {
+            "name": "SQL",
+            "level": "Advanzado",
+            "color": "purple",
+            "icon": "<TbSql size={24} />"
+          },
+          {
+            "name": "HTML",
+            "level": "Advanzado",
+            "color": "lightblue",
+            "icon": "<FaHtml5 size={24} />"
+          },
+          {
+            "name": "CSS",
+            "level": "Intermedio",
+            "color": "orange",
+            "icon": "<FaCss3 size={24} />"
+          }
+        ]
+      },
+      {
+        "name": "Frontend Frameworks",
+        "items": [
+          {
+            "name": "Next JS",
+            "level": "Intermedio",
+            "color": "blue",
+            "icon": "<SiNextdotjs size={24} />"
+          },
+          {
+            "name": "Angular",
+            "level": "Advanzado",
+            "color": "red",
+            "icon": "<FaAngular size={24} />"
+          },
+          {
+            "name": "Vue",
+            "level": "Basico",
+            "color": "green",
+            "icon": "<FaVuejs size={24} />"
+          }
+        ]
+      },
+      {
+        "name": "Backend Frameworks",
+        "items": [
+          {
+            "name": ".NET Core",
+            "level": "Advanzado",
+            "color": "gray",
+            "icon": "<SiCsharp size={24} />"
+          },
+          {
+            "name": "Express",
+            "level": "Intermedio",
+            "color": "blue",
+            "icon": "<SiExpress size={24} />"
+          },
+          {
+            "name": "Java",
+            "level": "Basico",
+            "color": "red",
+            "icon": "<FaJava size={24} />"
+          },
+          {
+            "name": "Firebase",
+            "level": "Intermedio",
+            "color": "yellow",
+            "icon": "<IoLogoFirebase size={24} />"
+          },
+          {
+            "name": "Nest JS",
+            "level": "Intermedio",
+            "color": "#3f51b5",
+            "icon": "<SiNestjs size={24} />"
+          }
+        ]
+      },
+      {
+        "name": "Base de Datos",
+        "items": [
+          {
+            "name": "SQL Server",
+            "level": "Advanzado",
+            "color": "green",
+            "icon": "<SiMicrosoftsqlserver size={24} />"
+          },
+          {
+            "name": "MySQL",
+            "level": "Intermedio",
+            "color": "orange",
+            "icon": "<SiMysql size={24} />"
+          },
+          {
+            "name": "PostgreSQL",
+            "level": "Intermedio",
+            "color": "blue",
+            "icon": "<BiLogoPostgresql size={24} />"
+          },
+          {
+            "name": "Firebase",
+            "level": "Basico",
+            "color": "yellow",
+            "icon": "<IoLogoFirebase size={24} />"
+          }
+        ]
+      }
+    ]
+  }
+  
