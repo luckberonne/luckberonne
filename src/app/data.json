@@ -1,4 +1,6 @@
 {
+    "title": "Lucas Berrone",
+    "about": "Soy estudiante de Ingeniería en Sistemas De Información en la Universidad Tecnológica Nacional. Me considero una persona responsable, social, comprometido al emprender y ampliar mis conocimientos en el rubro IT.",
     "curses": [
       {
         "company": "AACI – ASOSIACION DE CULTURA INGLESA",
@@ -178,12 +180,6 @@
             "level": "Advanzado",
             "color": "red",
             "icon": "<FaAngular size={24} />"
-          },
-          {
-            "name": "Vue",
-            "level": "Basico",
-            "color": "green",
-            "icon": "<FaVuejs size={24} />"
           }
         ]
       },

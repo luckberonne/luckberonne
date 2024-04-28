@@ -47,6 +47,8 @@ interface SkillCategory {
 }
 
 interface Data {
+  title: string;
+  about: string;
   curses: Course[];
   experiences: Experience[];
   items: Item[];

@@ -1,4 +1,5 @@
 'use client'
+import { LanguageSelector } from '../language-toogle';
 import { ModeToggle } from '../mode-toogle';
 import React, { useState, useEffect } from 'react';
 
@@ -31,6 +32,9 @@ const Header: React.FC = () => {
                             Lucas Beronne
                         </h1>
                     </a>
+                    <div>
+                        <LanguageSelector />
+                    </div>
                     <div>
                         <ModeToggle />
                     </div>
