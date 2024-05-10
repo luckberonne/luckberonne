@@ -35,7 +35,7 @@ const IAM: React.FC = () => {
             name: 'CV',
             color: 'green',
             icon: <FaDownload size={24} />,
-            link: 'https://drive.google.com/file/d/1umllW_QBbVKjXxl1zO5o96THyfFX_ZVu/view?usp=drive_link'
+            link: 'https://drive.google.com/file/d/1FUb91eyZX37aZO11XEI83FeRR74FbnNV/view?usp=sharing'
         }
     ];
 
