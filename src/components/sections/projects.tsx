@@ -19,6 +19,22 @@ import { motion } from "framer-motion";
 const Projects: React.FC = () => {
     const projects = [
         {
+            titulo: 'Kytame',
+            subtitulo: 'Puntaje de taekwondo',
+            description: 'Puntaje de taekwondo para torneos.',
+            chips: ['Blazor', 'SignalR', '.NET 8', 'Azure'],
+            pagina: 'https://kytame.azurewebsites.net/',
+            github: 'https://github.com/luckberonne/Kytame'
+        },
+        {
+            titulo: 'Casa Minka',
+            subtitulo: 'Pagina de museo virtual',
+            description: 'Pagina de museo virtual de cultura Japonesa.',
+            chips: ['Next.js', 'PostgreSQL', 'Vercel'],
+            pagina: 'https://casaminka.vercel.app/',
+            github: ''
+        },
+        {
             titulo: 'TotalNews',
             subtitulo: 'Pagina de noticias Falsas',
             description: 'Pagina de noticias falsas generadas por IA.',
@@ -41,6 +57,14 @@ const Projects: React.FC = () => {
             chips: ['.NET', 'API REST', 'Swagger'],
             pagina: '',
             github: 'https://github.com/luckberonne/GeneradorModelosAPI'
+        },
+        {
+            titulo: 'CapitanKrik',
+            subtitulo: 'Automatización de tareas Testing',
+            description: 'Automatización de tareas Testing para la lectura y subida de archivos FTP.',
+            chips: ['.NET', 'WPF', 'Windows app', 'Firebase', 'SQL Server'],
+            pagina: '',
+            github: 'https://github.com/luckberonne/CapitanKrik'
         }
     ]
 

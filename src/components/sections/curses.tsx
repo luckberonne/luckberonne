@@ -24,9 +24,37 @@ const Curses: React.FC = () => {
     const curses = [
         {
             company: 'AACI – ASOSIACION DE CULTURA INGLESA',
-            position: 'INGLES - PRE INTERMEDIATE',
+            position: 'INGLES - INTERMEDIATE (B2)',
             date: '(03/2021 – ACTUALIDAD)',
             description: ''
+        },
+        {
+            company: 'Linkedin Learning',
+            position: 'Azure: Introducción a la nube de Microsoft',
+            date: 'VIRTUAL(09/2024)',
+            description: '',
+            certificate: 'https://www.linkedin.com/posts/lucas-beronne_certificate-of-completion-activity-7239613452590153729-8PfJ'
+        },
+        {
+            company: 'Linkedin Learning',
+            position: 'Azure: Microservicios avanzados para desarrollo .NET',
+            date: 'VIRTUAL(08/2024)',
+            description: '',
+            certificate: 'https://www.linkedin.com/posts/lucas-beronne_certificate-of-completion-activity-7228861628375531521-X7yE'
+        },
+        {
+            company: 'Linkedin Learning',
+            position: 'Azure: Microservicios esencial',
+            date: 'VIRTUAL(06/2024)',
+            description: '',
+            certificate: 'https://www.linkedin.com/posts/lucas-beronne_microservicios-microsoftazure-activity-7203565102707412992-LBPq'
+        },
+        {
+            company: 'Linkedin Learning',
+            position: 'Fundamentos de DevOps: Contenedores',
+            date: 'VIRTUAL(05/2024)',
+            description: '',
+            certificate: 'https://www.linkedin.com/posts/lucas-beronne_contenedorizaciaejn-activity-7187649312900726785-P-qu'
         },
         {
             company: 'Linkedin Learning',
@@ -83,7 +111,7 @@ const Curses: React.FC = () => {
             <div>
                 <h1 className="text-6xl mb-4">Cursos</h1>
             </div>
-            <div className="grid lg:grid-cols-2 md:grid-col-1 items-center justify-center">
+            <div className="grid lg:grid-cols-2 md:grid-col-1 items-center">
                 <div className="col-span-1 hidden lg:block">
                     <div className=" p-10 flex justify-center items-center">
                         <Image src={cursesImage} alt="Curses" />
