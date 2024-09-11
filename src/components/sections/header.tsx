@@ -1,5 +1,6 @@
 'use client'
 import { ModeToggle } from '../mode-toogle';
+import { LanguageToggle } from '../language-toogle';
 import React, { useState, useEffect } from 'react';
 
 const scrollToBottom = () => {
@@ -33,6 +34,7 @@ const Header: React.FC = () => {
                     </a>
                     <div>
                         <ModeToggle />
+                        <LanguageToggle />
                     </div>
                 </div>
             </div>
