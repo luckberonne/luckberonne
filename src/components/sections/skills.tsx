@@ -27,7 +27,7 @@ const Skills: React.FC = () => {
             items: [
                 {
                     name: 'C#',
-                    level: 'Advanzado',
+                    level: 'Avanzado',
                     color: 'blue',
                     icon: <SiCsharp size={24} />
                 },
@@ -51,7 +51,7 @@ const Skills: React.FC = () => {
                 },
                 {
                     name: 'SQL',
-                    level: 'Advanzado',
+                    level: 'Avanzado',
                     color: 'purple',
                     icon: <TbSql size={24} />
                 },
@@ -74,22 +74,16 @@ const Skills: React.FC = () => {
             items: [
                 {
                     name: 'Next JS',
-                    level: 'Intermedio',
+                    level: 'Basico',
                     color: 'blue',
                     icon: <SiNextdotjs size={24} />
                 },
                 {
                     name: 'Angular',
-                    level: 'Advanzado',
+                    level: 'Avanzado',
                     color: 'red',
                     icon: <FaAngular size={24} />
-                },
-                {
-                    name: 'Vue',
-                    level: 'Basico',
-                    color: 'green',
-                    icon: <FaVuejs size={24} />
-                },
+                }
             ]
         },
         {
@@ -97,34 +91,16 @@ const Skills: React.FC = () => {
             items: [
                 {
                     name: '.NET Core',
-                    level: 'Advanzado',
+                    level: 'Avanzado',
                     color: 'gray',
                     icon: <SiCsharp size={24} />
-                },
-                {
-                    name: 'Express',
-                    level: 'Intermedio',
-                    color: 'blue',
-                    icon: <SiExpress size={24} />
                 },
                 {
                     name: 'Java',
                     level: 'Basico',
                     color: 'red',
                     icon: <FaJava size={24} />
-                },
-                {
-                    name: 'Firebase',
-                    level: 'Intermedio',
-                    color: 'yellow',
-                    icon: <IoLogoFirebase size={24} />
-                },
-                {
-                    name: 'Nest JS',
-                    level: 'Intermedio',
-                    color: '#3f51b5',
-                    icon: <SiNestjs size={24} />
-                },
+                }
             ]
         },
         {
@@ -132,7 +108,7 @@ const Skills: React.FC = () => {
             items: [
                 {
                     name: 'SQL Server',
-                    level: 'Advanzado',
+                    level: 'Avanzado',
                     color: 'green',
                     icon: <SiMicrosoftsqlserver size={24} />
                 },
