@@ -83,7 +83,19 @@ const Skills: React.FC = () => {
                     level: 'Avanzado',
                     color: 'red',
                     icon: <FaAngular size={24} />
-                }
+                },
+            {
+                name: 'Blazor',
+                level: 'Intermedio',
+                color: 'purple',
+                icon: <SiCsharp size={24} />
+            },
+            {
+                name: 'ASP.NET',
+                level: 'Avanzado',
+                color: 'blue',
+                icon: <SiCsharp size={24} />
+            }
             ]
         },
         {
