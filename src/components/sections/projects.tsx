@@ -19,6 +19,22 @@ import { motion } from "framer-motion";
 const Projects: React.FC = () => {
     const projects = [
         {
+            titulo: 'Tae Guk',
+            subtitulo: 'Pagina de escuela de taekwondo',
+            description: 'Landing page de escuela de taekwondo',
+            chips: ['Astro js', 'Vercel'],
+            pagina: 'https://taeguk.vercel.app/',
+            github: 'https://github.com/luckberonne/TaeGuk'
+        },
+        {
+            titulo: 'GentoPass',
+            subtitulo: 'Generador de contraseñas',
+            description: 'Generador de contraseña seguras, con un historial.',
+            chips: ['.NET', 'Blazor', 'Azure', 'Docker'],
+            pagina: '',
+            github: 'https://github.com/luckberonne/GentoPass'
+        },
+        {
             titulo: 'Kytame',
             subtitulo: 'Puntaje de taekwondo',
             description: 'Puntaje de taekwondo para torneos.',

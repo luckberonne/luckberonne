@@ -24,10 +24,17 @@ import { motion } from "framer-motion";
 const Experience: React.FC = () => {
     const experiences = [
         {
+            company: 'Banco Galicia',
+            link: 'https://www.galicia.ar/personas/',
+            position: 'Developer .NET',
+            date: '2024 - ACTUALIDAD',
+            description: ""
+        },
+        {
             company: 'PlanexWare S.A.',
             link: 'https://www.planexware.com/',
             position: 'SSr Fullstack Developer',
-            date: '2022 - ACTUALIDAD',
+            date: '2022 - 2024',
             description: "Tareas realizadas:\n• Realizar documentación Técnica.\n• Definición de arquitectura y desarrollo de APIs REST\n• Tickets CRM.\n• Desarrollo de Procesos en .net.\n• Capacitación desarrolladores jr.\n• Investigación e implementación de nuevas Tecnologías."
         },
         {
