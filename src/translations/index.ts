@@ -56,7 +56,7 @@ export const translations = {
     education: 'Educación',
     courses: 'Certificaciones',
     about: 'Sobre Mí',
-    viewProject: 'Demo en Vivo',
+    viewProject: 'Demo',
     viewCode: 'Ver Código',
     viewCertificate: 'Ver Certificado',
     aboutText:
