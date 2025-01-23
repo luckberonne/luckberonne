@@ -1,0 +1,82 @@
+import React from 'react';
+import { Cpu } from 'lucide-react';
+
+interface SkillsProps {
+  t: any;
+  isDark: boolean;
+}
+
+const skillCategories = {
+  frontend: [
+    { name: "HTML/CSS", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "JavaScript/TypeScript", url: "https://www.typescriptlang.org/docs/" },
+    { name: "React/Next.js", url: "https://react.dev/" },
+    { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
+    { name: "Redux", url: "https://redux.js.org/" },
+    { name: "Vue.js", url: "https://vuejs.org/guide/introduction.html" }
+  ],
+  backend: [
+    { name: "Node.js", url: "https://nodejs.org/docs/latest/api/" },
+    { name: "Python", url: "https://docs.python.org/3/" },
+    { name: "Express", url: "https://expressjs.com/" },
+    { name: "NestJS", url: "https://docs.nestjs.com/" },
+    { name: "REST APIs", url: "https://restfulapi.net/" },
+    { name: "GraphQL", url: "https://graphql.org/learn/" }
+  ],
+  database: [
+    { name: "PostgreSQL", url: "https://www.postgresql.org/docs/" },
+    { name: "MongoDB", url: "https://docs.mongodb.com/" },
+    { name: "Redis", url: "https://redis.io/documentation" },
+    { name: "Prisma", url: "https://www.prisma.io/docs/" },
+    { name: "SQL", url: "https://www.w3schools.com/sql/" },
+    { name: "TypeORM", url: "https://typeorm.io/" }
+  ],
+  tools: [
+    { name: "Git", url: "https://git-scm.com/doc" },
+    { name: "Docker", url: "https://docs.docker.com/" },
+    { name: "AWS", url: "https://docs.aws.amazon.com/" },
+    { name: "CI/CD", url: "https://docs.github.com/en/actions" },
+    { name: "Linux", url: "https://www.kernel.org/doc/html/latest/" },
+    { name: "Kubernetes", url: "https://kubernetes.io/docs/home/" }
+  ]
+};
+
+export function Skills({ t, isDark }: SkillsProps) {
+  return (
+    <section className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center space-x-4 mb-12">
+          <Cpu className="text-blue-400" size={32} />
+          <h2 className="text-4xl font-bold">{t.skills.title}</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {Object.entries(skillCategories).map(([category, skills]) => (
+            <div 
+              key={category} 
+              className={`skill-card ${
+                isDark ? 'bg-gray-800/50' : 'bg-white shadow-lg'
+              } p-4 sm:p-6 rounded-lg hover:shadow-xl transition-all`}
+            >
+              <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-4">{t.skills[category]}</h3>
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                {skills.map((skill, index) => (
+                  <a
+                    key={index}
+                    href={skill.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${
+                      isDark ? 'bg-gray-700/50 hover:bg-blue-500/10' : 'bg-gray-50 hover:bg-blue-50'
+                    } p-2 sm:p-3 rounded-lg transition-all hover:transform hover:scale-105 cursor-pointer`}
+                  >
+                    <p className="font-semibold text-xs sm:text-sm text-center break-words">{skill.name}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
