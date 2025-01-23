@@ -24,7 +24,7 @@ export function About({ t, isDark }: AboutProps) {
                 className="w-48 h-48 rounded-lg object-cover shadow-lg transition-transform duration-300 group-hover:scale-105"
               />
               <a
-                href="https://github.com/lucasberonne"
+                href="https://github.com/luckberonne"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`absolute bottom-4 right-4 p-2 rounded-full ${
@@ -39,7 +39,7 @@ export function About({ t, isDark }: AboutProps) {
                 {t.aboutText}
               </p>
               <a
-                href="https://github.com/lucasberonne"
+                href="https://github.com/luckberonne"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`inline-flex items-center px-4 py-2 rounded-lg ${

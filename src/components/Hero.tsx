@@ -64,12 +64,11 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
       <div className="absolute inset-0 animated-bg"></div>
       <div ref={particlesRef} className="particles"></div>
       <div
-        className={`transform transition-all duration-1000 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        } relative z-10`}
+        className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          } relative z-10`}
       >
         <div className="floating">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text text-center">
             Lucas Ariel Beronne
           </h1>
           <p className="text-xl md:text-2xl text-center mb-8 text-opacity-80">
@@ -82,11 +81,10 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               href="https://github.com/luckberonne"
               target="_blank"
               rel="noopener noreferrer"
-              className={`social-icon ${
-                isDark
+              className={`social-icon ${isDark
                   ? 'text-gray-300 hover:text-blue-400'
                   : 'text-gray-600 hover:text-blue-500'
-              } transition-colors`}
+                } transition-colors`}
             >
               <Github size={24} />
             </a>
@@ -96,11 +94,10 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               href="https://www.linkedin.com/in/lucas-beronne/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`social-icon ${
-                isDark
+              className={`social-icon ${isDark
                   ? 'text-gray-300 hover:text-blue-400'
                   : 'text-gray-600 hover:text-blue-500'
-              } transition-colors`}
+                } transition-colors`}
             >
               <Linkedin size={24} />
             </a>
@@ -110,11 +107,10 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               href="https://drive.google.com/file/d/1FUb91eyZX37aZO11XEI83FeRR74FbnNV/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className={`social-icon ${
-                isDark
+              className={`social-icon ${isDark
                   ? 'text-gray-300 hover:text-blue-400'
                   : 'text-gray-600 hover:text-blue-500'
-              } transition-colors`}
+                } transition-colors`}
             >
               <Download size={24} />
             </a>
@@ -124,11 +120,10 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               href="mailto: lucasberonne@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={`social-icon ${
-                isDark
+              className={`social-icon ${isDark
                   ? 'text-gray-300 hover:text-blue-400'
                   : 'text-gray-600 hover:text-blue-500'
-              } transition-colors`}
+                } transition-colors`}
             >
               <Mail size={24} />
             </a>
