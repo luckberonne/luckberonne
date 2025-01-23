@@ -91,7 +91,7 @@ function App() {
         href="https://www.linkedin.com/in/lucas-beronne"
         target="_blank"
         rel="noopener noreferrer"
-        className={`fixed bottom-6 right-6 p-4 rounded-full shadow-lg transition-all duration-300 transform ${
+        className={`fixed bottom-6 right-6 p-4 rounded-full shadow-lg transition-all duration-300 transform z-[100]${
           showLinkedIn
             ? 'translate-y-0 opacity-100'
             : 'translate-y-16 opacity-0 pointer-events-none'
@@ -99,7 +99,7 @@ function App() {
           isDark
             ? 'bg-gray-800 hover:bg-gray-700'
             : 'bg-white hover:bg-gray-100'
-        } hover:scale-110`}
+        } hover:scale-110 z-[100]`}
       >
         <Linkedin className="text-blue-400" size={24} />
       </a>
