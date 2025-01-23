@@ -12,32 +12,32 @@ const skillCategories = {
     { name: "JavaScript/TypeScript", url: "https://www.typescriptlang.org/docs/" },
     { name: "React/Next.js", url: "https://react.dev/" },
     { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
-    { name: "Redux", url: "https://redux.js.org/" },
-    { name: "Vue.js", url: "https://vuejs.org/guide/introduction.html" }
+    { name: "Blazor", url: "https://dotnet.microsoft.com/es-es/apps/aspnet/web-apps/blazor" },
+    { name: "Angular/AngularJS", url: "https://angular.dev/" }
   ],
   backend: [
+    { name: ".NET", url: "https://dotnet.microsoft.com/es-es/download" },
     { name: "Node.js", url: "https://nodejs.org/docs/latest/api/" },
-    { name: "Python", url: "https://docs.python.org/3/" },
-    { name: "Express", url: "https://expressjs.com/" },
+    { name: "Java", url: "https://expressjs.com/" },
     { name: "NestJS", url: "https://docs.nestjs.com/" },
     { name: "REST APIs", url: "https://restfulapi.net/" },
-    { name: "GraphQL", url: "https://graphql.org/learn/" }
+    { name: "SOAP", url: "https://graphql.org/learn/" }
   ],
   database: [
     { name: "PostgreSQL", url: "https://www.postgresql.org/docs/" },
-    { name: "MongoDB", url: "https://docs.mongodb.com/" },
+    { name: "SQL Server", url: "https://www.microsoft.com/es-es/sql-server/sql-server-downloads?msockid=3c1366fe0c8968971239738f0df56934" },
     { name: "Redis", url: "https://redis.io/documentation" },
     { name: "Prisma", url: "https://www.prisma.io/docs/" },
     { name: "SQL", url: "https://www.w3schools.com/sql/" },
-    { name: "TypeORM", url: "https://typeorm.io/" }
+    { name: "Entity Framework", url: "https://learn.microsoft.com/es-es/ef/" }
   ],
   tools: [
-    { name: "Git", url: "https://git-scm.com/doc" },
+    { name: "Git/GitHub", url: "https://git-scm.com/doc" },
     { name: "Docker", url: "https://docs.docker.com/" },
-    { name: "AWS", url: "https://docs.aws.amazon.com/" },
-    { name: "CI/CD", url: "https://docs.github.com/en/actions" },
-    { name: "Linux", url: "https://www.kernel.org/doc/html/latest/" },
-    { name: "Kubernetes", url: "https://kubernetes.io/docs/home/" }
+    { name: "Azure", url: "https://azure.microsoft.com/es-es/" },
+    { name: "OpenShift", url: "https://www.redhat.com/es/technologies/cloud-computing/openshift" },
+    { name: "Jenkins", url: "https://www.jenkins.io/" },
+    { name: "AzureDevops/Jira", url: "https://www.atlassian.com/es/software/jira" }
   ]
 };
 
