@@ -11,7 +11,7 @@ const projects = [
     title: 'Tae Guk',
     description: 'Landing page de escuela de taekwondo',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
     demoUrl: 'https://taeguk.vercel.app/',
     githubUrl: 'https://github.com/lucasberonne/TaeGuk',
     technologies: ['Astro js', 'Vercel'],
@@ -20,8 +20,8 @@ const projects = [
     title: 'GentoPass',
     description: 'Generador de contraseñas seguras, con un historial.',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
-    demoUrl: '',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
+    demoUrl: 'https://gentopass.azurewebsites.net/',
     githubUrl: 'https://github.com/lucasberonne/GentoPass',
     technologies: ['.NET', 'Blazor', 'Azure', 'Docker'],
   },
@@ -29,7 +29,7 @@ const projects = [
     title: 'Kytame',
     description: 'Puntaje de taekwondo para torneos.',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
     demoUrl: 'https://kytame.azurewebsites.net/',
     githubUrl: 'https://github.com/lucasberonne/Kytame',
     technologies: ['Blazor', 'SignalR', '.NET 8', 'Azure'],
@@ -38,7 +38,7 @@ const projects = [
     title: 'Casa Minka',
     description: 'Página de museo virtual de cultura japonesa.',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
     demoUrl: 'https://casaminka.vercel.app/',
     githubUrl: '',
     technologies: ['Next.js', 'PostgreSQL', 'Vercel'],
@@ -47,7 +47,7 @@ const projects = [
     title: 'TotalNews',
     description: 'Página de noticias falsas generadas por IA.',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
     demoUrl: 'https://totalnews.vercel.app/',
     githubUrl: 'https://github.com/lucasberonne/totalnews',
     technologies: ['Next.js', 'PostgreSQL', 'Gemini API', 'Vercel'],
@@ -57,7 +57,7 @@ const projects = [
     description:
       'Genera un README.md con IA, extrayendo el package.json y los nombres de los archivos.',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
     demoUrl: '',
     githubUrl: 'https://github.com/lucasberonne/genreadme',
     technologies: ['TypeScript', 'Gemini API', 'VSCODE Extension', 'Node.js'],
@@ -67,7 +67,7 @@ const projects = [
     description:
       'Genera modelos a partir de los sps de una base de datos, para proyectos .NET.',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
     demoUrl: '',
     githubUrl: 'https://github.com/lucasberonne/GeneradorModelosAPI',
     technologies: ['.NET', 'API REST', 'Swagger'],
@@ -77,7 +77,7 @@ const projects = [
     description:
       'Automatización de tareas Testing para la lectura y subida de archivos FTP.',
     image:
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800',
     demoUrl: '',
     githubUrl: 'https://github.com/lucasberonne/CapitanKrik',
     technologies: ['.NET', 'WPF', 'Windows app', 'Firebase', 'SQL Server'],
