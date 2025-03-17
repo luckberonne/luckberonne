@@ -17,10 +17,10 @@ const educations: Education[] = [
     description: 'Especialización en desarrollo de software y sistemas de información empresariales.',
   },
   {
-    title: 'Técnico en Programación',
-    institution: 'Instituto Superior de Tecnología',
-    institutionUrl: 'https://www.ist.edu/',
-    period: '2018 - 2020',
+    title: 'Analista en Sistemas',
+    institution: 'ORT Argentina',
+    institutionUrl: 'https://landing.ort.edu.ar/sistemas',
+    period: '2025 - Actualidad',
     description: 'Formación técnica en programación y desarrollo de aplicaciones.',
   }
 ];
