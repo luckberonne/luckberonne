@@ -12,7 +12,7 @@ const defaultImageUrl =
 const projects = [
   {
     title: 'ControlAR',
-    description: 'Gestion de stock y software de Ventas.',
+    description: 'Sistema de gestión de stock y ventas con soporte multi-tenant.',
     image: defaultImageUrl,
     demoUrl: 'https://controlar.azurewebsites.net/',
     githubUrl: '',
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'Namur',
-    description: 'Landing de una empresa de productos alimenticios de la más alta calidad para el mercado mayorista.',
+    description: 'Landing page para una empresa de productos alimenticios de alta calidad.',
     image: defaultImageUrl,
     demoUrl: 'https://www.namur.com.py/',
     githubUrl: '',
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: 'Tae Guk',
-    description: 'Landing page de escuela de taekwondo',
+    description: 'Página web para una escuela de taekwondo.',
     image: defaultImageUrl,
     demoUrl: 'https://taeguk.vercel.app/',
     githubUrl: 'https://github.com/lucasberonne/TaeGuk',
@@ -36,15 +36,23 @@ const projects = [
   },
   {
     title: 'KaizenCode',
-    description: 'Landing de empresa consultora IT.',
+    description: 'Landing page para una consultora IT con enfoque en SEO y chatbots.',
     image: defaultImageUrl,
     demoUrl: 'https://www.kaizencode.com.ar/',
     githubUrl: '',
     technologies: ['Vite js', 'Vercel', 'Tailwind CSS', 'TypeScript', 'Chatbot', 'SEO', 'Gemini'],
   },
   {
+    title: 'DolarHoy',
+    description: 'Aplicación para consultar el valor del dólar en tiempo real.',
+    image: defaultImageUrl,
+    demoUrl: 'https://dolar-hoy-labs.vercel.app/',
+    githubUrl: '',
+    technologies: ['Vite js', 'Vercel', 'API REST'],
+  },
+  {
     title: 'GentoPass',
-    description: 'Generador de contraseñas seguras, con un historial.',
+    description: 'Generador de contraseñas seguras con historial de uso.',
     image: defaultImageUrl,
     demoUrl: 'https://gentopass.azurewebsites.net/',
     githubUrl: 'https://github.com/lucasberonne/GentoPass',
@@ -52,7 +60,7 @@ const projects = [
   },
   {
     title: 'Kytame',
-    description: 'Puntaje de taekwondo para torneos.',
+    description: 'Sistema de puntuación para torneos de taekwondo en tiempo real.',
     image: defaultImageUrl,
     demoUrl: 'https://kytame.azurewebsites.net/',
     githubUrl: 'https://github.com/lucasberonne/Kytame',
@@ -60,7 +68,7 @@ const projects = [
   },
   {
     title: 'Casa Minka',
-    description: 'Página de museo virtual de cultura japonesa.',
+    description: 'Museo virtual de cultura japonesa con contenido interactivo.',
     image: defaultImageUrl,
     demoUrl: 'https://casaminka.vercel.app/',
     githubUrl: '',
@@ -68,7 +76,7 @@ const projects = [
   },
   {
     title: 'TotalNews',
-    description: 'Página de noticias falsas generadas por IA.',
+    description: 'Generador de noticias ficticias utilizando inteligencia artificial.',
     image: defaultImageUrl,
     demoUrl: 'https://totalnews.vercel.app/',
     githubUrl: 'https://github.com/lucasberonne/totalnews',
@@ -76,8 +84,7 @@ const projects = [
   },
   {
     title: 'GenReadme',
-    description:
-      'Genera un README.md con IA, extrayendo el package.json y los nombres de los archivos.',
+    description: 'Herramienta para generar archivos README.md automáticamente con IA.',
     image: defaultImageUrl,
     demoUrl: '',
     githubUrl: 'https://github.com/lucasberonne/genreadme',
@@ -85,8 +92,7 @@ const projects = [
   },
   {
     title: 'Generador de modelos SP',
-    description:
-      'Genera modelos a partir de los sps de una base de datos, para proyectos .NET.',
+    description: 'Generador de modelos para proyectos .NET a partir de stored procedures.',
     image: defaultImageUrl,
     demoUrl: '',
     githubUrl: 'https://github.com/lucasberonne/GeneradorModelosAPI',
@@ -94,8 +100,7 @@ const projects = [
   },
   {
     title: 'CapitanKrik',
-    description:
-      'Automatización de tareas Testing para la lectura y subida de archivos FTP.',
+    description: 'Automatización de tareas de testing para manejo de archivos FTP.',
     image: defaultImageUrl,
     demoUrl: '',
     githubUrl: 'https://github.com/lucasberonne/CapitanKrik',
