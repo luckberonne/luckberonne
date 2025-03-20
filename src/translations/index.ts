@@ -60,7 +60,7 @@ export const translations = {
     viewCode: 'Ver Código',
     viewCertificate: 'Ver Certificado',
     aboutText:
-      'Soy un desarrollador fullstack apasionado con más de 5 años de experiencia construyendo aplicaciones web. Me encanta crear soluciones elegantes para problemas complejos y estoy constantemente aprendiendo nuevas tecnologías para mantenerme a la vanguardia del desarrollo de software. Cuando no estoy programando, puedes encontrarme contribuyendo a proyectos de código abierto o mentoreando a desarrolladores aspirantes.',
+      'Soy un desarrollador fullstack apasionado con más de 5 años de experiencia construyendo en diferentes desarrollos. Me encanta crear soluciones para problemas y estoy constantemente aprendiendo nuevas tecnologías para mantenerme a la vanguardia del desarrollo de software.',
     experienceDetails: {
       responsibilities: 'Responsabilidades Principales',
       technologies: 'Tecnologías Utilizadas',
