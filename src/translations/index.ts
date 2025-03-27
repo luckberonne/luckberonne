@@ -1,6 +1,7 @@
 export const translations = {
   en: {
     role: 'Senior Software Developer | Crafting Digital Experiences',
+    linkCV: 'https://drive.google.com/file/d/1GbHLgY9EYl5T_7nqnCD6j-2VLLJk9Hj9/view?usp=sharing',
     experience: 'Professional Experience',
     projects: 'Portfolio Projects',
     skills: {
@@ -44,6 +45,7 @@ export const translations = {
   },
   es: {
     role: 'Desarrollador de Software Senior | Creando Experiencias Digitales',
+    linkCV: 'https://drive.google.com/file/d/1kcC29pbk5ZtwEvcGqzZVHM4KmzD0RnYC/view?usp=sharing',
     experience: 'Experiencia Profesional',
     projects: 'Proyectos del Portafolio',
     skills: {

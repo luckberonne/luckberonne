@@ -14,6 +14,7 @@ interface HeroProps {
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
   t: {
     role: string;
+    linkCV: string;
   };
 }
 
@@ -25,9 +26,10 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
 
     // Smooth scroll behavior
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', (e: Event) => {
         e.preventDefault();
-        const href = this.getAttribute('href');
+        const target = e.currentTarget as HTMLAnchorElement;
+        const href = target.getAttribute('href');
         if (href) {
           document.querySelector(href)?.scrollIntoView({
             behavior: 'smooth',
@@ -104,7 +106,7 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
           </div>
           <div className="social-icon-wrapper">
             <a
-              href="https://drive.google.com/file/d/1FUb91eyZX37aZO11XEI83FeRR74FbnNV/view?usp=sharing"
+              href= {t.linkCV}
               target="_blank"
               rel="noopener noreferrer"
               className={`social-icon ${isDark
