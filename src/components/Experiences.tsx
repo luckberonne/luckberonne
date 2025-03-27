@@ -25,7 +25,7 @@ const experiences: Experience[] = [
       'Optimización de sistemas y procesos bancarios.',
       'Implementación de nuevos servicios digitales.',
     ],
-    technologies: ['.NET', 'SQL Server', 'REST APIs'],
+    technologies: ['.NET', 'SQL Server', 'REST APIs', 'React', 'Jenkins', 'NestJS'],
   },
   {
     title: 'SSr Fullstack Developer',
