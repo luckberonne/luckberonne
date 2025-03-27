@@ -13,7 +13,7 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    title: 'Developer .NET',
+    title: 'SR Developer',
     company: 'Banco Galicia',
     companyUrl: 'https://www.galicia.ar/personas/',
     period: '2024 - ACTUALIDAD',
@@ -21,6 +21,7 @@ const experiences: Experience[] = [
       'Desarrollo de soluciones .NET para optimizar sistemas bancarios y servicios digitales.',
     responsibilities: [
       'Desarrollo y mantenimiento de aplicaciones en .NET.',
+      'Desarrollo y mantenimiento de aplicaciones con React.',
       'Optimización de sistemas y procesos bancarios.',
       'Implementación de nuevos servicios digitales.',
     ],
