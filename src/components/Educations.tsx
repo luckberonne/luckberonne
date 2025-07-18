@@ -8,29 +8,32 @@ interface Education {
   description: string;
 }
 
-const educations: Education[] = [
-  {
-    title: 'Ingeniería en Sistemas de Información',
-    institution: 'Universidad Tecnológica Nacional',
-    institutionUrl: 'https://www.utn.edu.ar/',
-    period: '2020 - Actualidad',
-    description: 'Especialización en desarrollo de software y sistemas de información empresariales.',
-  },
-  {
-    title: 'Analista en Sistemas',
-    institution: 'ORT Argentina',
-    institutionUrl: 'https://landing.ort.edu.ar/sistemas',
-    period: '2025 - Actualidad',
-    description: 'Formación técnica en programación y desarrollo de aplicaciones.',
-  }
-];
-
 interface EducationsProps {
-  t: any;
+  t: {
+    education: string;
+    educationsData?: Education[];
+  };
   isDark: boolean;
 }
 
 export function Educations({ t, isDark }: EducationsProps) {
+  // Combinar datos estáticos con traducciones
+  const educations: Education[] = [
+    {
+      title: t.educationsData?.[0]?.title || 'Ingeniería en Sistemas de Información',
+      institution: 'Universidad Tecnológica Nacional',
+      institutionUrl: 'https://www.utn.edu.ar/',
+      period: t.educationsData?.[0]?.period || '2020 - Actualidad',
+      description: t.educationsData?.[0]?.description || 'Especialización en desarrollo de software y sistemas de información empresariales.',
+    },
+    {
+      title: t.educationsData?.[1]?.title || 'Analista en Sistemas',
+      institution: 'ORT Argentina',
+      institutionUrl: 'https://landing.ort.edu.ar/sistemas',
+      period: t.educationsData?.[1]?.period || '2025 - Actualidad',
+      description: t.educationsData?.[1]?.description || 'Formación técnica en programación y desarrollo de aplicaciones.',
+    }
+  ];
   return (
     <section
       id="education"

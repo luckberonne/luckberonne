@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Code2, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 
 import CombiGoImg from '../assets/images/CombiGo.png';
@@ -21,122 +21,124 @@ interface ProjectsProps {
 const defaultImageUrl =
   'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800';
 
-const projects = [
-  {
-    title: 'CombiGo',
-    description: 'CombiGo es una aplicación web full-stack diseñada para una empresa de transporte de media distancia.',
-    image: CombiGoImg,
-    demoUrl: 'https://combi-go.vercel.app/',
-    technologies: ['Next.js', 'Firebase', 'NoSQL', 'Vercel'],
-  },
-  {
-    title: 'ReciClick',
-    description: 'ReciClick te ayuda a identificar residuos y clasificarlos en el contenedor correcto usando una foto.',
-    image: ReciClickImg,
-    demoUrl: 'https://reci-click.vercel.app/',
-    technologies: ['Next.js', 'Firebase', 'Vercel'],
-  },
-  {
-    title: 'Kytame',
-    description: 'Sistema de puntuación para torneos de taekwondo en tiempo real.',
-    image: KytameImg,
-    demoUrl: 'https://kytame.azurewebsites.net/',
-    githubUrl: 'https://github.com/lucasberonne/Kytame',
-    technologies: ['Blazor', 'SignalR', '.NET 8', 'Azure'],
-  },
-  {
-    title: 'Namur',
-    description: 'Landing page para una empresa de productos alimenticios de alta calidad.',
-    image: NamurImg,
-    demoUrl: 'https://www.namur.com.py/',
-    githubUrl: '',
-    technologies: ['Astro js', 'Vercel'],
-  },
-  {
-    title: 'GentoPass',
-    description: 'Generador de contraseñas seguras con historial de uso.',
-    image: GentoPassImg,
-    demoUrl: 'https://gentopass.azurewebsites.net/',
-    githubUrl: 'https://github.com/lucasberonne/GentoPass',
-    technologies: ['.NET', 'Blazor', 'Azure', 'Docker'],
-  },
-  {
-    title: 'KaizenCode',
-    description: 'Landing page para una consultora IT con enfoque en SEO y chatbots.',
-    image: KaizenCodeImg,
-    demoUrl: 'https://www.kaizencode.com.ar/',
-    githubUrl: '',
-    technologies: ['Vite js', 'Vercel', 'Tailwind CSS', 'TypeScript', 'Chatbot', 'SEO', 'Gemini'],
-  },
-  {
-    title: 'ControlAR',
-    description: 'Sistema de gestión de stock y ventas con soporte multi-tenant.',
-    image: ControlARImg,
-    demoUrl: 'https://controlar.azurewebsites.net/',
-    githubUrl: '',
-    technologies: ['.NET', 'Blazor', 'Azure', 'Docker', 'Multi-tenant', 'SQL Server'],
-  },
-  {
-    title: 'Tae Guk',
-    description: 'Página web para una escuela de taekwondo.',
-    image: TaeGukImg,
-    demoUrl: 'https://taeguk.vercel.app/',
-    githubUrl: 'https://github.com/lucasberonne/TaeGuk',
-    technologies: ['Astro js', 'Vercel'],
-  },
-  {
-    title: 'GenReadme',
-    description: 'Herramienta para generar archivos README.md automáticamente con IA.',
-    image: defaultImageUrl,
-    demoUrl: '',
-    githubUrl: 'https://github.com/lucasberonne/genreadme',
-    technologies: ['TypeScript', 'Gemini API', 'VSCODE Extension', 'Node.js'],
-  },
-  {
-    title: 'Generador de modelos SP',
-    description: 'Generador de modelos para proyectos .NET a partir de stored procedures.',
-    image: defaultImageUrl,
-    demoUrl: '',
-    githubUrl: 'https://github.com/lucasberonne/GeneradorModelosAPI',
-    technologies: ['.NET', 'API REST', 'Swagger'],
-  },
-  {
-    title: 'DolarHoy',
-    description: 'Aplicación para consultar el valor del dólar en tiempo real.',
-    image: DolarHoyImg,
-    demoUrl: 'https://dolar-hoy-labs.vercel.app/',
-    githubUrl: '',
-    technologies: ['Vite js', 'Vercel', 'API REST'],
-  },
-  {
-    title: 'Casa Minka',
-    description: 'Museo virtual de cultura japonesa con contenido interactivo.',
-    image: CasaMinkaImg,
-    demoUrl: 'https://casaminka.vercel.app/',
-    githubUrl: '',
-    technologies: ['Next.js', 'PostgreSQL', 'Vercel'],
-  },
-  {
-    title: 'TotalNews',
-    description: 'Generador de noticias ficticias utilizando inteligencia artificial.',
-    image: TotalNewsImg,
-    demoUrl: 'https://totalnews.vercel.app/',
-    githubUrl: 'https://github.com/lucasberonne/totalnews',
-    technologies: ['Next.js', 'PostgreSQL', 'Gemini API', 'Vercel'],
-  },
-  {
-    title: 'CapitanKrik',
-    description: 'Automatización de tareas de testing para manejo de archivos FTP.',
-    image: defaultImageUrl,
-    demoUrl: '',
-    githubUrl: 'https://github.com/lucasberonne/CapitanKrik',
-    technologies: ['.NET', 'WPF', 'Windows app', 'Firebase', 'SQL Server'],
-  },
-];
-
 export function Projects({ t, isDark }: ProjectsProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
+  
+  // Combinar datos estáticos con traducciones
+  const projects = [
+    {
+      title: 'CombiGo',
+      description: t.projectsData[0]?.description || 'CombiGo es una aplicación web full-stack diseñada para una empresa de transporte de media distancia.',
+      image: CombiGoImg,
+      demoUrl: 'https://combi-go.vercel.app/',
+      technologies: ['Next.js', 'Firebase', 'NoSQL', 'Vercel'],
+    },
+    {
+      title: 'ReciClick',
+      description: t.projectsData[1]?.description || 'ReciClick te ayuda a identificar residuos y clasificarlos en el contenedor correcto usando una foto.',
+      image: ReciClickImg,
+      demoUrl: 'https://reci-click.vercel.app/',
+      technologies: ['Next.js', 'Firebase', 'Vercel'],
+    },
+    {
+      title: 'Kytame',
+      description: t.projectsData[2]?.description || 'Sistema de puntuación para torneos de taekwondo en tiempo real.',
+      image: KytameImg,
+      demoUrl: 'https://kytame.azurewebsites.net/',
+      githubUrl: 'https://github.com/lucasberonne/Kytame',
+      technologies: ['Blazor', 'SignalR', '.NET 8', 'Azure'],
+    },
+    {
+      title: 'Namur',
+      description: t.projectsData[3]?.description || 'Landing page para una empresa de productos alimenticios de alta calidad.',
+      image: NamurImg,
+      demoUrl: 'https://www.namur.com.py/',
+      githubUrl: '',
+      technologies: ['Astro js', 'Vercel'],
+    },
+    {
+      title: 'GentoPass',
+      description: t.projectsData[4]?.description || 'Generador de contraseñas seguras con historial de uso.',
+      image: GentoPassImg,
+      demoUrl: 'https://gentopass.azurewebsites.net/',
+      githubUrl: 'https://github.com/lucasberonne/GentoPass',
+      technologies: ['.NET', 'Blazor', 'Azure', 'Docker'],
+    },
+    {
+      title: 'KaizenCode',
+      description: t.projectsData[5]?.description || 'Landing page para una consultora IT con enfoque en SEO y chatbots.',
+      image: KaizenCodeImg,
+      demoUrl: 'https://www.kaizencode.com.ar/',
+      githubUrl: '',
+      technologies: ['Vite js', 'Vercel', 'Tailwind CSS', 'TypeScript', 'Chatbot', 'SEO', 'Gemini'],
+    },
+    {
+      title: 'ControlAR',
+      description: t.projectsData[6]?.description || 'Sistema de gestión de stock y ventas con soporte multi-tenant.',
+      image: ControlARImg,
+      demoUrl: 'https://controlar.azurewebsites.net/',
+      githubUrl: '',
+      technologies: ['.NET', 'Blazor', 'Azure', 'Docker', 'Multi-tenant', 'SQL Server'],
+    },
+    {
+      title: 'Tae Guk',
+      description: t.projectsData[7]?.description || 'Página web para una escuela de taekwondo.',
+      image: TaeGukImg,
+      demoUrl: 'https://taeguk.vercel.app/',
+      githubUrl: 'https://github.com/lucasberonne/TaeGuk',
+      technologies: ['Astro js', 'Vercel'],
+    },
+    {
+      title: 'GenReadme',
+      description: t.projectsData[8]?.description || 'Herramienta para generar archivos README.md automáticamente con IA.',
+      image: defaultImageUrl,
+      demoUrl: '',
+      githubUrl: 'https://github.com/lucasberonne/genreadme',
+      technologies: ['TypeScript', 'Gemini API', 'VSCODE Extension', 'Node.js'],
+    },
+    {
+      title: 'Generador de modelos SP',
+      description: t.projectsData[9]?.description || 'Generador de modelos para proyectos .NET a partir de stored procedures.',
+      image: defaultImageUrl,
+      demoUrl: '',
+      githubUrl: 'https://github.com/lucasberonne/GeneradorModelosAPI',
+      technologies: ['.NET', 'API REST', 'Swagger'],
+    },
+    {
+      title: 'DolarHoy',
+      description: t.projectsData[10]?.description || 'Aplicación para consultar el valor del dólar en tiempo real.',
+      image: DolarHoyImg,
+      demoUrl: 'https://dolar-hoy-labs.vercel.app/',
+      githubUrl: '',
+      technologies: ['Vite js', 'Vercel', 'API REST'],
+    },
+    {
+      title: 'Casa Minka',
+      description: t.projectsData[11]?.description || 'Museo virtual de cultura japonesa con contenido interactivo.',
+      image: CasaMinkaImg,
+      demoUrl: 'https://casaminka.vercel.app/',
+      githubUrl: '',
+      technologies: ['Next.js', 'PostgreSQL', 'Vercel'],
+    },
+    {
+      title: 'TotalNews',
+      description: t.projectsData[12]?.description || 'Generador de noticias ficticias utilizando inteligencia artificial.',
+      image: TotalNewsImg,
+      demoUrl: 'https://totalnews.vercel.app/',
+      githubUrl: 'https://github.com/lucasberonne/totalnews',
+      technologies: ['Next.js', 'PostgreSQL', 'Gemini API', 'Vercel'],
+    },
+    {
+      title: 'CapitanKrik',
+      description: t.projectsData[13]?.description || 'Automatización de tareas de testing para manejo de archivos FTP.',
+      image: defaultImageUrl,
+      demoUrl: '',
+      githubUrl: 'https://github.com/lucasberonne/CapitanKrik',
+      technologies: ['.NET', 'WPF', 'Windows app', 'Firebase', 'SQL Server'],
+    },
+  ];
+
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
   const indexOfLastProject = currentPage * projectsPerPage;
