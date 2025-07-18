@@ -87,7 +87,8 @@ export const Experiences: React.FC<ExperiencesProps> = ({
               key={index}
               className={`${
                 isDark ? 'bg-gray-800/50' : 'bg-white shadow-lg'
-              } p-6 rounded-lg hover:transform hover:scale-105 transition-all`}
+              } p-6 rounded-lg hover:transform hover:scale-105 transition-all cursor-pointer`}
+              onClick={() => setSelectedExperience(exp)}
             >
               <h3 className="text-xl font-bold text-blue-400">{exp.title}</h3>
               <div className="flex items-center gap-2 mb-2">
@@ -98,6 +99,7 @@ export const Experiences: React.FC<ExperiencesProps> = ({
                   className={`${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   } hover:text-blue-400 transition-colors inline-flex items-center gap-1 animated-underline`}
+                  onClick={(e) => e.stopPropagation()}
                 >
                   {exp.company}
                   <ExternalLink size={14} />
@@ -109,8 +111,7 @@ export const Experiences: React.FC<ExperiencesProps> = ({
               <p
                 className={`${
                   isDark ? 'text-gray-400' : 'text-gray-500'
-                } mb-4 cursor-pointer`}
-                onClick={() => setSelectedExperience(exp)}
+                } mb-4`}
               >
                 {exp.description}
               </p>
