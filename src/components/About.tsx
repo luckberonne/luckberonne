@@ -1,6 +1,7 @@
 import React from 'react';
-import { User, Github, ExternalLink } from 'lucide-react';
+import { User, Github } from 'lucide-react';
 import perfil from '../assets/images/perfil.jpeg';
+import githubLogo from '../assets/images/GithubLogo.jpeg';
 
 interface AboutProps {
   t: any;
@@ -27,11 +28,11 @@ export function About({ t, isDark }: AboutProps) {
                 href="https://github.com/luckberonne"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`absolute bottom-4 right-4 p-2 rounded-full ${
+                className={`absolute bottom-4 right-4 p-1 rounded-full ${
                   isDark ? 'bg-gray-800/90' : 'bg-white/90'
-                } shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-110`}
+                } shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-110 overflow-hidden`}
               >
-                <Github className="text-blue-400" size={24} />
+                <img src={githubLogo} alt="GitHub" className="w-6 h-6 object-cover rounded-full transition-transform duration-300 hover:scale-110" />
               </a>
             </div>
             <div className="flex-1">
@@ -48,7 +49,7 @@ export function About({ t, isDark }: AboutProps) {
                     : 'bg-gray-200 hover:bg-gray-300'
                 } transition-all duration-300 hover:transform hover:scale-105`}
               >
-                GitHub <ExternalLink size={16} className="ml-2" />
+                GitHub <Github size={16} className="ml-2" />
               </a>
             </div>
           </div>
