@@ -73,7 +73,7 @@ function App() {
           isDark ? 'text-gray-400' : 'text-gray-600'
         }`}
       >
-        <p>© 2024 Lucas Ariel Beronne. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Lucas Ariel Beronne. {t.allRightsReserved}</p>
       </footer>
 
       {/* Experience Modal */}
