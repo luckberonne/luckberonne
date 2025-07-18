@@ -33,61 +33,41 @@ export const Experiences: React.FC<ExperiencesProps> = ({
 }) => {
   const [showAll, setShowAll] = useState(false);
   
-  // Combinar datos estáticos con traducciones
   const experiences: Experience[] = [
     {
       title: 'SR Developer',
       company: 'Banco Galicia',
       companyUrl: 'https://www.galicia.ar/personas/',
-      period: t.experiencesData?.[0]?.period || '2024 - ACTUALIDAD',
-      description: t.experiencesData?.[0]?.description || 'Desarrollo de soluciones .NET para optimizar sistemas bancarios y servicios digitales.',
-      responsibilities: t.experiencesData?.[0]?.responsibilities || [
-        'Desarrollo y mantenimiento de aplicaciones en .NET.',
-        'Desarrollo y mantenimiento de aplicaciones con React.',
-        'Optimización de sistemas y procesos bancarios.',
-        'Implementación de nuevos servicios digitales.',
-      ],
+      period: t.experiencesData?.[0]?.period!,
+      description: t.experiencesData?.[0]?.description!,
+      responsibilities: t.experiencesData?.[0]?.responsibilities!,
       technologies: ['.NET', 'SQL Server', 'REST APIs', 'React', 'Jenkins', 'NestJS'],
     },
     {
       title: 'SSr Fullstack Developer',
       company: 'PlanexWare S.A.',
       companyUrl: 'https://www.planexware.com/',
-      period: t.experiencesData?.[1]?.period || '2022 - 2024',
-      description: t.experiencesData?.[1]?.description || 'Diseño de APIs REST y desarrollo de procesos backend en .NET.',
-      responsibilities: t.experiencesData?.[1]?.responsibilities || [
-        'Definición de arquitecturas de APIs REST.',
-        'Documentación técnica de sistemas.',
-        'Capacitación de desarrolladores junior.',
-        'Investigación e implementación de nuevas tecnologías.',
-      ],
+      period: t.experiencesData?.[1]?.period!,
+      description: t.experiencesData?.[1]?.description!,
+      responsibilities: t.experiencesData?.[1]?.responsibilities!,
       technologies: ['.NET', 'REST APIs', 'SQL Server', 'Angular'],
     },
     {
       title: 'Jr Fullstack Developer',
       company: 'PlanexWare S.A.',
       companyUrl: 'https://www.planexware.com/',
-      period: t.experiencesData?.[2]?.period || '2021 - 2022',
-      description: t.experiencesData?.[2]?.description || 'Desarrollo de APIs REST y migración de sistemas heredados.',
-      responsibilities: t.experiencesData?.[2]?.responsibilities || [
-        'Desarrollo de APIs REST y aplicaciones web con Angular.',
-        'Migración de soluciones heredadas.',
-        'Creación y modificación de procedimientos almacenados (SPs).',
-        'Automatización de procesos.',
-      ],
+      period: t.experiencesData?.[2]?.period!,
+      description: t.experiencesData?.[2]?.description!,
+      responsibilities: t.experiencesData?.[2]?.responsibilities!,
       technologies: ['.NET', 'Angular', 'SQL Server', 'APIs REST'],
     },
     {
       title: 'QA Tester',
       company: 'PlanexWare S.A.',
       companyUrl: 'https://www.planexware.com/',
-      period: t.experiencesData?.[3]?.period || '2019 - 2021',
-      description: t.experiencesData?.[3]?.description || 'Ejecución de pruebas y aseguramiento de calidad en soluciones de software.',
-      responsibilities: t.experiencesData?.[3]?.responsibilities || [
-        'Creación de planes de prueba.',
-        'Ejecución de pruebas unitarias, de regresión y estrés.',
-        'Registro y análisis de resultados en Azure DevOps.',
-      ],
+      period: t.experiencesData?.[3]?.period!,
+      description: t.experiencesData?.[3]?.description!,
+      responsibilities: t.experiencesData?.[3]?.responsibilities!,
       technologies: ['Azure DevOps', 'Testing', 'Planificación de pruebas'],
     },
   ];
