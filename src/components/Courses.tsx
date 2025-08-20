@@ -203,11 +203,11 @@ export function Courses({ t, isDark }: CoursesProps) {
               >
                 {showAll ? (
                   <>
-                    {t.showLess || 'Show Less'} <ChevronUp size={20} />
+                    {t.showLess} <ChevronUp size={20} />
                   </>
                 ) : (
                   <>
-                    {t.showMore || 'Show More'} <ChevronDown size={20} />
+                    {t.showMore} <ChevronDown size={20} />
                   </>
                 )}
               </button>

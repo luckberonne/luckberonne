@@ -17,6 +17,8 @@ export const translations = {
     viewProject: 'Live Demo',
     viewCode: 'Source Code',
     viewCertificate: 'Certificate',
+    showMore: 'Show More',
+    showLess: 'Show Less',
     allRightsReserved: 'All rights reserved.',
     aboutText:
       "I am a dedicated full-stack developer with over 5 years of experience delivering innovative solutions. I thrive on solving complex problems and continuously learning new technologies to stay ahead in the ever-evolving field of software development.",
@@ -183,6 +185,8 @@ export const translations = {
     viewProject: 'Demo en Vivo',
     viewCode: 'Código Fuente',
     viewCertificate: 'Certificado',
+    showMore: 'Ver Más',
+    showLess: 'Ver Menos',
     allRightsReserved: 'Todos los derechos reservados.',
     aboutText:
       'Soy un desarrollador full-stack comprometido con más de 5 años de experiencia ofreciendo soluciones innovadoras. Me apasiona resolver problemas complejos y aprender constantemente nuevas tecnologías para mantenerme a la vanguardia en el campo del desarrollo de software.',
