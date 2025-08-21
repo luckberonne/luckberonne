@@ -25,6 +25,15 @@ const courses: Course[] = [
     description: '',
   },
   {
+    name: 'GitHub: GitHub Foundations',
+    platform: 'GitHub',
+    platformUrl: 'https://education.github.com/experiences/foundations_certificate',
+    date: 'VIRTUAL(05/2025)',
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7326750324319272961/',
+    description: '',
+  },
+  {
     name: 'Azure: Introducción a la nube de Microsoft',
     platform: 'Linkedin Learning',
     platformUrl: 'https://www.linkedin.com/learning/',

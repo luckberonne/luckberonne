@@ -23,7 +23,7 @@ export function Educations({ t, isDark }: EducationsProps) {
       title: t.educationsData?.[0]?.title || 'Ingeniería en Sistemas de Información',
       institution: 'Universidad Tecnológica Nacional',
       institutionUrl: 'https://www.utn.edu.ar/',
-      period: t.educationsData?.[0]?.period || '2020 - Actualidad',
+      period: t.educationsData?.[0]?.period || '2018 - Actualidad',
       description: t.educationsData?.[0]?.description || 'Especialización en desarrollo de software y sistemas de información empresariales.',
     },
     {
