@@ -46,7 +46,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[2]?.description || 'Sistema de puntuación para torneos de taekwondo en tiempo real.',
       image: KytameImg,
       demoUrl: 'https://kytame.azurewebsites.net/',
-      githubUrl: 'https://github.com/lucasberonne/Kytame',
+      githubUrl: 'https://github.com/luckberonne/Kytame',
       technologies: ['Blazor', 'SignalR', '.NET 8', 'Azure'],
     },
     {
@@ -62,7 +62,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[4]?.description || 'Generador de contraseñas seguras con historial de uso.',
       image: GentoPassImg,
       demoUrl: 'https://gentopass.azurewebsites.net/',
-      githubUrl: 'https://github.com/lucasberonne/GentoPass',
+      githubUrl: 'https://github.com/luckberonne/GentoPass',
       technologies: ['.NET', 'Blazor', 'Azure', 'Docker'],
     },
     {
@@ -86,7 +86,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[7]?.description || 'Página web para una escuela de taekwondo.',
       image: TaeGukImg,
       demoUrl: 'https://taeguk.vercel.app/',
-      githubUrl: 'https://github.com/lucasberonne/TaeGuk',
+      githubUrl: 'https://github.com/luckberonne/TaeGuk',
       technologies: ['Astro js', 'Vercel'],
     },
     {
@@ -94,7 +94,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[8]?.description || 'Herramienta para generar archivos README.md automáticamente con IA.',
       image: defaultImageUrl,
       demoUrl: '',
-      githubUrl: 'https://github.com/lucasberonne/genreadme',
+      githubUrl: 'https://github.com/luckberonne/genreadme',
       technologies: ['TypeScript', 'Gemini API', 'VSCODE Extension', 'Node.js'],
     },
     {
@@ -102,7 +102,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[9]?.description || 'Generador de modelos para proyectos .NET a partir de stored procedures.',
       image: defaultImageUrl,
       demoUrl: '',
-      githubUrl: 'https://github.com/lucasberonne/GeneradorModelosAPI',
+      githubUrl: 'https://github.com/luckberonne/GeneradorModelosAPI',
       technologies: ['.NET', 'API REST', 'Swagger'],
     },
     {
@@ -126,7 +126,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[12]?.description || 'Generador de noticias ficticias utilizando inteligencia artificial.',
       image: TotalNewsImg,
       demoUrl: 'https://totalnews.vercel.app/',
-      githubUrl: 'https://github.com/lucasberonne/totalnews',
+      githubUrl: 'https://github.com/luckberonne/totalnews',
       technologies: ['Next.js', 'PostgreSQL', 'Gemini API', 'Vercel'],
     },
     {
@@ -134,7 +134,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[13]?.description || 'Automatización de tareas de testing para manejo de archivos FTP.',
       image: defaultImageUrl,
       demoUrl: '',
-      githubUrl: 'https://github.com/lucasberonne/CapitanKrik',
+      githubUrl: 'https://github.com/luckberonne/CapitanKrik',
       technologies: ['.NET', 'WPF', 'Windows app', 'Firebase', 'SQL Server'],
     },
   ];
