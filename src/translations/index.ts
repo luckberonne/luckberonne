@@ -102,6 +102,10 @@ export const translations = {
         title: 'CapitanKrik',
         description: 'Testing task automation for FTP file handling.',
       },
+      {
+        title: 'Factulabs',
+        description: 'Factulabs is an electronic invoicing application developed with .NET MAUI, mainly focused on Windows.',
+      },
     ],
     experiencesData: [
       {
@@ -269,6 +273,10 @@ export const translations = {
       {
         title: 'CapitanKrik',
         description: 'Automatización de tareas de testing para manejo de archivos FTP.',
+      },
+      {
+        title: 'Factulabs',
+        description: 'Factulabs es una aplicación de facturación electrónica desarrollada con .NET MAUI, enfocada principalmente en Windows.',
       },
     ],
     experiencesData: [

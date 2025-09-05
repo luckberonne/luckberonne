@@ -12,6 +12,7 @@ import ControlARImg from '../assets/images/ControlAR.jpg';
 import CasaMinkaImg from '../assets/images/CasaMinka.png';
 import TotalNewsImg from '../assets/images/TotalNews.png';
 import DolarHoyImg from '../assets/images/DolarHoy.png';
+import FactulabsImg from '../assets/images/Factulabs.png';
 
 interface ProjectsProps {
   t: any;
@@ -27,6 +28,13 @@ export function Projects({ t, isDark }: ProjectsProps) {
   
   // Combinar datos estáticos con traducciones
   const projects = [
+    {
+      title: 'Factulabs',
+      description: t.projectsData[14]?.description || 'Factulabs es una aplicación de facturación electrónica desarrollada con .NET MAUI, enfocada principalmente en Windows',
+      image: FactulabsImg,
+      githubUrl: 'https://github.com/luckberonne/Factulabs_Release',
+      technologies: ['.NET MAUI', 'SQL LITE', 'Windows', 'Android', 'PDF'],
+    },
     {
       title: 'CombiGo',
       description: t.projectsData[0]?.description || 'CombiGo es una aplicación web full-stack diseñada para una empresa de transporte de media distancia.',
