@@ -33,7 +33,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[14]?.description || 'Factulabs es una aplicación de facturación electrónica desarrollada con .NET MAUI, enfocada principalmente en Windows',
       image: FactulabsImg,
       githubUrl: 'https://github.com/luckberonne/Factulabs_Release',
-      technologies: ['.NET MAUI', 'SQL LITE', 'Windows', 'Android', 'PDF'],
+      technologies: ['.NET MAUI', '.NET 9', 'SQL LITE', 'Windows', 'Android', 'PDF'],
     },
     {
       title: 'CombiGo',
