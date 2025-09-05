@@ -47,7 +47,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       description: t.projectsData[1]?.description || 'ReciClick te ayuda a identificar residuos y clasificarlos en el contenedor correcto usando una foto.',
       image: ReciClickImg,
       demoUrl: 'https://reci-click.vercel.app/',
-      technologies: ['Next.js', 'Firebase', 'Vercel'],
+      technologies: ['Next.js', 'Firebase', 'Vercel', 'Gemini API', 'AI'],
     },
     {
       title: 'Kytame',
