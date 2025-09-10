@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { translations } from './translations';
 import { Header } from './components/Header';
 import { Experiences } from './components/Experiences';
@@ -10,6 +10,17 @@ import { About } from './components/About';
 import Hero from './components/Hero';
 import { ExperienceModal } from './components/ExperienceModal';
 import { Linkedin } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
+type Experience = {
+  title: string;
+  company: string;
+  companyUrl: string;
+  period: string;
+  description: string;
+  responsibilities: string[];
+  technologies: string[];
+};
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,13 +69,25 @@ function App() {
       </section>
       <Experiences
         isDark={isDark}
-        t={t}
+        t={{
+          experience: t.experience,
+          experienceDetails: t.experienceDetails,
+          experiencesData: undefined,
+          showMore: t.showMore,
+          showLess: t.showLess,
+        }}
         setSelectedExperience={setSelectedExperience}
       />
       <Projects t={t} isDark={isDark} />
       <Skills t={t} isDark={isDark} />
       <Courses t={t} isDark={isDark} />
-      <Educations t={t} isDark={isDark} />
+      <Educations 
+        t={{
+          education: t.education,
+          educationsData: undefined,
+        }} 
+        isDark={isDark} 
+      />
       <About t={t} isDark={isDark} />
 
       {/* Footer */}
@@ -103,6 +126,9 @@ function App() {
       >
         <Linkedin className="text-blue-400" size={24} />
       </a>
+      
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
