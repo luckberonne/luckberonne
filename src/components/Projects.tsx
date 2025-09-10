@@ -162,11 +162,11 @@ export function Projects({ t, isDark }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className={`py-20 px-4 ${isDark ? 'bg-gray-800/30' : 'bg-gray-50'}`}
+      className={`py-20 px-4 ${isDark ? 'bg-surface-dark-alt' : 'bg-surface-light-alt'}`}
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
-          <Code2 className="text-blue-400" size={32} />
+          <Code2 className="text-primary-400" size={32} />
           <h2 className="text-4xl font-bold">{t.projects}</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -174,7 +174,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
             <div
               key={index}
               className={`project-card relative ${
-                isDark ? 'bg-gray-800/50' : 'bg-white'
+                isDark ? 'bg-surface-dark' : 'bg-surface-light'
               } rounded-lg shadow-lg overflow-hidden group flex flex-col h-full transition-all duration-300 hover:shadow-2xl`}
             >
               <div className="relative h-40 sm:h-48 overflow-hidden">
@@ -195,7 +195,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
               <div className="p-3 sm:p-4 flex-1 flex flex-col">
                 <p
                   className={`${
-                    isDark ? 'text-gray-300' : 'text-gray-600'
+                    isDark ? 'text-neutral-300' : 'text-neutral-600'
                   } mb-3 sm:mb-4 text-sm`}
                 >
                   {project.description}
@@ -208,8 +208,8 @@ export function Projects({ t, isDark }: ProjectsProps) {
                         key={techIndex}
                         className={`px-2 py-1 rounded-full text-xs ${
                           isDark
-                            ? 'bg-gray-700 text-gray-300'
-                            : 'bg-gray-100 text-gray-700'
+                            ? 'bg-neutral-700 text-neutral-300'
+                            : 'bg-neutral-100 text-neutral-700'
                         } transition-all duration-300 hover:transform hover:scale-105`}
                       >
                         {tech}
@@ -218,7 +218,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-2 sm:space-x-3 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-700/20">
+                <div className="flex flex-col sm:flex-row gap-2 sm:space-x-3 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-neutral-700/20">
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
@@ -226,8 +226,8 @@ export function Projects({ t, isDark }: ProjectsProps) {
                       rel="noopener noreferrer"
                       className={`flex-1 inline-flex items-center justify-center px-4 py-2 rounded-lg ${
                         isDark
-                          ? 'bg-blue-500 hover:bg-blue-600'
-                          : 'bg-blue-600 hover:bg-blue-700'
+                          ? 'bg-primary-500 hover:bg-primary-600'
+                          : 'bg-primary-600 hover:bg-primary-700'
                       } text-white transition-all duration-300 hover:transform hover:scale-105 z-10`}
                     >
                       {t.viewProject}{' '}
@@ -241,8 +241,8 @@ export function Projects({ t, isDark }: ProjectsProps) {
                       rel="noopener noreferrer"
                       className={`flex-1 inline-flex items-center justify-center px-4 py-2 rounded-lg ${
                         isDark
-                          ? 'bg-gray-700 hover:bg-gray-600'
-                          : 'bg-gray-200 hover:bg-gray-300'
+                          ? 'bg-neutral-700 hover:bg-neutral-600'
+                          : 'bg-neutral-200 hover:bg-neutral-300'
                       } transition-all duration-300 hover:transform hover:scale-105 z-10`}
                     >
                       {t.viewCode} <Github size={16} className="ml-2" />
@@ -262,8 +262,8 @@ export function Projects({ t, isDark }: ProjectsProps) {
               disabled={currentPage === 1}
               className={`p-2 rounded-lg transition-all duration-300 ${
                 isDark
-                  ? 'bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800'
-                  : 'bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100'
+                  ? 'bg-neutral-700 hover:bg-neutral-600 disabled:bg-neutral-800'
+                  : 'bg-neutral-200 hover:bg-neutral-300 disabled:bg-neutral-100'
               } disabled:cursor-not-allowed`}
             >
               <ChevronLeft size={24} />
@@ -277,11 +277,11 @@ export function Projects({ t, isDark }: ProjectsProps) {
                   className={`w-10 h-10 rounded-lg transition-all duration-300 ${
                     currentPage === page
                       ? isDark
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-blue-600 text-white'
+                        ? 'bg-primary-500 text-white'
+                        : 'bg-primary-600 text-white'
                       : isDark
-                      ? 'bg-gray-700 hover:bg-gray-600'
-                      : 'bg-gray-200 hover:bg-gray-300'
+                      ? 'bg-neutral-700 hover:bg-neutral-600'
+                      : 'bg-neutral-200 hover:bg-neutral-300'
                   }`}
                 >
                   {page}
@@ -294,8 +294,8 @@ export function Projects({ t, isDark }: ProjectsProps) {
               disabled={currentPage === totalPages}
               className={`p-2 rounded-lg transition-all duration-300 ${
                 isDark
-                  ? 'bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800'
-                  : 'bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100'
+                  ? 'bg-neutral-700 hover:bg-neutral-600 disabled:bg-neutral-800'
+                  : 'bg-neutral-200 hover:bg-neutral-300 disabled:bg-neutral-100'
               } disabled:cursor-not-allowed`}
             >
               <ChevronRight size={24} />

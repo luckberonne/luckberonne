@@ -46,7 +46,7 @@ export function Skills({ t, isDark }: SkillsProps) {
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
-          <Cpu className="text-blue-400" size={32} />
+          <Cpu className="text-primary-400" size={32} />
           <h2 className="text-4xl font-bold">{t.skills.title}</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -54,10 +54,10 @@ export function Skills({ t, isDark }: SkillsProps) {
             <div 
               key={category} 
               className={`skill-card ${
-                isDark ? 'bg-gray-800/50' : 'bg-white shadow-lg'
+                isDark ? 'bg-surface-dark' : 'bg-surface-light shadow-lg'
               } p-4 sm:p-6 rounded-lg hover:shadow-xl transition-all`}
             >
-              <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-4">{t.skills[category]}</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-primary-400 mb-4">{t.skills[category]}</h3>
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {skills.map((skill, index) => (
                   <a
@@ -66,7 +66,7 @@ export function Skills({ t, isDark }: SkillsProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${
-                      isDark ? 'bg-gray-700/50 hover:bg-blue-500/10' : 'bg-gray-50 hover:bg-blue-50'
+                      isDark ? 'bg-neutral-700/50 hover:bg-primary-500/10' : 'bg-neutral-50 hover:bg-primary-50'
                     } p-2 sm:p-3 rounded-lg transition-all hover:transform hover:scale-105 cursor-pointer`}
                   >
                     <p className="font-semibold text-xs sm:text-sm text-center break-words">{skill.name}</p>

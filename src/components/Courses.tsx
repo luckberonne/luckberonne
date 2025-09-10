@@ -126,11 +126,11 @@ export function Courses({ t, isDark }: CoursesProps) {
 
   return (
     <section
-      className={`py-20 px-4 ${isDark ? 'bg-gray-800/30' : 'bg-gray-50'}`}
+      className={`py-20 px-4 ${isDark ? 'bg-surface-dark-alt' : 'bg-surface-light-alt'}`}
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
-          <GraduationCap className="text-blue-400" size={32} />
+          <GraduationCap className="text-primary-400" size={32} />
           <h2 className="text-4xl font-bold">{t.courses}</h2>
         </div>
         <div>
@@ -139,11 +139,11 @@ export function Courses({ t, isDark }: CoursesProps) {
               <div
                 key={index}
                 className={`${
-                  isDark ? 'bg-gray-800/50' : 'bg-white shadow-lg'
+                  isDark ? 'bg-surface-dark' : 'bg-surface-light shadow-lg'
                 } p-6 rounded-lg hover:transform hover:scale-105 transition-all flex flex-col min-h-[200px]`}
               >
                 <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-blue-400 mb-2">
+                  <h3 className="text-xl font-bold text-primary-400 mb-2">
                     {course.name}
                   </h3>
                   <div className="flex items-center gap-2 mb-2">
@@ -153,19 +153,19 @@ export function Courses({ t, isDark }: CoursesProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`${
-                          isDark ? 'text-gray-300' : 'text-gray-600'
-                        } hover:text-blue-400 transition-colors inline-flex items-center gap-1 animated-underline`}
+                          isDark ? 'text-neutral-300' : 'text-neutral-600'
+                        } hover:text-primary-400 transition-colors inline-flex items-center gap-1 animated-underline`}
                       >
                         {course.platform}
                         <ExternalLink size={14} />
                       </a>
                     ) : (
-                      <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>
+                      <span className={isDark ? 'text-neutral-300' : 'text-neutral-600'}>
                         {course.platform}
                       </span>
                     )}
                     <span
-                      className={isDark ? 'text-gray-300' : 'text-gray-600'}
+                      className={isDark ? 'text-neutral-300' : 'text-neutral-600'}
                     >
                       | {course.date}
                     </span>
@@ -173,7 +173,7 @@ export function Courses({ t, isDark }: CoursesProps) {
                   {course.description && (
                     <p
                       className={`${
-                        isDark ? 'text-gray-400' : 'text-gray-500'
+                        isDark ? 'text-neutral-400' : 'text-neutral-500'
                       } mb-4`}
                     >
                       {course.description}
@@ -188,8 +188,8 @@ export function Courses({ t, isDark }: CoursesProps) {
                       rel="noopener noreferrer"
                       className={`inline-flex items-center px-4 py-2 rounded-lg ${
                         isDark
-                          ? 'bg-blue-500 hover:bg-blue-600'
-                          : 'bg-blue-600 hover:bg-blue-700'
+                          ? 'bg-primary-500 hover:bg-primary-600'
+                          : 'bg-primary-600 hover:bg-primary-700'
                       } text-white transition-all duration-300 hover:transform hover:scale-105`}
                     >
                       {t.courseDetails.certificate}{' '}
@@ -206,8 +206,8 @@ export function Courses({ t, isDark }: CoursesProps) {
                 onClick={() => setShowAll(!showAll)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg ${
                   isDark
-                    ? 'bg-blue-500 hover:bg-blue-600'
-                    : 'bg-blue-600 hover:bg-blue-700'
+                    ? 'bg-primary-500 hover:bg-primary-600'
+                    : 'bg-primary-600 hover:bg-primary-700'
                 } text-white font-semibold transition-all duration-300 hover:transform hover:scale-105`}
               >
                 {showAll ? (

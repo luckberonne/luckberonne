@@ -29,15 +29,15 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
         isScrolled
           ? isDark
-            ? 'bg-gray-900/90'
-            : 'bg-white/90'
+            ? 'bg-neutral-900/90'
+            : 'bg-surface-light/90'
           : 'bg-transparent'
       } backdrop-blur-sm`}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <h2 
           onClick={scrollToTop}
-          className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text cursor-pointer hover:opacity-80 transition-opacity"
+          className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary-400 to-secondary-500 text-transparent bg-clip-text cursor-pointer hover:opacity-80 transition-opacity"
         >
           Lucas Ariel Beronne
         </h2>
@@ -46,8 +46,8 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
             onClick={() => setLang(lang === 'en' ? 'es' : 'en')}
             className={`p-1.5 rounded-lg flex items-center ${
               isDark
-                ? 'bg-white/10 hover:bg-white/20'
-                : 'bg-black/10 hover:bg-black/20'
+                ? 'bg-neutral-50/10 hover:bg-neutral-50/20'
+                : 'bg-neutral-900/10 hover:bg-neutral-900/20'
             } transition-colors backdrop-blur-sm`}
           >
             <Languages size={16} />
@@ -57,8 +57,8 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
             onClick={() => setIsDark(!isDark)}
             className={`p-1.5 rounded-lg ${
               isDark
-                ? 'bg-white/10 hover:bg-white/20'
-                : 'bg-black/10 hover:bg-black/20'
+                ? 'bg-neutral-50/10 hover:bg-neutral-50/20'
+                : 'bg-neutral-900/10 hover:bg-neutral-900/20'
             } transition-colors backdrop-blur-sm`}
           >
             {isDark ? <Sun size={16} /> : <Moon size={16} />}
