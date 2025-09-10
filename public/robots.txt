@@ -1,0 +1,100 @@
+# Robots.txt optimizado para el portfolio de Lucas Beronne
+# https://lucasberonne.com.ar/robots.txt
+
+User-agent: *
+Allow: /
+
+# Permitir acceso completo a bots de motores de búsqueda principales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Bloquear acceso a archivos y directorios sensibles
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /coverage/
+Disallow: /.env
+Disallow: /.env.local
+Disallow: /.env.development
+Disallow: /.env.production
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /tsconfig.json
+Disallow: /vite.config.ts
+Disallow: /tailwind.config.js
+Disallow: /postcss.config.js
+Disallow: /eslint.config.js
+
+# Permitir acceso a recursos estáticos importantes
+Allow: /assets/
+Allow: /images/
+Allow: /public/
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /manifest.json
+Allow: /sw.js
+Allow: /sitemap.xml
+
+# Permitir acceso a archivos CSS y JS minificados
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.otf$
+
+# Bloquear bots problemáticos y scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: BlexBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Configurar crawl-delay para bots agresivos
+User-agent: *
+Crawl-delay: 1
+
+# Ubicación del sitemap
+Sitemap: https://lucasberonne.com.ar/sitemap.xml
+
+# Configuraciones adicionales de SEO
+# Cache-Control y directivas de indexación son manejadas por headers HTTP
