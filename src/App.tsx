@@ -72,7 +72,7 @@ function App() {
         t={{
           experience: t.experience,
           experienceDetails: t.experienceDetails,
-          experiencesData: undefined,
+          experiencesData: t.experiencesData,
           showMore: t.showMore,
           showLess: t.showLess,
         }}

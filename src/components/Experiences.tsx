@@ -11,6 +11,14 @@ type Experience = {
   technologies: string[];
 };
 
+type TranslationExperienceData = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  responsibilities: string[];
+};
+
 type ExperiencesProps = {
   isDark: boolean;
   t: {
@@ -19,7 +27,7 @@ type ExperiencesProps = {
       company: string;
       period: string;
     };
-    experiencesData?: Experience[];
+    experiencesData?: TranslationExperienceData[];
     showMore?: string;
     showLess?: string;
   };
