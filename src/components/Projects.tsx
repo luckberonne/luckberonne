@@ -29,6 +29,13 @@ export function Projects({ t, isDark }: ProjectsProps) {
   // Combinar datos estáticos con traducciones
   const projects = [
     {
+      title: 'MCPrompt',
+      description: t.projectsData[15]?.description || 'MCPrompt es un bibliotecario(mpc server) de chatmodes para copilot este busca e inserta el chotmode mas adecudo segun el contexto del codigo',
+      image: FactulabsImg,
+      githubUrl: 'https://github.com/luckberonne/MCPrompt',
+      technologies: ['.NET', 'C#', 'MCP', 'VSCode', 'AI', 'ChatModes'],
+    },
+    {
       title: 'Factulabs',
       description: t.projectsData[14]?.description || 'Factulabs es una aplicación de facturación electrónica desarrollada con .NET MAUI, enfocada principalmente en Windows',
       image: FactulabsImg,

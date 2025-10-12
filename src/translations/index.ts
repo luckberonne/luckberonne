@@ -106,6 +106,10 @@ export const translations = {
         title: 'Factulabs',
         description: 'Factulabs is an electronic invoicing application developed with .NET MAUI, mainly focused on Windows.',
       },
+      {
+        title: 'MCPrompt',
+        description: 'MCPrompt is a chat mode librarian (mpc server) for Copilot that searches and inserts the most suitable chat mode according to the code context.',
+      },
     ],
     experiencesData: [
       {
@@ -276,7 +280,11 @@ export const translations = {
       },
       {
         title: 'Factulabs',
-        description: 'Factulabs es una aplicación de facturación electrónica desarrollada con .NET MAUI, enfocada principalmente en Windows.',
+        description: 'Factulabs is an electronic invoicing application developed with .NET MAUI, mainly focused on Windows.',
+      },
+      {
+        title: 'MCPrompt',
+        description: 'MCPrompt es un bibliotecario(mpc server) de chatmodes para copilot este busca e inserta el chotmode mas adecudo segun el contexto del codigo',
       },
     ],
     experiencesData: [
