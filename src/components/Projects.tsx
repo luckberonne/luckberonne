@@ -31,7 +31,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
     {
       title: 'MCPrompt',
       description: t.projectsData[15]?.description || 'MCPrompt es un bibliotecario(mpc server) de chatmodes para copilot este busca e inserta el chotmode mas adecudo segun el contexto del codigo',
-      image: FactulabsImg,
+      image: defaultImageUrl,
       githubUrl: 'https://github.com/luckberonne/MCPrompt',
       technologies: ['.NET', 'C#', 'MCP', 'VSCode', 'AI', 'ChatModes'],
     },
