@@ -284,7 +284,7 @@ export const translations = {
       },
       {
         title: 'MCPrompt',
-        description: 'MCPrompt es un bibliotecario(mpc server) de chatmodes para copilot este busca e inserta el chotmode mas adecudo segun el contexto del codigo',
+        description: 'MCPrompt es un bibliotecario de chatmodes para Copilot que busca e inserta el chatmode más adecuado según el contexto del código.',
       },
     ],
     experiencesData: [

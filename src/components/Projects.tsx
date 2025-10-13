@@ -30,7 +30,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
   const projects = [
     {
       title: 'MCPrompt',
-      description: t.projectsData[15]?.description || 'MCPrompt es un bibliotecario(mpc server) de chatmodes para copilot este busca e inserta el chotmode mas adecudo segun el contexto del codigo',
+      description: t.projectsData[15]?.description || 'MCPrompt es un bibliotecario de chatmodes para Copilot que busca e inserta el chatmode más adecuado según el contexto del código.',
       image: defaultImageUrl,
       githubUrl: 'https://github.com/luckberonne/MCPrompt',
       technologies: ['.NET', 'C#', 'MCP', 'VSCode', 'AI', 'ChatModes'],
