@@ -29,6 +29,18 @@ export function Projects({ t, isDark }: ProjectsProps) {
   // Combinar datos estáticos con traducciones
   const projects = [
     {
+      title: 'Code Carrusel',
+      description:
+        t.projectsData[16]?.description ||
+        (t.language === 'en'
+          ? 'Professional image generator. Design slides with highlighted code, branding, and high-resolution export ready for LinkedIn.'
+          : 'Generador de imágenes profesionales. Diseña slides con código resaltado, branding y exportación en alta resolución listo para LinkedIn.'),
+      image: defaultImageUrl,
+      demoUrl: 'https://code-carrusel.vercel.app/',
+      githubUrl: '',
+      technologies: ['Next.js', 'Vercel', 'Tailwind CSS', 'Exportación HD', 'Branding', 'Slides'],
+    },
+    {
       title: 'MCPrompt',
       description: t.projectsData[15]?.description || 'MCPrompt es un bibliotecario de chatmodes para Copilot que busca e inserta el chatmode más adecuado según el contexto del código.',
       image: defaultImageUrl,
