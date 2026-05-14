@@ -13,6 +13,8 @@ import CasaMinkaImg from '../assets/images/CasaMinka.png';
 import TotalNewsImg from '../assets/images/TotalNews.png';
 import DolarHoyImg from '../assets/images/DolarHoy.png';
 import FactulabsImg from '../assets/images/Factulabs.png';
+import CodeImg from '../assets/images/Code.png';
+
 
 interface ProjectsProps {
   t: any;
@@ -35,7 +37,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
         (t.language === 'en'
           ? 'Professional image generator. Design slides with highlighted code, branding, and high-resolution export ready for LinkedIn.'
           : 'Generador de imágenes profesionales. Diseña slides con código resaltado, branding y exportación en alta resolución listo para LinkedIn.'),
-      image: defaultImageUrl,
+      image: CodeImg,
       demoUrl: 'https://code-carrusel.vercel.app/',
       githubUrl: '',
       technologies: ['Next.js', 'Vercel', 'Tailwind CSS', 'Exportación HD', 'Branding', 'Slides'],
@@ -55,11 +57,12 @@ export function Projects({ t, isDark }: ProjectsProps) {
       technologies: ['.NET MAUI', '.NET 9', 'SQL LITE', 'Windows', 'Android', 'PDF'],
     },
     {
-      title: 'CombiGo',
-      description: t.projectsData[0]?.description || 'CombiGo es una aplicación web full-stack diseñada para una empresa de transporte de media distancia.',
-      image: CombiGoImg,
-      demoUrl: 'https://combi-go.vercel.app/',
-      technologies: ['Next.js', 'Firebase', 'NoSQL', 'Vercel'],
+      title: 'Namur',
+      description: t.projectsData[3]?.description || 'Landing page para una empresa de productos alimenticios de alta calidad.',
+      image: NamurImg,
+      demoUrl: 'https://www.namur.com.py/',
+      githubUrl: '',
+      technologies: ['Astro js', 'Vercel'],
     },
     {
       title: 'ReciClick',
@@ -77,12 +80,11 @@ export function Projects({ t, isDark }: ProjectsProps) {
       technologies: ['Blazor', 'SignalR', '.NET 8', 'Azure'],
     },
     {
-      title: 'Namur',
-      description: t.projectsData[3]?.description || 'Landing page para una empresa de productos alimenticios de alta calidad.',
-      image: NamurImg,
-      demoUrl: 'https://www.namur.com.py/',
-      githubUrl: '',
-      technologies: ['Astro js', 'Vercel'],
+      title: 'CombiGo',
+      description: t.projectsData[0]?.description || 'CombiGo es una aplicación web full-stack diseñada para una empresa de transporte de media distancia.',
+      image: CombiGoImg,
+      demoUrl: 'https://combi-go.vercel.app/',
+      technologies: ['Next.js', 'Firebase', 'NoSQL', 'Vercel'],
     },
     {
       title: 'GentoPass',
