@@ -29,13 +29,24 @@
 }
 
 .animated-bg {
+  background-size: 160% 160%;
+  animation: gradient 26s ease infinite;
+}
+
+.animated-bg--dark {
   background:
     radial-gradient(circle at 12% 18%, rgba(6, 182, 212, 0.18), transparent 45%),
     radial-gradient(circle at 82% 12%, rgba(6, 182, 212, 0.1), transparent 40%),
     linear-gradient(-45deg, theme('colors.neutral.950'), theme('colors.neutral.900'), theme('colors.neutral.800'), theme('colors.neutral.900'));
-  background-size: 160% 160%;
-  animation: gradient 26s ease infinite;
-  opacity: 0.2;
+  opacity: 0.26;
+}
+
+.animated-bg--light {
+  background:
+    radial-gradient(circle at 10% 14%, rgba(6, 182, 212, 0.2), transparent 45%),
+    radial-gradient(circle at 88% 16%, rgba(6, 182, 212, 0.14), transparent 42%),
+    linear-gradient(135deg, #f8fafc, #e6edf3, #f8fafc);
+  opacity: 0.55;
 }
 
 .animated-bg::after {
@@ -46,8 +57,12 @@
     linear-gradient(to right, rgba(6, 182, 212, 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(6, 182, 212, 0.06) 1px, transparent 1px);
   background-size: 56px 56px;
-  opacity: 0.2;
+  opacity: 0.18;
   pointer-events: none;
+}
+
+.animated-bg--light::after {
+  opacity: 0.28;
 }
 
 @keyframes gradient {
@@ -204,4 +219,8 @@
   background: radial-gradient(circle, rgba(34, 211, 238, 0.9) 0%, rgba(6, 182, 212, 0.1) 70%);
   border-radius: 50%;
   opacity: 0.25;
+}
+
+.particles-light .particle {
+  opacity: 0.45;
 }

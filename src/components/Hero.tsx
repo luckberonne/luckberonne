@@ -62,14 +62,27 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-16 overflow-hidden">
-      <div className="absolute inset-0 animated-bg"></div>
-      <div ref={particlesRef} className="particles"></div>
+      <div
+        className={`absolute inset-0 animated-bg ${
+          isDark ? 'animated-bg--dark' : 'animated-bg--light'
+        }`}
+      ></div>
+      <div
+        ref={particlesRef}
+        className={`particles ${isDark ? '' : 'particles-light'}`}
+      ></div>
       <div
         className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           } relative z-10`}
       >
         <div className="floating">
-          <h1 className="text-6xl md:text-8xl font-display font-semibold mb-4 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-600 text-transparent bg-clip-text text-center">
+          <h1
+            className={`text-6xl md:text-8xl font-display font-semibold mb-4 bg-gradient-to-r text-transparent bg-clip-text text-center ${
+              isDark
+                ? 'from-primary-200 via-primary-400 to-primary-600'
+                : 'from-primary-600 via-primary-500 to-primary-700'
+            }`}
+          >
             Lucas Ariel Beronne
           </h1>
           <p className={`text-xl md:text-2xl text-center mb-8 ${
