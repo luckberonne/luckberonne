@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import {
   Github,
   Linkedin,
-  Twitter,
   Mail,
   ChevronDown,
   Download,
@@ -41,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
     // Create particles
     if (particlesRef.current) {
       const container = particlesRef.current;
-      const particleCount = 50;
+      const particleCount = 36;
 
       for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
@@ -70,10 +69,13 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
           } relative z-10`}
       >
         <div className="floating">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text text-center">
+          <h1 className="text-6xl md:text-8xl font-display font-semibold mb-4 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-600 text-transparent bg-clip-text text-center">
             Lucas Ariel Beronne
           </h1>
-          <p className="text-xl md:text-2xl text-center mb-8 text-opacity-80">
+          <p className={`text-xl md:text-2xl text-center mb-8 ${
+            isDark ? 'text-neutral-300' : 'text-neutral-600'
+          }`}
+          >
             {t.role}
           </p>
         </div>
@@ -84,8 +86,8 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={`social-icon ${isDark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-600 hover:text-blue-500'
+                  ? 'text-neutral-300 hover:text-primary-300'
+                  : 'text-neutral-600 hover:text-primary-500'
                 } transition-colors`}
             >
               <Github size={24} />
@@ -97,8 +99,8 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={`social-icon ${isDark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-600 hover:text-blue-500'
+                  ? 'text-neutral-300 hover:text-primary-300'
+                  : 'text-neutral-600 hover:text-primary-500'
                 } transition-colors`}
             >
               <Linkedin size={24} />
@@ -110,8 +112,8 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={`social-icon ${isDark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-600 hover:text-blue-500'
+                  ? 'text-neutral-300 hover:text-primary-300'
+                  : 'text-neutral-600 hover:text-primary-500'
                 } transition-colors`}
             >
               <Download size={24} />
@@ -123,8 +125,8 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={`social-icon ${isDark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-600 hover:text-blue-500'
+                  ? 'text-neutral-300 hover:text-primary-300'
+                  : 'text-neutral-600 hover:text-primary-500'
                 } transition-colors`}
             >
               <Mail size={24} />
@@ -135,7 +137,7 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
       <a href="#experience" className="absolute bottom-10 animate-bounce z-10">
         <ChevronDown
           size={32}
-          className={isDark ? 'text-gray-300' : 'text-gray-600'}
+          className={isDark ? 'text-neutral-400' : 'text-neutral-500'}
         />
       </a>
     </section>

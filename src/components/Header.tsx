@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Sun, Moon, Languages } from 'lucide-react';
 
 interface HeaderProps {
@@ -29,15 +29,15 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
         isScrolled
           ? isDark
-            ? 'bg-neutral-900/90'
-            : 'bg-surface-light/90'
+            ? 'bg-neutral-950/80 border-b border-white/5'
+            : 'bg-surface-light/85 border-b border-neutral-200'
           : 'bg-transparent'
-      } backdrop-blur-sm`}
+      } backdrop-blur-md`}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <h2 
           onClick={scrollToTop}
-          className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary-400 to-secondary-500 text-transparent bg-clip-text cursor-pointer hover:opacity-80 transition-opacity"
+          className="text-lg sm:text-xl font-display font-semibold tracking-tight bg-gradient-to-r from-primary-200 via-primary-400 to-primary-300 text-transparent bg-clip-text cursor-pointer hover:opacity-80 transition-opacity"
         >
           Lucas Ariel Beronne
         </h2>
@@ -46,8 +46,8 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
             onClick={() => setLang(lang === 'en' ? 'es' : 'en')}
             className={`p-1.5 rounded-lg flex items-center ${
               isDark
-                ? 'bg-neutral-50/10 hover:bg-neutral-50/20'
-                : 'bg-neutral-900/10 hover:bg-neutral-900/20'
+                ? 'bg-white/5 hover:bg-white/10 ring-1 ring-white/10'
+                : 'bg-neutral-900/5 hover:bg-neutral-900/10 ring-1 ring-neutral-200'
             } transition-colors backdrop-blur-sm`}
           >
             <Languages size={16} />
@@ -57,8 +57,8 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
             onClick={() => setIsDark(!isDark)}
             className={`p-1.5 rounded-lg ${
               isDark
-                ? 'bg-neutral-50/10 hover:bg-neutral-50/20'
-                : 'bg-neutral-900/10 hover:bg-neutral-900/20'
+                ? 'bg-white/5 hover:bg-white/10 ring-1 ring-white/10'
+                : 'bg-neutral-900/5 hover:bg-neutral-900/10 ring-1 ring-neutral-200'
             } transition-colors backdrop-blur-sm`}
           >
             {isDark ? <Sun size={16} /> : <Moon size={16} />}

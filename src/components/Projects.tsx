@@ -181,11 +181,11 @@ export function Projects({ t, isDark }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className={`py-20 px-4 ${isDark ? 'bg-surface-dark-alt' : 'bg-surface-light-alt'}`}
+      className={`py-24 px-4 ${isDark ? 'bg-surface-dark-alt' : 'bg-surface-light-alt'}`}
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
-          <Code2 className="text-primary-400" size={32} />
+          <Code2 className="text-primary-300" size={32} />
           <h2 className="text-4xl font-bold">{t.projects}</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -193,14 +193,16 @@ export function Projects({ t, isDark }: ProjectsProps) {
             <div
               key={index}
               className={`project-card relative ${
-                isDark ? 'bg-surface-dark' : 'bg-surface-light'
-              } rounded-lg shadow-lg overflow-hidden group flex flex-col h-full transition-all duration-300 hover:shadow-2xl`}
+                isDark
+                  ? 'bg-surface-dark border border-white/5'
+                  : 'bg-surface-light border border-neutral-200'
+              } rounded-2xl shadow-lg overflow-hidden group flex flex-col h-full transition-all duration-300 hover:shadow-2xl`}
             >
               <div className="relative h-40 sm:h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none">
                   <div className="absolute bottom-0 p-3 sm:p-4">
@@ -229,7 +231,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
                           isDark
                             ? 'bg-neutral-700 text-neutral-300'
                             : 'bg-neutral-100 text-neutral-700'
-                        } transition-all duration-300 hover:transform hover:scale-105`}
+                        } transition-all duration-300 hover:transform hover:scale-[1.02]`}
                       >
                         {tech}
                       </span>
@@ -237,7 +239,11 @@ export function Projects({ t, isDark }: ProjectsProps) {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-2 sm:space-x-3 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-neutral-700/20">
+                <div
+                  className={`flex flex-col sm:flex-row gap-2 sm:space-x-3 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t ${
+                    isDark ? 'border-white/10' : 'border-neutral-200/80'
+                  }`}
+                >
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
@@ -247,7 +253,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
                         isDark
                           ? 'bg-primary-500 hover:bg-primary-600'
                           : 'bg-primary-600 hover:bg-primary-700'
-                      } text-white transition-all duration-300 hover:transform hover:scale-105 z-10`}
+                      } text-white transition-all duration-300 hover:transform hover:scale-[1.02] z-10`}
                     >
                       {t.viewProject}{' '}
                       <ExternalLink size={16} className="ml-2" />
@@ -260,9 +266,9 @@ export function Projects({ t, isDark }: ProjectsProps) {
                       rel="noopener noreferrer"
                       className={`flex-1 inline-flex items-center justify-center px-4 py-2 rounded-lg ${
                         isDark
-                          ? 'bg-neutral-700 hover:bg-neutral-600'
+                          ? 'bg-neutral-800/70 hover:bg-neutral-700/80'
                           : 'bg-neutral-200 hover:bg-neutral-300'
-                      } transition-all duration-300 hover:transform hover:scale-105 z-10`}
+                      } transition-all duration-300 hover:transform hover:scale-[1.02] z-10`}
                     >
                       {t.viewCode} <Github size={16} className="ml-2" />
                     </a>
@@ -281,7 +287,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
               disabled={currentPage === 1}
               className={`p-2 rounded-lg transition-all duration-300 ${
                 isDark
-                  ? 'bg-neutral-700 hover:bg-neutral-600 disabled:bg-neutral-800'
+                  ? 'bg-neutral-800/70 hover:bg-neutral-700/80 disabled:bg-neutral-900/70'
                   : 'bg-neutral-200 hover:bg-neutral-300 disabled:bg-neutral-100'
               } disabled:cursor-not-allowed`}
             >
@@ -299,7 +305,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
                         ? 'bg-primary-500 text-white'
                         : 'bg-primary-600 text-white'
                       : isDark
-                      ? 'bg-neutral-700 hover:bg-neutral-600'
+                      ? 'bg-neutral-800/70 hover:bg-neutral-700/80'
                       : 'bg-neutral-200 hover:bg-neutral-300'
                   }`}
                 >
@@ -313,7 +319,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
               disabled={currentPage === totalPages}
               className={`p-2 rounded-lg transition-all duration-300 ${
                 isDark
-                  ? 'bg-neutral-700 hover:bg-neutral-600 disabled:bg-neutral-800'
+                  ? 'bg-neutral-800/70 hover:bg-neutral-700/80 disabled:bg-neutral-900/70'
                   : 'bg-neutral-200 hover:bg-neutral-300 disabled:bg-neutral-100'
               } disabled:cursor-not-allowed`}
             >

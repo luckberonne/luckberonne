@@ -83,10 +83,10 @@ export const Experiences: React.FC<ExperiencesProps> = ({
   const displayedExperiences = showAll ? experiences : experiences.slice(0, 4);
 
   return (
-    <section id="experience" className="py-20 px-4">
+    <section id="experience" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
-          <Briefcase className="text-blue-400" size={32} />
+          <Briefcase className="text-primary-300" size={32} />
           <h2 className="text-4xl font-bold">{t.experience}</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
@@ -94,31 +94,33 @@ export const Experiences: React.FC<ExperiencesProps> = ({
             <div
               key={index}
               className={`${
-                isDark ? 'bg-gray-800/50' : 'bg-white shadow-lg'
-              } p-6 rounded-lg hover:transform hover:scale-105 transition-all cursor-pointer`}
+                isDark
+                  ? 'bg-surface-dark border border-white/5'
+                  : 'bg-surface-light border border-neutral-200 shadow-lg'
+              } p-6 rounded-2xl transition-all cursor-pointer hover:-translate-y-1 hover:shadow-2xl`}
               onClick={() => setSelectedExperience(exp)}
             >
-              <h3 className="text-xl font-bold text-blue-400">{exp.title}</h3>
+              <h3 className="text-xl font-bold text-primary-300">{exp.title}</h3>
               <div className="flex items-center gap-2 mb-2">
                 <a
                   href={exp.companyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${
-                    isDark ? 'text-gray-300' : 'text-gray-600'
-                  } hover:text-blue-400 transition-colors inline-flex items-center gap-1 animated-underline`}
+                    isDark ? 'text-neutral-300' : 'text-neutral-600'
+                  } hover:text-primary-300 transition-colors inline-flex items-center gap-1 animated-underline`}
                   onClick={(e) => e.stopPropagation()}
                 >
                   {exp.company}
                   <ExternalLink size={14} />
                 </a>
-                <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>
+                <span className={isDark ? 'text-neutral-300' : 'text-neutral-600'}>
                   | {exp.period}
                 </span>
               </div>
               <p
                 className={`${
-                  isDark ? 'text-gray-400' : 'text-gray-500'
+                  isDark ? 'text-neutral-400' : 'text-neutral-500'
                 } mb-4`}
               >
                 {exp.description}
@@ -129,8 +131,8 @@ export const Experiences: React.FC<ExperiencesProps> = ({
                     key={techIndex}
                     className={`px-2 py-1 text-sm rounded-full ${
                       isDark
-                        ? 'bg-gray-700 text-gray-300'
-                        : 'bg-gray-100 text-gray-700'
+                        ? 'bg-neutral-800/60 text-neutral-200'
+                        : 'bg-neutral-100 text-neutral-700'
                     }`}
                   >
                     {tech}
@@ -140,8 +142,8 @@ export const Experiences: React.FC<ExperiencesProps> = ({
                   <span
                     className={`px-2 py-1 text-sm rounded-full ${
                       isDark
-                        ? 'bg-gray-700 text-gray-300'
-                        : 'bg-gray-100 text-gray-700'
+                        ? 'bg-neutral-800/60 text-neutral-200'
+                        : 'bg-neutral-100 text-neutral-700'
                     }`}
                   >
                     +{exp.technologies.length - 3}
@@ -157,9 +159,9 @@ export const Experiences: React.FC<ExperiencesProps> = ({
               onClick={() => setShowAll(!showAll)}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg ${
                 isDark
-                  ? 'bg-blue-500 hover:bg-blue-600'
-                  : 'bg-blue-600 hover:bg-blue-700'
-              } text-white font-semibold transition-all duration-300 hover:transform hover:scale-105`}
+                  ? 'bg-primary-500 hover:bg-primary-600'
+                  : 'bg-primary-600 hover:bg-primary-700'
+              } text-white font-semibold transition-all duration-300 hover:transform hover:scale-[1.02]`}
             >
               {showAll ? (
                 <>

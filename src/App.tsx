@@ -47,10 +47,10 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen ${
+      className={`min-h-screen page-shell ${
         isDark
-          ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white'
-          : 'bg-gradient-to-br from-gray-100 via-white to-gray-100 text-gray-900'
+          ? 'bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-100'
+          : 'bg-gradient-to-br from-neutral-50 via-white to-neutral-100 text-neutral-900'
       }`}
     >
       <Header
@@ -93,7 +93,7 @@ function App() {
       {/* Footer */}
       <footer
         className={`py-8 px-4 text-center ${
-          isDark ? 'text-gray-400' : 'text-gray-600'
+          isDark ? 'text-neutral-400' : 'text-neutral-500'
         }`}
       >
         <p>© {new Date().getFullYear()} Lucas Ariel Beronne. {t.allRightsReserved}</p>
@@ -114,17 +114,17 @@ function App() {
         href="https://www.linkedin.com/in/lucas-beronne"
         target="_blank"
         rel="noopener noreferrer"
-        className={`fixed bottom-6 right-6 p-4 rounded-full shadow-lg transition-all duration-300 transform z-[100]${
+        className={`fixed bottom-6 right-6 p-4 rounded-full shadow-lg transition-all duration-300 transform ${
           showLinkedIn
             ? 'translate-y-0 opacity-100'
             : 'translate-y-16 opacity-0 pointer-events-none'
         } ${
           isDark
-            ? 'bg-gray-800 hover:bg-gray-700'
-            : 'bg-white hover:bg-gray-100'
-        } hover:scale-110 z-[100]`}
+            ? 'bg-neutral-900/80 hover:bg-neutral-800 ring-1 ring-white/10'
+            : 'bg-white/90 hover:bg-neutral-100 ring-1 ring-neutral-200'
+        } hover:scale-[1.04] z-[100]`}
       >
-        <Linkedin className="text-blue-400" size={24} />
+        <Linkedin className="text-primary-400" size={24} />
       </a>
       
       {/* Vercel Speed Insights */}

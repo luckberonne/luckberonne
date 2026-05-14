@@ -126,11 +126,11 @@ export function Courses({ t, isDark }: CoursesProps) {
 
   return (
     <section
-      className={`py-20 px-4 ${isDark ? 'bg-surface-dark-alt' : 'bg-surface-light-alt'}`}
+      className={`py-24 px-4 ${isDark ? 'bg-surface-dark-alt' : 'bg-surface-light-alt'}`}
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
-          <GraduationCap className="text-primary-400" size={32} />
+          <GraduationCap className="text-primary-300" size={32} />
           <h2 className="text-4xl font-bold">{t.courses}</h2>
         </div>
         <div>
@@ -139,11 +139,13 @@ export function Courses({ t, isDark }: CoursesProps) {
               <div
                 key={index}
                 className={`${
-                  isDark ? 'bg-surface-dark' : 'bg-surface-light shadow-lg'
-                } p-6 rounded-lg hover:transform hover:scale-105 transition-all flex flex-col min-h-[200px]`}
+                  isDark
+                    ? 'bg-surface-dark border border-white/5'
+                    : 'bg-surface-light border border-neutral-200 shadow-lg'
+                } p-6 rounded-2xl hover:shadow-xl transition-all flex flex-col min-h-[200px]`}
               >
                 <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-primary-400 mb-2">
+                  <h3 className="text-xl font-bold text-primary-300 mb-2">
                     {course.name}
                   </h3>
                   <div className="flex items-center gap-2 mb-2">
@@ -154,7 +156,7 @@ export function Courses({ t, isDark }: CoursesProps) {
                         rel="noopener noreferrer"
                         className={`${
                           isDark ? 'text-neutral-300' : 'text-neutral-600'
-                        } hover:text-primary-400 transition-colors inline-flex items-center gap-1 animated-underline`}
+                        } hover:text-primary-300 transition-colors inline-flex items-center gap-1 animated-underline`}
                       >
                         {course.platform}
                         <ExternalLink size={14} />
@@ -190,7 +192,7 @@ export function Courses({ t, isDark }: CoursesProps) {
                         isDark
                           ? 'bg-primary-500 hover:bg-primary-600'
                           : 'bg-primary-600 hover:bg-primary-700'
-                      } text-white transition-all duration-300 hover:transform hover:scale-105`}
+                      } text-white transition-all duration-300 hover:transform hover:scale-[1.02]`}
                     >
                       {t.courseDetails.certificate}{' '}
                       <ExternalLink size={16} className="ml-2" />
@@ -208,7 +210,7 @@ export function Courses({ t, isDark }: CoursesProps) {
                   isDark
                     ? 'bg-primary-500 hover:bg-primary-600'
                     : 'bg-primary-600 hover:bg-primary-700'
-                } text-white font-semibold transition-all duration-300 hover:transform hover:scale-105`}
+                } text-white font-semibold transition-all duration-300 hover:transform hover:scale-[1.02]`}
               >
                 {showAll ? (
                   <>
