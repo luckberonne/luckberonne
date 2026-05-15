@@ -126,6 +126,7 @@ export function Courses({ t, isDark }: CoursesProps) {
 
   return (
     <section
+      id="courses"
       className={`py-24 px-4 ${isDark ? 'bg-surface-dark-alt' : 'bg-surface-light-alt'}`}
     >
       <div className="max-w-6xl mx-auto">

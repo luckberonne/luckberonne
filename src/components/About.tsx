@@ -10,7 +10,7 @@ interface AboutProps {
 
 export function About({ t, isDark }: AboutProps) {
   return (
-    <section className="py-24 px-4">
+    <section id="about" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
           <User className="text-primary-300" size={32} />

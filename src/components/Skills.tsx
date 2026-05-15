@@ -43,7 +43,7 @@ const skillCategories = {
 
 export function Skills({ t, isDark }: SkillsProps) {
   return (
-    <section className="py-24 px-4">
+    <section id="skills" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center space-x-4 mb-12">
           <Cpu className="text-primary-300" size={32} />
