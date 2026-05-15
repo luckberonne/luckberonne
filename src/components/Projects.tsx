@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Code2, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Code2, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { GithubIcon } from './GithubIcon';
 
 import CombiGoImg from '../assets/images/CombiGo.png';
 import GentoPassImg from '../assets/images/GentoPass.png';
@@ -272,7 +273,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
                           : 'bg-neutral-200 hover:bg-neutral-300'
                       } transition-all duration-300 hover:transform hover:scale-[1.02] z-10`}
                     >
-                      {t.viewCode} <Github size={16} className="ml-2" />
+                      {t.viewCode} <GithubIcon size={16} className="ml-2" />
                     </a>
                   )}
                 </div>

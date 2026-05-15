@@ -1,7 +1,8 @@
 import React from 'react';
-import { User, Github } from 'lucide-react';
+import { User } from 'lucide-react';
 import perfil from '../assets/images/perfil.jpeg';
 import githubLogo from '../assets/images/GithubLogo.jpeg';
+import { GithubIcon } from './GithubIcon';
 
 interface AboutProps {
   t: any;
@@ -55,7 +56,7 @@ export function About({ t, isDark }: AboutProps) {
                     : 'bg-neutral-200 hover:bg-neutral-300'
                 } transition-all duration-300 hover:transform hover:scale-[1.02]`}
               >
-                GitHub <Github size={16} className="ml-2" />
+                GitHub <GithubIcon size={16} className="ml-2" />
               </a>
             </div>
           </div>

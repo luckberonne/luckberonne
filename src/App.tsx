@@ -9,7 +9,7 @@ import { Educations } from './components/Educations';
 import { About } from './components/About';
 import Hero from './components/Hero';
 import { ExperienceModal } from './components/ExperienceModal';
-import { Linkedin } from 'lucide-react';
+import { LinkedInIcon } from './components/LinkedInIcon';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
 type Experience = {
@@ -114,6 +114,7 @@ function App() {
         href="https://www.linkedin.com/in/lucas-beronne"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="LinkedIn"
         className={`fixed bottom-6 right-6 p-4 rounded-full shadow-lg transition-all duration-300 transform ${
           showLinkedIn
             ? 'translate-y-0 opacity-100'
@@ -124,7 +125,7 @@ function App() {
             : 'bg-white/90 hover:bg-neutral-100 ring-1 ring-neutral-200'
         } hover:scale-[1.04] z-[100]`}
       >
-        <Linkedin className="text-primary-400" size={24} />
+        <LinkedInIcon size={24} className="text-primary-400" />
       </a>
       
       {/* Vercel Speed Insights */}

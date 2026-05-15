@@ -1,11 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import {
-  Github,
-  Linkedin,
   Mail,
   ChevronDown,
   Download,
 } from 'lucide-react';
+import { MedusaeBackdrop } from './MedusaeBackdrop';
+import { LinkedInIcon } from './LinkedInIcon';
+import { GithubIcon } from './GithubIcon';
 
 interface HeroProps {
   isDark: boolean;
@@ -18,8 +19,6 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
-  const particlesRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     setIsVisible(true);
 
@@ -37,39 +36,20 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
       });
     });
 
-    // Create particles
-    if (particlesRef.current) {
-      const container = particlesRef.current;
-      const particleCount = 36;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        const size = Math.random() * 4 + 1;
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.top = `${Math.random() * 100}%`;
-
-        // Random animation
-        const duration = Math.random() * 20 + 10;
-        particle.style.animation = `float ${duration}s infinite`;
-
-        container.appendChild(particle);
-      }
-    }
   }, [setIsVisible]);
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-16 overflow-hidden">
+      <MedusaeBackdrop
+        isDark={isDark}
+        className="absolute inset-0 z-0"
+      />
       <div
-        className={`absolute inset-0 animated-bg ${
-          isDark ? 'animated-bg--dark' : 'animated-bg--light'
+        className={`absolute inset-0 z-0 ${
+          isDark
+            ? 'bg-gradient-to-b from-neutral-950/60 via-neutral-950/20 to-neutral-950/10'
+            : 'bg-gradient-to-b from-white/70 via-white/40 to-white/20'
         }`}
-      ></div>
-      <div
-        ref={particlesRef}
-        className={`particles ${isDark ? '' : 'particles-light'}`}
       ></div>
       <div
         className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -103,7 +83,7 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
                   : 'text-neutral-600 hover:text-primary-500'
                 } transition-colors`}
             >
-              <Github size={24} />
+                <GithubIcon size={24} />
             </a>
           </div>
           <div className="social-icon-wrapper">
@@ -111,12 +91,13 @@ const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
               href="https://www.linkedin.com/in/lucas-beronne/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className={`social-icon ${isDark
                   ? 'text-neutral-300 hover:text-primary-300'
                   : 'text-neutral-600 hover:text-primary-500'
                 } transition-colors`}
             >
-              <Linkedin size={24} />
+                <LinkedInIcon size={24} />
             </a>
           </div>
           <div className="social-icon-wrapper">

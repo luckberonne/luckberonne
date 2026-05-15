@@ -37,7 +37,11 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <h2 
           onClick={scrollToTop}
-          className="text-lg sm:text-xl font-display font-semibold tracking-tight bg-gradient-to-r from-primary-200 via-primary-400 to-primary-300 text-transparent bg-clip-text cursor-pointer hover:opacity-80 transition-opacity"
+          className={`text-lg sm:text-xl font-display font-semibold tracking-tight bg-gradient-to-r text-transparent bg-clip-text cursor-pointer hover:opacity-80 transition-opacity ${
+            isDark
+              ? 'from-primary-200 via-primary-400 to-primary-300'
+              : 'from-primary-700 via-primary-600 to-primary-500'
+          }`}
         >
           Lucas Ariel Beronne
         </h2>
