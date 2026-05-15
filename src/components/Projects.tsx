@@ -1,20 +1,34 @@
 import { useState } from 'react';
 import { Code2, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GithubIcon } from './GithubIcon';
+import { LazyImage } from './LazyImage';
 
 import CombiGoImg from '../assets/images/CombiGo.png';
+import CombiGoImgWebp from '../assets/images/CombiGo.png?format=webp&quality=80';
 import GentoPassImg from '../assets/images/GentoPass.png';
+import GentoPassImgWebp from '../assets/images/GentoPass.png?format=webp&quality=80';
 import KytameImg from '../assets/images/Kytame.png';
+import KytameImgWebp from '../assets/images/Kytame.png?format=webp&quality=80';
 import NamurImg from '../assets/images/Namur.png';
+import NamurImgWebp from '../assets/images/Namur.png?format=webp&quality=80';
 import TaeGukImg from '../assets/images/TaeGuk.png';
+import TaeGukImgWebp from '../assets/images/TaeGuk.png?format=webp&quality=80';
 import ReciClickImg from '../assets/images/ReciClick.png';
+import ReciClickImgWebp from '../assets/images/ReciClick.png?format=webp&quality=80';
 import KaizenCodeImg from '../assets/images/KaizenCode.png';
+import KaizenCodeImgWebp from '../assets/images/KaizenCode.png?format=webp&quality=80';
 import ControlARImg from '../assets/images/ControlAR.jpg';
+import ControlARImgWebp from '../assets/images/ControlAR.jpg?format=webp&quality=80';
 import CasaMinkaImg from '../assets/images/CasaMinka.png';
+import CasaMinkaImgWebp from '../assets/images/CasaMinka.png?format=webp&quality=80';
 import TotalNewsImg from '../assets/images/TotalNews.png';
+import TotalNewsImgWebp from '../assets/images/TotalNews.png?format=webp&quality=80';
 import DolarHoyImg from '../assets/images/DolarHoy.png';
+import DolarHoyImgWebp from '../assets/images/DolarHoy.png?format=webp&quality=80';
 import FactulabsImg from '../assets/images/Factulabs.png';
+import FactulabsImgWebp from '../assets/images/Factulabs.png?format=webp&quality=80';
 import CodeImg from '../assets/images/Code.png';
+import CodeImgWebp from '../assets/images/Code.png?format=webp&quality=80';
 
 
 interface ProjectsProps {
@@ -39,6 +53,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
           ? 'Professional image generator. Design slides with highlighted code, branding, and high-resolution export ready for LinkedIn.'
           : 'Generador de imágenes profesionales. Diseña slides con código resaltado, branding y exportación en alta resolución listo para LinkedIn.'),
       image: CodeImg,
+      imageWebp: CodeImgWebp,
       demoUrl: 'https://code-carrusel.vercel.app/',
       githubUrl: '',
       technologies: ['Next.js', 'Vercel', 'Tailwind CSS', 'Exportación HD', 'Branding', 'Slides'],
@@ -54,6 +69,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'Factulabs',
       description: t.projectsData[14]?.description || 'Factulabs es una aplicación de facturación electrónica desarrollada con .NET MAUI, enfocada principalmente en Windows',
       image: FactulabsImg,
+      imageWebp: FactulabsImgWebp,
       githubUrl: 'https://github.com/luckberonne/Factulabs_Release',
       technologies: ['.NET MAUI', '.NET 9', 'SQL LITE', 'Windows', 'Android', 'PDF'],
     },
@@ -61,6 +77,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'Namur',
       description: t.projectsData[3]?.description || 'Landing page para una empresa de productos alimenticios de alta calidad.',
       image: NamurImg,
+      imageWebp: NamurImgWebp,
       demoUrl: 'https://www.namur.com.py/',
       githubUrl: '',
       technologies: ['Astro js', 'Vercel'],
@@ -69,6 +86,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'ReciClick',
       description: t.projectsData[1]?.description || 'ReciClick te ayuda a identificar residuos y clasificarlos en el contenedor correcto usando una foto.',
       image: ReciClickImg,
+      imageWebp: ReciClickImgWebp,
       demoUrl: 'https://reci-click.vercel.app/',
       technologies: ['Next.js', 'Firebase', 'Vercel', 'Gemini API', 'AI'],
     },
@@ -76,6 +94,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'Kytame',
       description: t.projectsData[2]?.description || 'Sistema de puntuación para torneos de taekwondo en tiempo real.',
       image: KytameImg,
+      imageWebp: KytameImgWebp,
       demoUrl: 'https://kytame.azurewebsites.net/',
       githubUrl: 'https://github.com/luckberonne/Kytame',
       technologies: ['Blazor', 'SignalR', '.NET 8', 'Azure'],
@@ -84,6 +103,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'CombiGo',
       description: t.projectsData[0]?.description || 'CombiGo es una aplicación web full-stack diseñada para una empresa de transporte de media distancia.',
       image: CombiGoImg,
+      imageWebp: CombiGoImgWebp,
       demoUrl: 'https://combi-go.vercel.app/',
       technologies: ['Next.js', 'Firebase', 'NoSQL', 'Vercel'],
     },
@@ -91,6 +111,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'GentoPass',
       description: t.projectsData[4]?.description || 'Generador de contraseñas seguras con historial de uso.',
       image: GentoPassImg,
+      imageWebp: GentoPassImgWebp,
       demoUrl: 'https://gentopass.azurewebsites.net/',
       githubUrl: 'https://github.com/luckberonne/GentoPass',
       technologies: ['.NET', 'Blazor', 'Azure', 'Docker'],
@@ -99,6 +120,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'KaizenCode',
       description: t.projectsData[5]?.description || 'Landing page para una consultora IT con enfoque en SEO y chatbots.',
       image: KaizenCodeImg,
+      imageWebp: KaizenCodeImgWebp,
       demoUrl: 'https://www.kaizencode.com.ar/',
       githubUrl: '',
       technologies: ['Vite js', 'Vercel', 'Tailwind CSS', 'TypeScript', 'Chatbot', 'SEO', 'Gemini'],
@@ -107,6 +129,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'ControlAR',
       description: t.projectsData[6]?.description || 'Sistema de gestión de stock y ventas con soporte multi-tenant.',
       image: ControlARImg,
+      imageWebp: ControlARImgWebp,
       demoUrl: 'https://controlar.azurewebsites.net/',
       githubUrl: '',
       technologies: ['.NET', 'Blazor', 'Azure', 'Docker', 'Multi-tenant', 'SQL Server'],
@@ -115,6 +138,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'Tae Guk',
       description: t.projectsData[7]?.description || 'Página web para una escuela de taekwondo.',
       image: TaeGukImg,
+      imageWebp: TaeGukImgWebp,
       demoUrl: 'https://taeguk.vercel.app/',
       githubUrl: 'https://github.com/luckberonne/TaeGuk',
       technologies: ['Astro js', 'Vercel'],
@@ -139,6 +163,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'DolarHoy',
       description: t.projectsData[10]?.description || 'Aplicación para consultar el valor del dólar en tiempo real.',
       image: DolarHoyImg,
+      imageWebp: DolarHoyImgWebp,
       demoUrl: 'https://dolar-hoy-labs.vercel.app/',
       githubUrl: '',
       technologies: ['Vite js', 'Vercel', 'API REST'],
@@ -147,6 +172,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'Casa Minka',
       description: t.projectsData[11]?.description || 'Museo virtual de cultura japonesa con contenido interactivo.',
       image: CasaMinkaImg,
+      imageWebp: CasaMinkaImgWebp,
       demoUrl: 'https://casaminka.vercel.app/',
       githubUrl: '',
       technologies: ['Next.js', 'PostgreSQL', 'Vercel'],
@@ -155,6 +181,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
       title: 'TotalNews',
       description: t.projectsData[12]?.description || 'Generador de noticias ficticias utilizando inteligencia artificial.',
       image: TotalNewsImg,
+      imageWebp: TotalNewsImgWebp,
       demoUrl: 'https://totalnews.vercel.app/',
       githubUrl: 'https://github.com/luckberonne/totalnews',
       technologies: ['Next.js', 'PostgreSQL', 'Gemini API', 'Vercel'],
@@ -202,10 +229,13 @@ export function Projects({ t, isDark }: ProjectsProps) {
               } rounded-2xl shadow-lg overflow-hidden group flex flex-col h-full transition-all duration-300 hover:shadow-2xl`}
             >
               <div className="relative h-40 sm:h-48 overflow-hidden">
-                <img
+                <LazyImage
                   src={project.image}
+                  webpSrc={project.imageWebp}
                   alt={project.title}
-                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="block w-full h-full"
+                  imgClassName="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-[1.04]"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none">
                   <div className="absolute bottom-0 p-3 sm:p-4">

@@ -1,8 +1,11 @@
 import React from 'react';
 import { User } from 'lucide-react';
 import perfil from '../assets/images/perfil.jpeg';
+import perfilWebp from '../assets/images/perfil.jpeg?format=webp&quality=80';
 import githubLogo from '../assets/images/GithubLogo.jpeg';
+import githubLogoWebp from '../assets/images/GithubLogo.jpeg?format=webp&quality=80';
 import { GithubIcon } from './GithubIcon';
+import { LazyImage } from './LazyImage';
 
 interface AboutProps {
   t: any;
@@ -26,10 +29,12 @@ export function About({ t, isDark }: AboutProps) {
         >
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="relative group">
-              <img
+              <LazyImage
                 src={perfil}
+                webpSrc={perfilWebp}
                 alt="Profile"
-                className="w-48 h-48 rounded-2xl object-cover shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
+                className="block"
+                imgClassName="w-48 h-48 rounded-2xl object-cover shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
               />
               <a
                 href="https://github.com/luckberonne"
@@ -39,7 +44,13 @@ export function About({ t, isDark }: AboutProps) {
                   isDark ? 'bg-neutral-900/90' : 'bg-white/90'
                 } shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-[1.04] overflow-hidden`}
               >
-                <img src={githubLogo} alt="GitHub" className="w-6 h-6 object-cover rounded-full transition-transform duration-300 hover:scale-[1.04]" />
+                <LazyImage
+                  src={githubLogo}
+                  webpSrc={githubLogoWebp}
+                  alt="GitHub"
+                  className="block"
+                  imgClassName="w-6 h-6 object-cover rounded-full transition-transform duration-300 hover:scale-[1.04]"
+                />
               </a>
             </div>
             <div className="flex-1">
