@@ -20,7 +20,7 @@ Fullstack Senior Developer with over 5 years of experience building solutions th
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Backend**
 
@@ -70,7 +70,7 @@ My repositories are focused on:
 
 ---
 
-## 🎯 Patterns & Practices
+## Patterns & Practices
 
 ![Microservices](https://img.shields.io/badge/Microservices-1C3C3C?style=flat-square)
 ![REST APIs](https://img.shields.io/badge/REST_APIs-009688?style=flat-square)
