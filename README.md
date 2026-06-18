@@ -20,7 +20,7 @@ Fullstack Senior Developer con más de 5 años creando soluciones que combinan b
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Backend**
 
@@ -70,7 +70,7 @@ Mis repos están enfocados en:
 
 ---
 
-## 🎯 Patrones & Prácticas
+## Patrones & Prácticas
 
 ![Microservices](https://img.shields.io/badge/Microservices-1C3C3C?style=flat-square)
 ![REST APIs](https://img.shields.io/badge/REST_APIs-009688?style=flat-square)
