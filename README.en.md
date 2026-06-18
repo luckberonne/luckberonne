@@ -16,7 +16,7 @@
 
 ## About Me
 
-Fullstack Senior Developer con más de 5 años creando soluciones que combinan backend sólido y frontend moderno. Me gusta optimizar performance, aplicar arquitectura limpia y automatizar despliegues para entregar software de calidad.
+Fullstack Senior Developer with over 5 years of experience building solutions that combine solid backend architecture with modern frontend development. I'm passionate about optimizing performance, applying clean architecture principles, and automating deployments to deliver high-quality software.
 
 ---
 
@@ -62,15 +62,15 @@ Fullstack Senior Developer con más de 5 años creando soluciones que combinan b
 
 ## Focus
 
-Mis repos están enfocados en:  
-- APIs REST escalables y seguras  
-- Automatización de pipelines CI/CD  
-- Optimizaciones de performance y monitoreo  
-- Aplicaciones frontend con alta mantenibilidad y experiencia de usuario
+My repositories are focused on:  
+- Scalable and secure REST APIs  
+- CI/CD pipeline automation  
+- Performance optimization and monitoring  
+- Frontend applications with high maintainability and user experience
 
 ---
 
-## 🎯 Patrones & Prácticas
+## 🎯 Patterns & Practices
 
 ![Microservices](https://img.shields.io/badge/Microservices-1C3C3C?style=flat-square)
 ![REST APIs](https://img.shields.io/badge/REST_APIs-009688?style=flat-square)
@@ -82,6 +82,6 @@ Mis repos están enfocados en:
 
 <div align="center">
 
-*Compartir código limpio, documentar soluciones y crear cosas increíbles juntos.*
+*Sharing clean code, documenting solutions, and building amazing things together.*
 
 </div>
