@@ -1,9 +1,9 @@
-import React from 'react';
 import { User } from 'lucide-react';
-import perfil from '../assets/images/perfil.jpeg';
-import perfilWebp from '../assets/images/perfil.jpeg?format=webp&quality=80';
-import githubLogo from '../assets/images/GithubLogo.jpeg';
-import githubLogoWebp from '../assets/images/GithubLogo.jpeg?format=webp&quality=80';
+// Rendered at 192px (perfil) and 24px (logo) — sized for 2x/4x displays, not full res.
+import perfil from '../assets/images/perfil.jpeg?w=400&quality=75&format=jpeg';
+import perfilWebp from '../assets/images/perfil.jpeg?w=400&quality=75&format=webp';
+import githubLogo from '../assets/images/GithubLogo.jpeg?w=96&quality=75&format=jpeg';
+import githubLogoWebp from '../assets/images/GithubLogo.jpeg?w=96&quality=75&format=webp';
 import { GithubIcon } from './GithubIcon';
 import { LazyImage } from './LazyImage';
 

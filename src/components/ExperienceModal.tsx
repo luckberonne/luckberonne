@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { X, ExternalLink } from 'lucide-react';
 
 interface Experience {
@@ -26,6 +27,20 @@ interface ExperienceModalProps {
 }
 
 export function ExperienceModal({ experience, onClose, isDark, t }: ExperienceModalProps) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    // Lock background scroll while the modal is open, same as the CLI.
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [onClose]);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-neutral-950/70 modal-backdrop" onClick={onClose} />
@@ -42,7 +57,8 @@ export function ExperienceModal({ experience, onClose, isDark, t }: ExperienceMo
         <button
           onClick={onClose}
           aria-label={t.close}
-          className={`absolute top-4 right-4 ${
+          autoFocus
+          className={`absolute top-4 right-4 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 ${
             isDark
               ? 'text-neutral-400 hover:text-neutral-200'
               : 'text-neutral-500 hover:text-neutral-700'

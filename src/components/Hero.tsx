@@ -1,12 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import {
   Mail,
   ChevronDown,
   Download,
 } from 'lucide-react';
-import { MedusaeBackdrop } from './MedusaeBackdrop';
 import { LinkedInIcon } from './LinkedInIcon';
 import { GithubIcon } from './GithubIcon';
+
+// three.js is ~800 KB of the bundle and this is a decorative backdrop — split it
+// out so it never blocks first paint or interactivity.
+const MedusaeBackdrop = lazy(() =>
+  import('./MedusaeBackdrop').then((m) => ({ default: m.MedusaeBackdrop })),
+);
 
 interface HeroProps {
   isDark: boolean;
@@ -21,29 +26,13 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ isDark, isVisible, setIsVisible, t }) => {
   useEffect(() => {
     setIsVisible(true);
-
-    // Smooth scroll behavior
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener('click', (e: Event) => {
-        e.preventDefault();
-        const target = e.currentTarget as HTMLAnchorElement;
-        const href = target.getAttribute('href');
-        if (href) {
-          document.querySelector(href)?.scrollIntoView({
-            behavior: 'smooth',
-          });
-        }
-      });
-    });
-
   }, [setIsVisible]);
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-16 overflow-hidden">
-      <MedusaeBackdrop
-        isDark={isDark}
-        className="absolute inset-0 z-0"
-      />
+      <Suspense fallback={null}>
+        <MedusaeBackdrop isDark={isDark} className="absolute inset-0 z-0" />
+      </Suspense>
       <div
         className={`absolute inset-0 z-0 ${
           isDark

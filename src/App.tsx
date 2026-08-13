@@ -24,16 +24,45 @@ type Experience = {
   technologies: string[];
 };
 
+// localStorage throws when cookies/storage are blocked — never let a preference break render.
+const readStored = (key: string): string | null => {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+
+const writeStored = (key: string, value: string) => {
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    /* ignore quota / private mode */
+  }
+};
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isDark, setIsDark] = useState(true);
-  const [lang, setLang] = useState<'en' | 'es'>('es');
+  const [isDark, setIsDark] = useState(() => readStored('theme') !== 'light');
+  const [lang, setLang] = useState<'en' | 'es'>(() =>
+    readStored('lang') === 'en' ? 'en' : 'es',
+  );
   const [selectedExperience, setSelectedExperience] =
     useState<Experience | null>(null);
   const [showLinkedIn, setShowLinkedIn] = useState(false);
   const [cliOpen, setCliOpen] = useState(false);
 
   const t = translations[lang];
+
+  useEffect(() => {
+    writeStored('theme', isDark ? 'dark' : 'light');
+  }, [isDark]);
+
+  // Keeps <html lang> in sync so screen readers and crawlers get the right language.
+  useEffect(() => {
+    writeStored('lang', lang);
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   useEffect(() => {
     const handleScroll = () => {

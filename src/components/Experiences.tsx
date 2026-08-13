@@ -93,12 +93,21 @@ export const Experiences: React.FC<ExperiencesProps> = ({
           {displayedExperiences.map((exp, index) => (
             <div
               key={index}
+              role="button"
+              tabIndex={0}
+              aria-haspopup="dialog"
               className={`${
                 isDark
                   ? 'bg-surface-dark border border-white/5'
                   : 'bg-surface-light border border-neutral-200 shadow-lg'
-              } p-6 rounded-2xl transition-all cursor-pointer hover:-translate-y-1 hover:shadow-2xl`}
+              } p-6 rounded-2xl transition-all cursor-pointer hover:-translate-y-1 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400`}
               onClick={() => setSelectedExperience(exp)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedExperience(exp);
+                }
+              }}
             >
               <h3 className="text-xl font-bold text-primary-300">{exp.title}</h3>
               <div className="flex items-center gap-2 mb-2">

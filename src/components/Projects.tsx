@@ -3,6 +3,7 @@ import { Code2, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GithubIcon } from './GithubIcon';
 import { LazyImage } from './LazyImage';
 import { getProjects } from '../data/projects';
+import { scrollToSection } from '../lib/sections';
 
 interface ProjectsProps {
   t: any;
@@ -23,8 +24,7 @@ export function Projects({ t, isDark }: ProjectsProps) {
 
   const goToPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
-    // Scroll suavemente al inicio de la sección de proyectos
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    scrollToSection('projects');
   };
 
   return (

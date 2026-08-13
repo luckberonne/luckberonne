@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -459,6 +459,24 @@ type MedusaeBackdropProps = {
   style?: React.CSSProperties;
 };
 
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+
+/** CSS can't stop the WebGL render loop, so the canvas has to opt out in JS. */
+const usePrefersReducedMotion = (): boolean => {
+  const [reduced, setReduced] = useState(
+    () => window.matchMedia(REDUCED_MOTION_QUERY).matches,
+  );
+
+  useEffect(() => {
+    const query = window.matchMedia(REDUCED_MOTION_QUERY);
+    const onChange = () => setReduced(query.matches);
+    query.addEventListener('change', onChange);
+    return () => query.removeEventListener('change', onChange);
+  }, []);
+
+  return reduced;
+};
+
 export const MedusaeBackdrop: React.FC<MedusaeBackdropProps> = ({
   isDark,
   className,
@@ -480,10 +498,22 @@ export const MedusaeBackdrop: React.FC<MedusaeBackdropProps> = ({
   );
 
   const merged = useMemo(() => mergeConfig(themeConfig), [themeConfig]);
-  const rootStyle = { pointerEvents: 'none', ...style };
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const rootStyle: React.CSSProperties = { pointerEvents: 'none', ...style };
   const rootClassName = className
     ? `medusae-root ${className}`
     : 'medusae-root';
+
+  // Reduced motion: skip WebGL entirely and keep just the flat backdrop colour.
+  if (prefersReducedMotion) {
+    return (
+      <div
+        className={rootClassName}
+        style={{ ...rootStyle, backgroundColor: merged.background.color }}
+        aria-hidden="true"
+      />
+    );
+  }
 
   return (
     <div className={rootClassName} style={rootStyle} aria-hidden="true">
