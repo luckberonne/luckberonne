@@ -6,7 +6,7 @@ export type Education = {
   description: string;
 };
 
-type EducationSource = {
+export type EducationSource = {
   educationsData?: Array<{ title: string; period: string; description: string }>;
 };
 
@@ -17,7 +17,7 @@ export function getEducations(t: EducationSource): Education[] {
       title: t.educationsData?.[0]?.title || 'Ingeniería en Sistemas de Información',
       institution: 'Universidad Tecnológica Nacional',
       institutionUrl: 'https://www.utn.edu.ar/',
-      period: t.educationsData?.[0]?.period || '2018 - Actualidad',
+      period: t.educationsData?.[0]?.period || '2020 - Actualidad',
       description:
         t.educationsData?.[0]?.description ||
         'Especialización en desarrollo de software y sistemas de información empresariales.',

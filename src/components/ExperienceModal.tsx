@@ -15,6 +15,7 @@ interface ExperienceModalProps {
   onClose: () => void;
   isDark: boolean;
   t: {
+    close: string;
     experienceDetails: {
       responsibilities: string;
       technologies: string;
@@ -29,6 +30,9 @@ export function ExperienceModal({ experience, onClose, isDark, t }: ExperienceMo
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-neutral-950/70 modal-backdrop" onClick={onClose} />
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={experience.title}
         className={`relative w-full max-w-2xl ${
           isDark
             ? 'bg-surface-dark-card border border-white/5'
@@ -37,6 +41,7 @@ export function ExperienceModal({ experience, onClose, isDark, t }: ExperienceMo
       >
         <button
           onClick={onClose}
+          aria-label={t.close}
           className={`absolute top-4 right-4 ${
             isDark
               ? 'text-neutral-400 hover:text-neutral-200'

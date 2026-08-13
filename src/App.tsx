@@ -126,13 +126,7 @@ function App() {
       <Projects t={t} isDark={isDark} />
       <Skills t={t} isDark={isDark} />
       <Courses t={t} isDark={isDark} />
-      <Educations 
-        t={{
-          education: t.education,
-          educationsData: undefined,
-        }} 
-        isDark={isDark} 
-      />
+      <Educations t={t} isDark={isDark} />
       <About t={t} isDark={isDark} />
 
       {/* Footer */}

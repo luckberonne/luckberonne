@@ -1,11 +1,8 @@
 import { GraduationCap, ExternalLink } from 'lucide-react';
-import { getEducations, type Education } from '../data/education';
+import { getEducations, type EducationSource } from '../data/education';
 
 interface EducationsProps {
-  t: {
-    education: string;
-    educationsData?: Education[];
-  };
+  t: EducationSource & { education: string };
   isDark: boolean;
 }
 

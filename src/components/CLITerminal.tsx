@@ -300,6 +300,9 @@ export function CLITerminal({
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4">
       <div className="absolute inset-0 bg-neutral-950/70 modal-backdrop" onClick={onClose} />
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={t.cli.title}
         onClick={() => inputRef.current?.focus()}
         className={`relative w-full max-w-2xl h-[85vh] sm:h-[70vh] max-h-[560px] flex flex-col rounded-2xl shadow-xl font-mono text-xs sm:text-sm ${
           isDark
@@ -315,7 +318,7 @@ export function CLITerminal({
           <span className="truncate">{PROMPT}</span>
           <button
             onClick={onClose}
-            aria-label="close"
+            aria-label={t.close}
             className={`shrink-0 p-2 -mr-2 ${isDark ? 'hover:text-neutral-200' : 'hover:text-neutral-700'}`}
           >
             <X size={16} />
@@ -353,6 +356,7 @@ export function CLITerminal({
               onKeyDown={onKeyDown}
               autoComplete="off"
               spellCheck={false}
+              aria-label={t.cli.inputLabel}
               placeholder={`${DISPLAY[lang].about} (Tab)`}
               className={`flex-1 min-w-0 bg-transparent outline-none placeholder:text-neutral-500/60 ${
                 isDark ? 'text-neutral-100' : 'text-neutral-900'
