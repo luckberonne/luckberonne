@@ -1,12 +1,5 @@
 import { GraduationCap, ExternalLink } from 'lucide-react';
-
-interface Education {
-  title: string;
-  institution: string;
-  institutionUrl: string;
-  period: string;
-  description: string;
-}
+import { getEducations, type Education } from '../data/education';
 
 interface EducationsProps {
   t: {
@@ -17,23 +10,7 @@ interface EducationsProps {
 }
 
 export function Educations({ t, isDark }: EducationsProps) {
-  // Combinar datos estáticos con traducciones
-  const educations: Education[] = [
-    {
-      title: t.educationsData?.[0]?.title || 'Ingeniería en Sistemas de Información',
-      institution: 'Universidad Tecnológica Nacional',
-      institutionUrl: 'https://www.utn.edu.ar/',
-      period: t.educationsData?.[0]?.period || '2018 - Actualidad',
-      description: t.educationsData?.[0]?.description || 'Especialización en desarrollo de software y sistemas de información empresariales.',
-    },
-    {
-      title: t.educationsData?.[1]?.title || 'Analista en Sistemas',
-      institution: 'ORT Argentina',
-      institutionUrl: 'https://landing.ort.edu.ar/sistemas',
-      period: t.educationsData?.[1]?.period || '2025 - Actualidad',
-      description: t.educationsData?.[1]?.description || 'Formación técnica en programación y desarrollo de aplicaciones.',
-    }
-  ];
+  const educations = getEducations(t);
   return (
     <section
       id="education"

@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
-import { Sun, Moon, Languages } from 'lucide-react';
+import { Sun, Moon, Languages, Terminal } from 'lucide-react';
 
 interface HeaderProps {
   isDark: boolean;
   setIsDark: (value: boolean) => void;
   lang: 'en' | 'es';
   setLang: (value: 'en' | 'es') => void;
+  onOpenTerminal: () => void;
 }
 
-export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
+export function Header({ isDark, setIsDark, lang, setLang, onOpenTerminal }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -66,6 +67,18 @@ export function Header({ isDark, setIsDark, lang, setLang }: HeaderProps) {
             } transition-colors backdrop-blur-sm`}
           >
             {isDark ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+          <button
+            onClick={onOpenTerminal}
+            aria-label="Open terminal"
+            title="Open terminal (T)"
+            className={`p-1.5 rounded-lg flex ${
+              isDark
+                ? 'bg-white/5 hover:bg-white/10 ring-1 ring-white/10'
+                : 'bg-neutral-900/5 hover:bg-neutral-900/10 ring-1 ring-neutral-200'
+            } transition-colors backdrop-blur-sm`}
+          >
+            <Terminal size={16} />
           </button>
         </div>
       </div>

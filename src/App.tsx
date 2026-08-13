@@ -10,6 +10,8 @@ import { About } from './components/About';
 import Hero from './components/Hero';
 import { ExperienceModal } from './components/ExperienceModal';
 import { LinkedInIcon } from './components/LinkedInIcon';
+import { CLITerminal } from './components/CLITerminal';
+import { resolveSectionId, scrollToSection } from './lib/sections';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
 type Experience = {
@@ -29,6 +31,7 @@ function App() {
   const [selectedExperience, setSelectedExperience] =
     useState<Experience | null>(null);
   const [showLinkedIn, setShowLinkedIn] = useState(false);
+  const [cliOpen, setCliOpen] = useState(false);
 
   const t = translations[lang];
 
@@ -45,6 +48,47 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // CLI easter egg — press "T" outside inputs to toggle.
+  useEffect(() => {
+    const isTypingTarget = (el: EventTarget | null) => {
+      if (!(el instanceof Element)) return false;
+      return Boolean(el.closest('input, textarea, select, [contenteditable="true"]'));
+    };
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
+      if (isTypingTarget(e.target)) return;
+      if (e.code !== 'KeyT') return;
+      e.preventDefault();
+      setCliOpen((open) => !open);
+    };
+
+    document.addEventListener('keydown', onKey, true);
+    return () => document.removeEventListener('keydown', onKey, true);
+  }, []);
+
+  // Deep-linking: resolve section hashes in any supported language (#proyectos, #projects…)
+  // and canonicalize the URL so links always share the same shape.
+  useEffect(() => {
+    const goHash = () => {
+      const raw = window.location.hash.slice(1);
+      if (!raw) return;
+      const id = resolveSectionId(raw);
+      if (!id) return;
+      if (id !== raw) {
+        const url = `${window.location.pathname}${window.location.search}#${id}`;
+        window.history.replaceState(null, '', url);
+      }
+      scrollToSection(id);
+    };
+
+    if (window.location.hash) {
+      window.requestAnimationFrame(goHash);
+    }
+    window.addEventListener('hashchange', goHash);
+    return () => window.removeEventListener('hashchange', goHash);
+  }, []);
+
   return (
     <div
       className={`min-h-screen page-shell ${
@@ -58,6 +102,7 @@ function App() {
         setIsDark={setIsDark}
         lang={lang}
         setLang={setLang}
+        onOpenTerminal={() => setCliOpen(true)}
       />
       <section id="hero">
         <Hero
@@ -128,6 +173,16 @@ function App() {
         <LinkedInIcon size={24} className="text-primary-400" />
       </a>
       
+      <CLITerminal
+        open={cliOpen}
+        onClose={() => setCliOpen(false)}
+        isDark={isDark}
+        lang={lang}
+        setLang={setLang}
+        setIsDark={setIsDark}
+        t={t}
+      />
+
       {/* Vercel Speed Insights */}
       <SpeedInsights />
     </div>
