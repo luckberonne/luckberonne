@@ -26,6 +26,18 @@ import FactulabsImg from '../assets/images/Factulabs.png?w=800&quality=75&format
 import FactulabsImgWebp from '../assets/images/Factulabs.png?w=800&quality=75&format=webp';
 import CodeImg from '../assets/images/Code.png?w=800&quality=75&format=jpeg';
 import CodeImgWebp from '../assets/images/Code.png?w=800&quality=75&format=webp';
+import EventaImg from '../assets/images/Eventa.png?w=800&quality=75&format=jpeg';
+import EventaImgWebp from '../assets/images/Eventa.png?w=800&quality=75&format=webp';
+import CVImg from '../assets/images/cv.png?w=800&quality=75&format=jpeg';
+import CVImgWebp from '../assets/images/cv.png?w=800&quality=75&format=webp';
+import DuckHuntImg from '../assets/images/DuckHunt.png?w=800&quality=75&format=jpeg';
+import DuckHuntImgWebp from '../assets/images/DuckHunt.png?w=800&quality=75&format=webp';
+import ClippoImg from '../assets/images/Clippo.png?w=800&quality=75&format=jpeg';
+import ClippoImgWebp from '../assets/images/Clippo.png?w=800&quality=75&format=webp';
+import SoulTravelImg from '../assets/images/SoulTravel.png?w=800&quality=75&format=jpeg';
+import SoulTravelImgWebp from '../assets/images/SoulTravel.png?w=800&quality=75&format=webp';
+import RadarNormativoImg from '../assets/images/RadarNormativo.png?w=800&quality=75&format=jpeg';
+import RadarNormativoImgWebp from '../assets/images/RadarNormativo.png?w=800&quality=75&format=webp';
 
 type Translation = (typeof translations)['en'];
 
@@ -46,6 +58,25 @@ const defaultImageUrl =
 export function getProjects(t: Translation): Project[] {
   return [
     {
+      title: 'Radar Normativo — Comercio exterior',
+      description:
+        t.projectsData[16]?.description ||
+        'Plataforma para consultar y seguir cambios normativos en comercio exterior, con una experiencia clara y visual para investigadores y profesionales.',
+      image: RadarNormativoImg,
+      imageWebp: RadarNormativoImgWebp,
+      demoUrl: 'https://rnormativo.com.ar/',      githubUrl: 'https://github.com/luckberonne/RadarNormativo',
+      technologies: ['C#', 'TypeScript', 'CSS', 'HTML', 'Docker', 'Shell', 'PowerShell', 'PostgreSQL'],
+    },
+    {
+      title: 'RuleEngineCLI',
+      description:
+        t.projectsData[17]?.description ||
+        'Aplicación de consola profesional diseñada para validar datos de entrada contra un conjunto de reglas de negocio configurables. Implementa Clean Architecture y Domain-Driven Design (DDD), permitiendo cambiar reglas sin modificar el código fuente.',
+      image: defaultImageUrl,
+      githubUrl: 'https://github.com/luckberonne/RuleEngineCLI',
+      technologies: ['.NET', 'C#', 'CLI', 'DDD', 'Clean Architecture', 'Rules Engine'],
+    },
+    {
       title: 'Code Carrusel',
       description:
         t.projectsData[16]?.description ||
@@ -55,6 +86,57 @@ export function getProjects(t: Translation): Project[] {
       demoUrl: 'https://code-carrusel.vercel.app/',
       githubUrl: '',
       technologies: ['Next.js', 'Vercel', 'Tailwind CSS', 'Exportación HD', 'Branding', 'Slides'],
+    },
+    {
+      title: 'Editor de CV — Lucas Beronne',
+      description:
+        t.projectsData[18]?.description ||
+        'Editor de currículum interactivo para crear, personalizar y exportar CVs profesionales con una experiencia moderna y clara.',
+      image: CVImg,
+      imageWebp: CVImgWebp,
+      demoUrl: 'https://cv.lucera.dedyn.io/',
+      githubUrl: 'https://github.com/luckberonne/proyecto-cv',
+      technologies: ['HTML', 'Python', 'Flask'],
+    },
+    {
+      title: 'DuckHunt',
+      description:
+        t.projectsData[19]?.description ||
+        'Duck Hunt casero: el juego se ve en el televisor (una página web) y disparás con la mano usando la cámara de tu celular. Se puede jugar de a uno o de a dos, y para dos hay dos formas: cada uno con su celu (a la vez) o un solo celu que se van pasando por turnos.',
+      image: DuckHuntImg,
+      imageWebp: DuckHuntImgWebp,
+      githubUrl: 'https://github.com/luckberonne/DuckHunt',
+      technologies: ['JavaScript', 'Python', 'HTML', 'CSS'],
+    },
+    {
+      title: 'Clippo',
+      description:
+        t.projectsData[20]?.description ||
+        'Mascota virtual inteligente para el escritorio de Windows. Una criaturita pixel-art que camina por los bordes de tus pantallas, recuerda lo que le digas, organiza tus tareas y jamás te interrumpe.',
+      image: ClippoImg,
+      imageWebp: ClippoImgWebp,
+      githubUrl: 'https://github.com/luckberonne/Clippo',
+      technologies: ['TypeScript', 'React', 'Clipboard', 'Productividad', 'UI'],
+    },
+    {
+      title: 'Eventa — Organizá mejor. Crecé más.',
+      description:
+        t.projectsData[21]?.description ||
+        'Plataforma para gestionar eventos, ventas, invitados y logística desde un mismo lugar, con una experiencia clara y profesional.',
+      image: EventaImg,
+      imageWebp: EventaImgWebp,
+      demoUrl: 'https://app.eventa.com.ar/',
+      technologies: ['TypeScript', 'HTML', 'CSS', 'PLpgSQL', 'JavaScript', 'Shell', 'Docker'],
+    },
+    {
+      title: 'Soul Travel',
+      description:
+        t.projectsData[22]?.description ||
+        'Agencia de viajes y turismo en Paraguay, enfocada en experiencias de viaje, turismo local e internacional y soluciones para recorrer el país y el mundo.',
+      image: SoulTravelImg,
+      imageWebp: SoulTravelImgWebp,
+      demoUrl: 'https://soultravel.com.py/',
+      technologies: ['Turismo', 'Landing Page', 'UX', 'Vercel'],
     },
     {
       title: 'MCPrompt',

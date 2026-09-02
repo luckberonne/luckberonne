@@ -147,6 +147,34 @@ export const translations = {
         title: 'MCPrompt',
         description: 'MCPrompt is a chat mode librarian (mpc server) for Copilot that searches and inserts the most suitable chat mode according to the code context.',
       },
+      {
+        title: 'Radar Normativo — Comercio exterior',
+        description: 'Platform to check and track regulatory changes in foreign trade, with a clear and visual experience for researchers and professionals.',
+      },
+      {
+        title: 'RuleEngineCLI',
+        description: 'Professional console application designed to validate input data against a set of configurable business rules. Implements Clean Architecture and Domain-Driven Design (DDD), allowing rules to change without modifying the source code.',
+      },
+      {
+        title: 'Editor de CV — Lucas Beronne',
+        description: 'Interactive resume editor to create, customize and export professional CVs with a modern, clear experience.',
+      },
+      {
+        title: 'DuckHunt',
+        description: "Homemade Duck Hunt: the game is shown on the TV (a web page) and you shoot with your hand using your phone's camera. It can be played solo or with two people, and for two there are two modes: each with their own phone (at the same time) or a single phone passed back and forth by turns.",
+      },
+      {
+        title: 'Clippo',
+        description: 'Smart virtual desktop pet for Windows. A pixel-art little creature that walks along the edges of your screens, remembers what you tell it, organizes your tasks and never interrupts you.',
+      },
+      {
+        title: 'Eventa — Organizá mejor. Crecé más.',
+        description: 'Platform to manage events, sales, guests and logistics from one place, with a clear and professional experience.',
+      },
+      {
+        title: 'Soul Travel',
+        description: 'Travel and tourism agency in Paraguay, focused on travel experiences, local and international tourism, and solutions to explore the country and the world.',
+      },
     ],
     experiencesData: [
       {
@@ -359,6 +387,34 @@ export const translations = {
       {
         title: 'MCPrompt',
         description: 'MCPrompt es un bibliotecario de chatmodes para Copilot que busca e inserta el chatmode más adecuado según el contexto del código.',
+      },
+      {
+        title: 'Radar Normativo — Comercio exterior',
+        description: 'Plataforma para consultar y seguir cambios normativos en comercio exterior, con una experiencia clara y visual para investigadores y profesionales.',
+      },
+      {
+        title: 'RuleEngineCLI',
+        description: 'Aplicación de consola profesional diseñada para validar datos de entrada contra un conjunto de reglas de negocio configurables. Implementa Clean Architecture y Domain-Driven Design (DDD), permitiendo cambiar reglas sin modificar el código fuente.',
+      },
+      {
+        title: 'Editor de CV — Lucas Beronne',
+        description: 'Editor de currículum interactivo para crear, personalizar y exportar CVs profesionales con una experiencia moderna y clara.',
+      },
+      {
+        title: 'DuckHunt',
+        description: 'Duck Hunt casero: el juego se ve en el televisor (una página web) y disparás con la mano usando la cámara de tu celular. Se puede jugar de a uno o de a dos, y para dos hay dos formas: cada uno con su celu (a la vez) o un solo celu que se van pasando por turnos.',
+      },
+      {
+        title: 'Clippo',
+        description: 'Mascota virtual inteligente para el escritorio de Windows. Una criaturita pixel-art que camina por los bordes de tus pantallas, recuerda lo que le digas, organiza tus tareas y jamás te interrumpe.',
+      },
+      {
+        title: 'Eventa — Organizá mejor. Crecé más.',
+        description: 'Plataforma para gestionar eventos, ventas, invitados y logística desde un mismo lugar, con una experiencia clara y profesional.',
+      },
+      {
+        title: 'Soul Travel',
+        description: 'Agencia de viajes y turismo en Paraguay, enfocada en experiencias de viaje, turismo local e internacional y soluciones para recorrer el país y el mundo.',
       },
     ],
     experiencesData: [
