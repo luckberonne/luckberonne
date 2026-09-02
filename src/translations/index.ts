@@ -35,6 +35,7 @@ export const translations = {
       sourceCode: 'Source Repository',
       techStack: 'Technology Stack',
     },
+    unmaintained: 'Unmaintained',
     courseDetails: {
       platform: 'Learning Platform',
       date: 'Completion Date',
@@ -276,6 +277,7 @@ export const translations = {
       sourceCode: 'Repositorio de Código',
       techStack: 'Stack Tecnológico',
     },
+    unmaintained: 'Sin mantenimiento',
     courseDetails: {
       platform: 'Plataforma de Aprendizaje',
       date: 'Fecha de Finalización',

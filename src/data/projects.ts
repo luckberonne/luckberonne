@@ -49,6 +49,7 @@ export type Project = {
   demoUrl?: string;
   githubUrl?: string;
   technologies: string[];
+  unmaintained?: boolean;
 };
 
 const defaultImageUrl =
@@ -173,6 +174,7 @@ export function getProjects(t: Translation): Project[] {
       imageWebp: ReciClickImgWebp,
       demoUrl: 'https://reci-click.vercel.app/',
       technologies: ['Next.js', 'Firebase', 'Vercel', 'Gemini API', 'AI'],
+      unmaintained: true,
     },
     {
       title: 'Kytame',
@@ -208,6 +210,7 @@ export function getProjects(t: Translation): Project[] {
       demoUrl: 'https://www.kaizencode.com.ar/',
       githubUrl: '',
       technologies: ['Vite js', 'Vercel', 'Tailwind CSS', 'TypeScript', 'Chatbot', 'SEO', 'Gemini'],
+      unmaintained: true,
     },
     {
       title: 'ControlAR',
@@ -217,6 +220,7 @@ export function getProjects(t: Translation): Project[] {
       demoUrl: 'https://controlar.azurewebsites.net/',
       githubUrl: '',
       technologies: ['.NET', 'Blazor', 'Azure', 'Docker', 'Multi-tenant', 'SQL Server'],
+      unmaintained: true,
     },
     {
       title: 'Tae Guk',
@@ -269,6 +273,7 @@ export function getProjects(t: Translation): Project[] {
       demoUrl: 'https://totalnews.vercel.app/',
       githubUrl: 'https://github.com/luckberonne/totalnews',
       technologies: ['Next.js', 'PostgreSQL', 'Gemini API', 'Vercel'],
+      unmaintained: true,
     },
     {
       title: 'CapitanKrik',

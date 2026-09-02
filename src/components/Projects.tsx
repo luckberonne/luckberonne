@@ -56,6 +56,11 @@ export function Projects({ t, isDark }: ProjectsProps) {
                   imgClassName="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-[1.04]"
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 />
+                {project.unmaintained && (
+                  <div className="absolute top-6 -right-9 w-40 rotate-45 bg-red-600 text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wide text-center py-1 shadow-md z-10 select-none">
+                    {t.unmaintained}
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none">
                   <div className="absolute bottom-0 p-3 sm:p-4">
                     <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
