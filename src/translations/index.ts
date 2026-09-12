@@ -176,6 +176,24 @@ export const translations = {
         title: 'Soul Travel',
         description: 'Travel and tourism agency in Paraguay, focused on travel experiences, local and international tourism, and solutions to explore the country and the world.',
       },
+      {
+        title: 'HistoricMD',
+        description: 'VS Code extension to view the change history of a Markdown file (or other file types) without leaving the editor, with Git support.',
+      },
+      {
+        title: 'Code Carrusel',
+        description: 'Professional image generator. Design slides with highlighted code, branding and high-resolution export ready for LinkedIn.',
+      },
+      {
+        title: 'HubScrum',
+        description:
+          'Hub of instant tools for agile teams, no signup or email required: Planning Poker, Name Wheel, Live Poll, Retro Board, Daily Timer and Team Generator.',
+      },
+      {
+        title: 'observe-llm',
+        description:
+          'Observability system for LLM agents in production: self-correction loop with LangGraph, tracing with Langfuse (self-hosted, local persistence). Stack: LangGraph + Langfuse + FastAPI + Docker.',
+      },
     ],
     experiencesData: [
       {
@@ -417,6 +435,24 @@ export const translations = {
       {
         title: 'Soul Travel',
         description: 'Agencia de viajes y turismo en Paraguay, enfocada en experiencias de viaje, turismo local e internacional y soluciones para recorrer el país y el mundo.',
+      },
+      {
+        title: 'HistoricMD',
+        description: 'Extensión de VS Code para ver el historial de cambios de un archivo Markdown o otras extensiones sin usar la terminal, con soporte para Git.',
+      },
+      {
+        title: 'Code Carrusel',
+        description: 'Generador de imágenes profesionales. Diseña slides con código resaltado, branding y exportación en alta resolución listo para LinkedIn.',
+      },
+      {
+        title: 'HubScrum',
+        description:
+          'Hub de herramientas instantáneas para equipos ágiles, sin registro ni correo: Planning Poker, Ruleta de Nombres, Encuesta en Vivo, Tablero de Retro, Temporizador de Daily y Generador de Equipos.',
+      },
+      {
+        title: 'observe-llm',
+        description:
+          'Sistema de observabilidad para agentes LLM en producción: bucle de auto-corrección con LangGraph, trazado con Langfuse (self-hosted, persistencia local). Stack: LangGraph + Langfuse + FastAPI + Docker.',
       },
     ],
     experiencesData: [

@@ -38,6 +38,10 @@ import SoulTravelImg from '../assets/images/SoulTravel.png?w=800&quality=75&form
 import SoulTravelImgWebp from '../assets/images/SoulTravel.png?w=800&quality=75&format=webp';
 import RadarNormativoImg from '../assets/images/RadarNormativo.png?w=800&quality=75&format=jpeg';
 import RadarNormativoImgWebp from '../assets/images/RadarNormativo.png?w=800&quality=75&format=webp';
+import HistoricMDImg from '../assets/images/HistoricMD.png?w=800&quality=75&format=jpeg';
+import HistoricMDImgWebp from '../assets/images/HistoricMD.png?w=800&quality=75&format=webp';
+import HubScrumImg from '../assets/images/HubScrum.png?w=800&quality=75&format=jpeg';
+import HubScrumImgWebp from '../assets/images/HubScrum.png?w=800&quality=75&format=webp';
 
 type Translation = (typeof translations)['en'];
 
@@ -59,13 +63,44 @@ const defaultImageUrl =
 export function getProjects(t: Translation): Project[] {
   return [
     {
+      title: 'observe-llm',
+      description:
+        t.projectsData[26]?.description ||
+        'Sistema de observabilidad para agentes LLM en producción: bucle de auto-corrección con LangGraph, trazado con Langfuse (self-hosted, persistencia local). Stack: LangGraph + Langfuse + FastAPI + Docker.',
+      image: defaultImageUrl,
+      githubUrl: 'https://github.com/luckberonne/observe-llm',
+      technologies: ['Python', 'LangGraph', 'Langfuse', 'FastAPI', 'Docker'],
+    },
+    {
+      title: 'HubScrum',
+      description:
+        t.projectsData[25]?.description ||
+        'Hub de herramientas instantáneas para equipos ágiles, sin registro ni correo: Planning Poker, Ruleta de Nombres, Encuesta en Vivo, Tablero de Retro, Temporizador de Daily y Generador de Equipos.',
+      image: HubScrumImg,
+      imageWebp: HubScrumImgWebp,
+      demoUrl: 'https://hubscrum.lucera.dedyn.io/',
+      technologies: ['TypeScript', 'React', 'WebSockets', 'Realtime'],
+    },
+    {
+      title: 'HistoricMD',
+      description:
+        t.projectsData[23]?.description ||
+        'Extensión de VS Code para ver el historial de cambios de un archivo Markdown o otras extensiones sin usar la terminal, con soporte para Git.',
+      image: HistoricMDImg,
+      imageWebp: HistoricMDImgWebp,
+      demoUrl: 'https://marketplace.visualstudio.com/items?itemName=luckberonne.historicmd',
+      githubUrl: 'https://github.com/luckberonne/HistoricMD',
+      technologies: ['TypeScript', 'VSCode Extension'],
+    },
+    {
       title: 'Radar Normativo — Comercio exterior',
       description:
         t.projectsData[16]?.description ||
         'Plataforma para consultar y seguir cambios normativos en comercio exterior, con una experiencia clara y visual para investigadores y profesionales.',
       image: RadarNormativoImg,
       imageWebp: RadarNormativoImgWebp,
-      demoUrl: 'https://rnormativo.com.ar/',      githubUrl: 'https://github.com/luckberonne/RadarNormativo',
+      demoUrl: 'https://rnormativo.com.ar/',      
+      githubUrl: 'https://github.com/luckberonne/RadarNormativo',
       technologies: ['C#', 'TypeScript', 'CSS', 'HTML', 'Docker', 'Shell', 'PowerShell', 'PostgreSQL'],
     },
     {
@@ -80,7 +115,7 @@ export function getProjects(t: Translation): Project[] {
     {
       title: 'Code Carrusel',
       description:
-        t.projectsData[16]?.description ||
+        t.projectsData[24]?.description ||
         'Generador de imágenes profesionales. Diseña slides con código resaltado, branding y exportación en alta resolución listo para LinkedIn.',
       image: CodeImg,
       imageWebp: CodeImgWebp,
